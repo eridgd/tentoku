@@ -1,6 +1,12 @@
 # Changelog
 
-## [0.1.2] - 2026-01-07
+## [0.1.4] - 2026-01-07
+
+### Added
+- Python 3.12, 3.13, and 3.14 support
+- Enhanced README example showcasing dictionary metadata fields (POS tags, usage, field, dialect)
+
+## [0.1.3] - 2026-01-07
 
 ### Added
 - Japanese text tokenization with deinflection support
