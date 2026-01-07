@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.6] - 2026-01-08
+
+### Fixed
+- Fixed broken logo image on PyPI by using absolute GitHub URL
+
 ## [0.1.5] - 2026-01-08
 
 ### Added

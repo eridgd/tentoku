@@ -6,7 +6,7 @@ dictionary lookup, and greedy longest-match algorithm. It reimplements the
 tokenization algorithm from 10ten Reader.
 """
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 
 # Import using relative imports to avoid conflicts with stdlib tokenize
 from . import tokenizer as _tokenize_module

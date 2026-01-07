@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/tentoku_icon.svg" alt="Tentoku Logo" width="128">
+  <img src="https://raw.githubusercontent.com/eridgd/tentoku/main/images/tentoku_icon.svg" alt="Tentoku Logo" width="128">
 </div>
 
 # Tentoku (天読) - Japanese Tokenizer
