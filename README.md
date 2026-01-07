@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="images/tentoku_icon.svg" alt="Tentoku Logo" width="128">
+</div>
+
 # Tentoku (天読) - Japanese Tokenizer
 
 A Python module for Japanese word tokenization with deinflection support.
