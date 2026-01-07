@@ -1,0 +1,33 @@
+JMDict/EDICT Dictionary Files License
+
+This project uses the JMdict/EDICT dictionary files. These files are the property of the Electronic Dictionary Research and Development Group, and are used in conformance with the Group's licence.
+
+The dictionary data is licensed under the Creative Commons Attribution-ShareAlike License (V4.0).
+
+JMdict Project: https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project
+EDRDG License: https://www.edrdg.org/edrdg/licence.html
+EDRDG Home Page: https://www.edrdg.org/
+
+Copyright: James William BREEN and The Electronic Dictionary Research and Development Group
+
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit:
+http://creativecommons.org/licenses/by-sa/4.0/
+
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially
+
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+For the full legal text of the CC BY-SA 4.0 license, see:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+For the complete EDRDG General Dictionary Licence Statement, see:
+https://www.edrdg.org/edrdg/licence.html
+

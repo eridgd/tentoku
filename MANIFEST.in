@@ -1,0 +1,6 @@
+include README.md
+include JMDICT_ATTRIBUTION.md
+include JMDICT_LICENSE.txt
+recursive-include tests *.py
+recursive-include scripts *.py
+

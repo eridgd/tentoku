@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["tentoku"]
+package-dir = {"tentoku" = "."}
+
+[project]
+name = "tentoku"
+version = "0.1.2"
+description = "Japanese text tokenization with deinflection support, reimplementing the algorithm from 10ten Reader"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "GPL-3.0-or-later"
+authors = [
+    {name = "Tentoku Contributors"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+full = [
+    "lxml>=4.0.0",  # Faster XML parsing for database building
+    "tqdm>=4.0.0",  # Progress bars for database building
+]
+
