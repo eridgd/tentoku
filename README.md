@@ -4,11 +4,15 @@
 
 # Tentoku (天読) - Japanese Tokenizer
 
-A Python module for Japanese word tokenization with deinflection support.
+**A dictionary-driven Japanese tokenizer with built-in deinflection.**
 
-This module reimplements the tokenization algorithm used in [10ten Japanese Reader](https://github.com/birchill/10ten-ja-reader), a browser extension for interactive Japanese reading and instant dictionary lookup. It provides the same greedy longest-match tokenization and deinflection capabilities as a Python package.
+[![PyPI version](https://img.shields.io/pypi/v/tentoku.svg)](https://pypi.org/project/tentoku/)
+[![Python versions](https://img.shields.io/pypi/pyversions/tentoku.svg)](https://pypi.org/project/tentoku/)
+[![License](https://img.shields.io/pypi/l/tentoku.svg)](https://pypi.org/project/tentoku/)
 
-**What to expect**: This is a dictionary-based tokenizer, not a statistical segmenter. It prioritizes lookup accuracy over speed, making it ideal for reading aids, lookup tools, and annotation tasks. It is not designed for corpus-scale segmentation where speed is the primary concern.
+Tentoku is a Python port of the high-accuracy tokenization engine used in [10ten Japanese Reader](https://github.com/birchill/10ten-ja-reader).
+
+Unlike statistical segmenters (such as MeCab or Sudachi), Tentoku uses a greedy longest-match algorithm paired with a rule-based system that resolves conjugated words back to their dictionary forms. It prioritizes lookup accuracy over speed, making it well suited for reading aids, dictionary tools, and annotation workflows. 
 
 ## Features
 
@@ -316,6 +320,45 @@ python -m unittest tentoku.tests.test_deinflect
 ```
 
 See [TEST_COVERAGE_INVENTORY.md](TEST_COVERAGE_INVENTORY.md) for detailed test coverage information.
+
+## Performance Benchmarking
+
+A comprehensive benchmark suite is available to measure performance:
+
+```bash
+python benchmark.py
+```
+
+This will run performance tests on:
+- Tokenization speed (tokens/sec, chars/sec)
+- Deinflection performance
+- Dictionary lookup performance
+- Different text complexity scenarios
+- Throughput with many texts
+
+You can customize the number of iterations:
+
+```bash
+python benchmark.py --iterations 1000
+```
+
+Or skip the warmup phase:
+
+```bash
+python benchmark.py --no-warmup
+```
+
+The benchmark script provides detailed metrics including:
+- Mean, median, min, max execution times
+- Standard deviation
+- Throughput (operations per second)
+- Time per token/character
+
+Performance tests are also included in the test suite (`tests/test_stress.py`) and can be run with:
+
+```bash
+python -m unittest tentoku.tests.test_stress
+```
 
 ## Credits
 
