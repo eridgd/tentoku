@@ -10,6 +10,8 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/tentoku.svg)](https://pypi.org/project/tentoku/)
 [![License](https://img.shields.io/pypi/l/tentoku.svg)](https://pypi.org/project/tentoku/)
 
+[日本語版 README](https://github.com/eridgd/tentoku/blob/main/README.ja.md)
+
 Tentoku is a Python port of the high-accuracy tokenization engine used in [10ten Japanese Reader](https://github.com/birchill/10ten-ja-reader).
 
 Unlike statistical segmenters (such as MeCab or Sudachi), Tentoku uses a greedy longest-match algorithm paired with a rule-based system that resolves conjugated words back to their dictionary forms. It prioritizes lookup accuracy over speed, making it well suited for reading aids, dictionary tools, and annotation workflows. 

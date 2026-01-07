@@ -1,11 +1,16 @@
 # Changelog
 
-## [0.1.6] - 2026-01-08
+## [0.1.7] - 2026-01-07
+
+### Added
+- Japanese README (`README.ja.md`) for Japanese-speaking users
+
+## [0.1.6] - 2026-01-07
 
 ### Fixed
 - Fixed broken logo image on PyPI by using absolute GitHub URL
 
-## [0.1.5] - 2026-01-08
+## [0.1.5] - 2026-01-07
 
 ### Added
 - Comprehensive benchmark suite (`benchmark.py`) for performance testing
