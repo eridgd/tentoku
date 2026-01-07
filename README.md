@@ -177,7 +177,6 @@ if result:
         print(f"'{matched_text}' -> {entry_word} (entry: {word_result.entry.ent_seq})")
         
         if word_result.reason_chains:
-            from tentoku import Reason
             for chain in word_result.reason_chains:
                 reason_names = [r.name for r in chain]
                 print(f"  Deinflected from: {' -> '.join(reason_names)}")
