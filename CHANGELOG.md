@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.5] - 2026-01-08
+
+### Added
+- Comprehensive benchmark suite (`benchmark.py`) for performance testing
+  - Tokenization speed metrics (tokens/sec, chars/sec)
+  - Deinflection and dictionary lookup performance benchmarks
+  - Percentile reporting (p90, p95) for performance analysis
+  - Windowed throughput tests for hover-like scenarios
+- Stress and performance tests in test suite
+  - Performance benchmarks for simple, complex, and long text tokenization
+  - Throughput tests for multiple texts
+  - Stress tests for many operations and windowed scenarios
+
+### Changed
+- Improved README with badges and logo
+
 ## [0.1.4] - 2026-01-07
 
 ### Added
