@@ -66,24 +66,52 @@ tokens = tokenize("私は学生です")
 for token in tokens:
     print(f"{token.text} ({token.start}-{token.end})")
     if token.dictionary_entry:
-        entry = token.dictionary_entry.ent_seq
-        meaning = token.dictionary_entry.senses[0].glosses[0].text
-        print(f"  Entry: {entry}")
-        print(f"  Meaning: ({meaning})\n", end="")
+        entry = token.dictionary_entry
+        sense = entry.senses[0]
+        meaning = sense.glosses[0].text
+        
+        print(f"  Entry: {entry.ent_seq}")
+        print(f"  Meaning: {meaning}")
+        
+        # Parts of speech
+        if sense.pos_tags:
+            print(f"  POS: {', '.join(sense.pos_tags)}")
+        
+        # Register/formality (misc)
+        if sense.misc:
+            print(f"  Usage: {', '.join(sense.misc)}")
+        
+        # Domain/field (e.g., computing, medicine)
+        if sense.field:
+            print(f"  Field: {', '.join(sense.field)}")
+        
+        # Dialect information
+        if sense.dial:
+            print(f"  Dialect: {', '.join(sense.dial)}")
+        
+        print()
         
 # Output:
 # 私 (0-1)
 #   Entry: 1311110
-#   Meaning: (I)
+#   Meaning: I
+#   POS: pronoun
+
 # は (1-2)
 #   Entry: 2028920
-#   Meaning: (indicates sentence topic)
+#   Meaning: indicates sentence topic
+#   POS: particle
+
 # 学生 (2-4)
 #   Entry: 1206900
-#   Meaning: (student (esp. a university student))
+#   Meaning: student (esp. a university student)
+#   POS: noun (common) (futsuumeishi)
+
 # です (4-6)
 #   Entry: 1628500
-#   Meaning: (be)
+#   Meaning: be
+#   POS: copula, auxiliary verb
+#   Usage: polite (teineigo) language
 ```
 
 ### Verb Forms and Deinflection
