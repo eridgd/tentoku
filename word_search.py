@@ -123,7 +123,8 @@ def word_search(
                 dictionary,
                 have,
                 max_results,
-                current_input_length
+                current_input_length,
+                normalized  # Pass original input for matchRange setting
             )
             
             if not word_results:
@@ -177,7 +178,8 @@ def lookup_candidates(
     dictionary: Dictionary,
     existing_entries: Set[int],
     max_results: int,
-    input_length: int
+    input_length: int,
+    original_search_text: Optional[str] = None
 ) -> List[WordResult]:
     """
     Look up candidates for a given input, handling deinflection.
@@ -202,10 +204,11 @@ def lookup_candidates(
         # Get more results than max_results so we can sort and pick the best ones
         # Use a multiplier to ensure we get enough results for proper sorting
         lookup_max = max(max_results * 3, 20)  # Get at least 20 or 3x max_results
-        # Pass candidate.word as matching_text so matchRange is set correctly
-        # matchRange should be based on the deinflected candidate.word (what we're looking up)
-        # This matches 10ten Reader's behavior where matchingText is the input to getWords
-        word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=candidate.word)
+        # Pass original_search_text (or input_text if not provided) as matching_text
+        # matchRange should be based on the original input text, not the deinflected form
+        # This matches 10ten Reader's behavior where matchingText is the original input
+        matching_text = original_search_text if original_search_text is not None else input_text
+        word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=matching_text)
         
         # Filter by word type if this is a deinflection (not the original)
         is_deinflection = candidate_index != 0
