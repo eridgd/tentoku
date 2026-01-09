@@ -218,12 +218,14 @@ def get_kana_headword_type(entry: WordEntry) -> int:
             return 1
     
     # (b) most of the English senses for the entry have a `uk` (usually kana)
-    #     `misc` field
-    # Note: We don't have a 'match' field like the TypeScript version, so we
-    # check all senses. The TypeScript version filters for matched English senses.
+    #     `misc` field and the reading is not marked as `ok` (old kana usage).
+    #
+    # Note: 10ten Reader filters for s.match && (s.lang === undefined || s.lang === 'en')
+    # In flat-file.ts, all senses get match: true, so we check all English senses.
+    # Since tentoku uses SQLite (similar to flat file), we check all English senses.
     matched_en_senses = [
         sense for sense in entry.senses
-        # Filter for English senses (default lang is 'eng')
+        # Filter for English senses (default lang is 'eng' or 'en')
         if not sense.glosses or any(g.lang in (None, 'eng', 'en') for g in sense.glosses)
     ]
     if matched_en_senses:
@@ -231,6 +233,7 @@ def get_kana_headword_type(entry: WordEntry) -> int:
             1 for sense in matched_en_senses
             if sense.misc and any('uk' in m for m in sense.misc)
         )
+        # Check if at least half of the English senses are marked as 'uk'
         if uk_en_sense_count >= len(matched_en_senses) / 2:
             return 1
     
