@@ -15,19 +15,44 @@ from tentoku._types import WordResult, WordEntry, KanjiReading, KanaReading, Sen
 class TestSorting(unittest.TestCase):
     """Test sorting functions."""
     
-    def create_entry(self, entry_id, kanji_priority=None, kana_priority=None):
-        """Helper to create a test entry."""
+    def create_entry(self, entry_id, kanji_priority=None, kana_priority=None, match_range=True):
+        """Helper to create a test entry.
+        
+        Args:
+            entry_id: Entry ID
+            kanji_priority: Priority for kanji reading
+            kana_priority: Priority for kana reading
+            match_range: Whether to set match_range on readings (for priority calculation)
+        """
         kanji_readings = []
         if kanji_priority:
-            kanji_readings.append(KanjiReading(text="test", priority=kanji_priority))
+            kanji_readings.append(KanjiReading(
+                text="test", 
+                priority=kanji_priority,
+                match_range=(0, 4) if match_range else None,
+                match=match_range
+            ))
         else:
-            kanji_readings.append(KanjiReading(text="test"))
+            kanji_readings.append(KanjiReading(
+                text="test",
+                match_range=(0, 4) if match_range else None,
+                match=match_range
+            ))
         
         kana_readings = []
         if kana_priority:
-            kana_readings.append(KanaReading(text="test", priority=kana_priority))
+            kana_readings.append(KanaReading(
+                text="test", 
+                priority=kana_priority,
+                match_range=(0, 4) if match_range else None,
+                match=match_range
+            ))
         else:
-            kana_readings.append(KanaReading(text="test"))
+            kana_readings.append(KanaReading(
+                text="test",
+                match_range=(0, 4) if match_range else None,
+                match=match_range
+            ))
         
         return WordEntry(
             entry_id=entry_id,
@@ -69,7 +94,7 @@ class TestSorting(unittest.TestCase):
         result2 = WordResult(entry=entry2, match_len=5, reason_chains=[[Reason.Past, Reason.Negative]])
         
         results = [result2, result1]  # More steps first
-        sorted_results = sort_word_results(results, "test")
+        sorted_results = sort_word_results(results)  # Updated: no longer takes matching_text parameter
         
         # Fewer steps should come first
         self.assertEqual(sorted_results[0].entry.entry_id, 1)
@@ -83,7 +108,7 @@ class TestSorting(unittest.TestCase):
         result2 = WordResult(entry=entry2, match_len=5)
         
         results = [result2, result1]  # Lower priority first
-        sorted_results = sort_word_results(results, "test")
+        sorted_results = sort_word_results(results)  # Updated: no longer takes matching_text parameter
         
         # Higher priority should come first
         self.assertEqual(sorted_results[0].entry.entry_id, 1)
@@ -101,7 +126,7 @@ class TestSorting(unittest.TestCase):
         result2 = WordResult(entry=entry2, match_len=5, reason_chains=[[Reason.Past, Reason.Negative]])
         
         results = [result2, result1]
-        sorted_results = sort_word_results(results, "test")
+        sorted_results = sort_word_results(results)  # Updated: no longer takes matching_text parameter
         
         # Fewer steps should win over priority
         self.assertEqual(sorted_results[0].entry.entry_id, 1)

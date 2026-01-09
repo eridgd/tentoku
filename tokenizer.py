@@ -69,17 +69,39 @@ def tokenize(
         else:
             remaining_lengths = None
         
+        # Get multiple results to ensure we find the best match with deinflection_reasons
+        # Results are sorted by priority, deinflection steps, etc., so first result is best
+        # But we also want to ensure we get a match that covers as much text as possible
         search_result = word_search(
             remaining_text,
             dictionary,
-            max_results=1,
+            max_results=5,  # Get multiple results to find best match
             input_lengths=remaining_lengths
         )
         
         if search_result and search_result.data:
-            # Found a match
-            word_result = search_result.data[0]
-            match_len = search_result.match_len
+            # Results are already sorted by priority, deinflection steps, etc.
+            # But we want to prefer longer matches when they exist
+            # Find the result with the longest match_len (from search_result.match_len)
+            # that also has good priority (prefer first result if it matches longest)
+            best_result = None
+            longest_match_len = search_result.match_len
+            
+            # First, try to find a result with longest match_len that's also high priority
+            # (results are sorted, so first result with longest match is best)
+            for word_result in search_result.data:
+                if word_result.match_len == longest_match_len:
+                    best_result = word_result
+                    break
+            
+            # Fallback to first result (best priority) if no longest match found
+            # This handles cases where shorter high-priority matches are better
+            if best_result is None:
+                best_result = search_result.data[0]
+                longest_match_len = best_result.match_len
+            
+            word_result = best_result
+            match_len = longest_match_len
             
             # Calculate actual text positions
             # match_len is in terms of the normalized input_lengths array
