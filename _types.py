@@ -3,7 +3,7 @@ Type definitions for the Japanese tokenizer.
 """
 
 from dataclasses import dataclass
-from typing import Optional, List
+from typing import Optional, List, Tuple
 from enum import IntEnum
 
 
@@ -85,6 +85,13 @@ class KanjiReading:
     text: str
     priority: Optional[str] = None
     info: Optional[str] = None
+    match_range: Optional[Tuple[int, int]] = None  # [start, end] if this reading matched the input
+    match: bool = False  # True if this reading matched (for display purposes)
+    
+    def __post_init__(self):
+        """Ensure match_range is None if not set."""
+        if self.match_range is None:
+            self.match_range = None
 
 
 @dataclass
@@ -94,6 +101,13 @@ class KanaReading:
     no_kanji: bool = False
     priority: Optional[str] = None
     info: Optional[str] = None
+    match_range: Optional[Tuple[int, int]] = None  # [start, end] if this reading matched the input
+    match: bool = False  # True if this reading matched (for display purposes)
+    
+    def __post_init__(self):
+        """Ensure match_range is None if not set."""
+        if self.match_range is None:
+            self.match_range = None
 
 
 @dataclass

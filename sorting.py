@@ -22,25 +22,70 @@ PRIORITY_ASSIGNMENTS: Dict[str, int] = {
 }
 
 
+def normalize_priority(priority: str) -> str:
+    """
+    Normalize JMDict priority strings to short codes.
+    
+    JMDict uses full names like 'ichi1', 'news1', 'spec1', etc.
+    but the priority assignments use short codes like 'i1', 'n1', 's1'.
+    
+    Args:
+        priority: Priority string from JMDict (e.g., 'ichi1', 'news1')
+        
+    Returns:
+        Normalized priority code (e.g., 'i1', 'n1')
+    """
+    # Map full JMDict priority names to short codes
+    # Based on JMDict documentation and 10ten Reader's usage
+    priority_map = {
+        'ichi1': 'i1',
+        'ichi2': 'i2',
+        'news1': 'n1',
+        'news2': 'n2',
+        'spec1': 's1',
+        'spec2': 's2',
+        'gai1': 'g1',
+        'gai2': 'g2',
+    }
+    
+    # If it's already a short code, return as-is
+    if priority in PRIORITY_ASSIGNMENTS:
+        return priority
+    
+    # Try mapping from full name
+    if priority in priority_map:
+        return priority_map[priority]
+    
+    # For nf## (word frequency), return as-is
+    if priority.startswith('nf'):
+        return priority
+    
+    # Unknown priority, return as-is (will get score 0)
+    return priority
+
+
 def get_priority_score(priority: str) -> int:
     """
     Get priority score for a priority string.
     
     Args:
-        priority: Priority string (e.g., 'i1', 'n1', 'nf01')
+        priority: Priority string (e.g., 'i1', 'n1', 'nf01', or 'ichi1', 'news1')
         
     Returns:
         Priority score (0-50+)
     """
-    if priority in PRIORITY_ASSIGNMENTS:
-        return PRIORITY_ASSIGNMENTS[priority]
+    # Normalize to short code
+    normalized = normalize_priority(priority)
     
-    if priority.startswith('nf'):
+    if normalized in PRIORITY_ASSIGNMENTS:
+        return PRIORITY_ASSIGNMENTS[normalized]
+    
+    if normalized.startswith('nf'):
         # The wordfreq scores are groups of 500 words.
         # e.g. nf01 is the top 500 words, and nf48 is the 23,501 ~ 24,000
         # most popular words.
         try:
-            wordfreq = int(priority[2:])
+            wordfreq = int(normalized[2:])
             if 0 < wordfreq < 48:
                 return int(48 - wordfreq / 2)
         except ValueError:
@@ -81,30 +126,32 @@ def get_priority_sum(priorities: List[str]) -> int:
     return result
 
 
-def get_priority(entry: WordEntry, matching_text: str) -> int:
+def get_priority(entry: WordEntry) -> int:
     """
-    Get priority score for an entry based on matching text.
+    Get priority score for an entry based on matched readings.
+    
+    Only uses priority from readings that have matchRange (i.e., that matched the input).
+    This matches 10ten Reader's behavior.
     
     Args:
         entry: Dictionary entry
-        matching_text: The text that was matched
         
     Returns:
         Priority score
     """
     scores = [0]
     
-    # Scores from kanji readings
+    # Scores from kanji readings (only those that matched)
     for kanji in entry.kanji_readings:
-        if kanji.text == matching_text and kanji.priority:
+        if kanji.match_range and kanji.priority:
             # Priority can be comma-separated
             priorities = [p.strip() for p in kanji.priority.split(',')] if kanji.priority else []
             if priorities:
                 scores.append(get_priority_sum(priorities))
     
-    # Scores from kana readings
+    # Scores from kana readings (only those that matched)
     for kana in entry.kana_readings:
-        if kana.text == matching_text and kana.priority:
+        if kana.match_range and kana.priority:
             # Priority can be comma-separated
             priorities = [p.strip() for p in kana.priority.split(',')] if kana.priority else []
             if priorities:
@@ -114,29 +161,30 @@ def get_priority(entry: WordEntry, matching_text: str) -> int:
     return max(scores)
 
 
-def get_kana_headword_type(entry: WordEntry, matching_text: str) -> int:
+def get_kana_headword_type(entry: WordEntry) -> int:
     """
     Determine the headword match type.
     
     1 = match on a kanji, or kana which is not just the reading for a kanji
     2 = match on a kana reading for a kanji
     
+    Uses matchRange to find which kana matched, matching 10ten Reader's behavior.
+    
     Args:
         entry: Dictionary entry
-        matching_text: The text that was matched
         
     Returns:
         1 or 2
     """
-    # Check if we matched on a kana reading
+    # Check if we matched on a kana reading (using matchRange like 10ten Reader)
     matching_kana = None
     for kana in entry.kana_readings:
-        if kana.text == matching_text:
+        if kana.match_range:
             matching_kana = kana
             break
     
     if not matching_kana:
-        return 1  # Matched on kanji
+        return 1  # Matched on kanji (or no match)
     
     # Check if reading is marked as obscure
     is_reading_obscure = False
@@ -193,7 +241,7 @@ def get_kana_headword_type(entry: WordEntry, matching_text: str) -> int:
     return 2
 
 
-def sort_word_results(results: List[WordResult], matching_text: str) -> List[WordResult]:
+def sort_word_results(results: List[WordResult]) -> List[WordResult]:
     """
     Sort word results by deinflection steps, match type, and priority.
     
@@ -202,9 +250,11 @@ def sort_word_results(results: List[WordResult], matching_text: str) -> List[Wor
     2. Match type: kanji/kana primary headword (1) vs reading (2)
     3. Priority score (higher = better)
     
+    This matches 10ten Reader's sortWordResults function exactly.
+    Uses matchRange to determine which reading matched, not matching_text.
+    
     Args:
         results: List of word results to sort
-        matching_text: The text that was matched (for priority calculation)
         
     Returns:
         Sorted list of word results
@@ -218,11 +268,11 @@ def sort_word_results(results: List[WordResult], matching_text: str) -> List[Wor
         if result.reason_chains:
             reasons = max(len(chain) for chain in result.reason_chains)
         
-        # Match type
-        match_type = get_kana_headword_type(result.entry, matching_text)
+        # Match type (uses matchRange internally)
+        match_type = get_kana_headword_type(result.entry)
         
-        # Priority
-        priority = get_priority(result.entry, matching_text)
+        # Priority (uses matchRange internally)
+        priority = get_priority(result.entry)
         
         sort_meta[result.entry.entry_id] = {
             'reasons': reasons,

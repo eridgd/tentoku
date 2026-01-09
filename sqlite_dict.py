@@ -83,24 +83,33 @@ class SQLiteDictionary(Dictionary):
             self.conn.close()
             self.conn = None
     
-    def get_words(self, input_text: str, max_results: int) -> List[WordEntry]:
+    def get_words(self, input_text: str, max_results: int, matching_text: Optional[str] = None) -> List[WordEntry]:
         """
         Look up words in the dictionary by exact match.
         
         Args:
             input_text: The text to look up (normalized to hiragana for readings)
             max_results: Maximum number of results to return
+            matching_text: Optional text that was actually matched (for setting matchRange).
+                          If None, uses input_text. This is the original input before deinflection.
             
         Returns:
-            List of WordEntry objects matching the input
+            List of WordEntry objects matching the input, with matchRange set on matching readings
         """
         if not self.conn:
             self._connect()
         
         cursor = self.conn.cursor()
         
+        # Use matching_text if provided, otherwise use input_text
+        # matching_text is what we're matching against (usually the deinflected candidate.word)
+        # This matches 10ten Reader's behavior where matchingText is the input to getWords
+        text_for_match_range = matching_text if matching_text is not None else input_text
+        
         # Normalize input to hiragana for reading lookup
         normalized_input = kana_to_hiragana(input_text)
+        # Normalize matching text for matchRange calculation (like 10ten Reader's kanaToHiragana)
+        normalized_matching = kana_to_hiragana(text_for_match_range)
         
         # First, try to find entries by reading (most common case)
         cursor.execute("""
@@ -133,38 +142,71 @@ class SQLiteDictionary(Dictionary):
             entry_id = row['entry_id']
             ent_seq = row['ent_seq']
             
-            # Get kanji readings
+            # Get kanji readings first to check for kanji match
             cursor.execute("""
                 SELECT kanji_text, priority, info
                 FROM kanji
                 WHERE entry_id = ?
                 ORDER BY kanji_id
             """, (entry_id,))
-            kanji_readings = [
-                KanjiReading(
-                    text=row['kanji_text'],
-                    priority=row['priority'],
-                    info=row['info']
-                )
-                for row in cursor.fetchall()
-            ]
+            kanji_rows = cursor.fetchall()
             
-            # Get kana readings
+            # Determine if we matched on kanji or kana (like 10ten Reader)
+            # Check if any kanji matches the matching_text (normalized)
+            kanji_match_found = False
+            for kanji_row in kanji_rows:
+                if kana_to_hiragana(kanji_row['kanji_text']) == normalized_matching:
+                    kanji_match_found = True
+                    break
+            
+            # Get kana readings to check for kana match
             cursor.execute("""
                 SELECT reading_text, no_kanji, priority, info
                 FROM readings
                 WHERE entry_id = ?
                 ORDER BY reading_id
             """, (entry_id,))
-            kana_readings = [
-                KanaReading(
-                    text=row['reading_text'],
-                    no_kanji=bool(row['no_kanji']),
-                    priority=row['priority'],
-                    info=row['info']
-                )
-                for row in cursor.fetchall()
-            ]
+            kana_rows = cursor.fetchall()
+            
+            # Check if any kana matches (only if no kanji match, like 10ten Reader)
+            kana_match_found = False
+            if not kanji_match_found:
+                for kana_row in kana_rows:
+                    if kana_row['reading_text'] == normalized_matching:
+                        kana_match_found = True
+                        break
+            
+            # Build kanji readings with matchRange (like 10ten Reader)
+            kanji_readings = []
+            for kanji_row in kanji_rows:
+                kanji_text = kanji_row['kanji_text']
+                kanji_normalized = kana_to_hiragana(kanji_text)
+                # Check if this kanji matches the matching_text (normalized)
+                matches = kanji_normalized == normalized_matching
+                
+                kanji_readings.append(KanjiReading(
+                    text=kanji_text,
+                    priority=kanji_row['priority'],
+                    info=kanji_row['info'],
+                    match_range=(0, len(kanji_text)) if matches else None,
+                    match=(kanji_match_found and matches) or not kanji_match_found
+                ))
+            
+            # Build kana readings with matchRange (like 10ten Reader)
+            kana_readings = []
+            for kana_row in kana_rows:
+                kana_text = kana_row['reading_text']
+                # Check if this kana matches the matching_text (normalized)
+                matches = kana_text == normalized_matching
+                
+                kana_readings.append(KanaReading(
+                    text=kana_text,
+                    no_kanji=bool(kana_row['no_kanji']),
+                    priority=kana_row['priority'],
+                    info=kana_row['info'],
+                    match_range=(0, len(kana_text)) if matches else None,
+                    match=(kana_match_found and matches) or not kana_match_found
+                ))
             
             # Get senses with POS tags
             cursor.execute("""
