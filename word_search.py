@@ -138,25 +138,30 @@ def word_search(
             # Update longest match length
             longest_match = max(longest_match, current_input_length)
             
-            # Add results
+            # Add results (but don't break - continue to try shorter matches)
+            # This ensures we collect results from all match lengths before sorting
             if len(results) + len(word_results) >= max_results:
                 results.extend(word_results[:max_results - len(results)])
-                break
             else:
                 results.extend(word_results)
+            
+            # Mark that we found a match, but continue to try shorter matches
+            found_match = True
             
             # Continue refining this variant excluding all others
             current_input = variant
             include_variants = False
             break
         
-        if len(results) >= max_results:
+        # Continue to try shorter matches even if we found results
+        # We'll sort all results together at the end
+        # Only break if we have way more results than needed (to avoid excessive work)
+        if len(results) >= max_results * 3:
             break
         
-        if not found_match:
-            # Shorten input, but don't split a ようおん (e.g. きゃ)
-            length_to_shorten = 2 if ends_in_yoon(current_input) else 1
-            current_input = current_input[:len(current_input) - length_to_shorten]
+        # Shorten input to try shorter matches, but don't split a ようおん (e.g. きゃ)
+        length_to_shorten = 2 if ends_in_yoon(current_input) else 1
+        current_input = current_input[:len(current_input) - length_to_shorten]
     
     if not results:
         return None
