@@ -4,11 +4,9 @@ Test script to verify matchRange and sorting fixes match 10ten Reader behavior.
 """
 
 import sys
-import os
+from pathlib import Path
 # Add parent directory to path to use local tentoku as a package
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.insert(0, parent_dir)
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from tentoku import tokenize
 
