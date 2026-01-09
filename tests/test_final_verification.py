@@ -5,6 +5,7 @@ Final verification test to ensure tentoku matches 10ten Reader behavior.
 
 import sys
 import os
+# Add parent directory to path to use local tentoku as a package
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir)
