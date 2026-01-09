@@ -118,13 +118,15 @@ def word_search(
         
         found_match = False
         for variant in variations:
+            # Pass current_input (the shortened input we're trying) as matching_text
+            # This ensures matchRange is set correctly for the current search length
             word_results = lookup_candidates(
                 variant,
                 dictionary,
                 have,
                 max_results,
                 current_input_length,
-                normalized  # Pass original input for matchRange setting
+                current_input  # Pass current shortened input for matchRange setting
             )
             
             if not word_results:
@@ -138,12 +140,10 @@ def word_search(
             # Update longest match length
             longest_match = max(longest_match, current_input_length)
             
-            # Add results (but don't break - continue to try shorter matches)
+            # Add results (but don't limit yet - continue to try shorter matches)
             # This ensures we collect results from all match lengths before sorting
-            if len(results) + len(word_results) >= max_results:
-                results.extend(word_results[:max_results - len(results)])
-            else:
-                results.extend(word_results)
+            # We'll limit to max_results after sorting all results together
+            results.extend(word_results)
             
             # Mark that we found a match, but continue to try shorter matches
             found_match = True
@@ -153,10 +153,12 @@ def word_search(
             include_variants = False
             break
         
-        # Continue to try shorter matches even if we found results
-        # We'll sort all results together at the end
-        # Only break if we have way more results than needed (to avoid excessive work)
-        if len(results) >= max_results * 3:
+        # Don't break early - continue trying shorter matches
+        # We need to collect results from all match lengths, then sort them together
+        # This is different from 10ten Reader's interactive lookup behavior
+        # For tokenization, we want the best match by priority, not just the longest match
+        # Only break if we have way too many results (to avoid excessive work)
+        if len(results) >= max_results * 10:
             break
         
         # Shorten input to try shorter matches, but don't split a ようおん (e.g. きゃ)
@@ -170,6 +172,10 @@ def word_search(
     # sorted separately, but we want them sorted as a whole)
     # Note: sort_word_results now uses matchRange from entries, not matching_text
     results = sort_word_results(results)
+    
+    # Now limit to max_results AFTER sorting
+    # This ensures we get the best results by priority, not just the longest matches
+    results = results[:max_results]
     
     return WordSearchResult(
         data=results,
