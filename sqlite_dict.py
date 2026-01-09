@@ -106,31 +106,38 @@ class SQLiteDictionary(Dictionary):
         # This matches 10ten Reader's behavior where matchingText is the input to getWords
         text_for_match_range = matching_text if matching_text is not None else input_text
         
-        # Normalize input to hiragana for reading lookup
+        # Normalize input to hiragana for reading lookup (like 10ten Reader)
+        # 10ten Reader normalizes katakana to hiragana before searching when using flat-file DB
+        # The SQLite database stores readings in their original form (katakana for loanwords),
+        # so we need to search for both original and normalized forms
         normalized_input = kana_to_hiragana(input_text)
         # Normalize matching text for matchRange calculation (like 10ten Reader's kanaToHiragana)
         normalized_matching = kana_to_hiragana(text_for_match_range)
         
         # First, try to find entries by reading (most common case)
+        # Try both original input_text (for katakana like "ベッド") and normalized (for hiragana)
+        # This matches 10ten Reader's behavior: it normalizes input to hiragana, but database
+        # may store readings in original form (katakana), so we search both
         cursor.execute("""
             SELECT DISTINCT e.entry_id, e.ent_seq
             FROM entries e
             JOIN readings r ON e.entry_id = r.entry_id
-            WHERE r.reading_text = ?
+            WHERE r.reading_text = ? OR r.reading_text = ?
             LIMIT ?
-        """, (normalized_input, max_results))
+        """, (input_text, normalized_input, max_results))
         
         entry_rows = cursor.fetchall()
         
         # If no results from reading, try kanji match
+        # Also try both original and normalized for kanji (some kanji entries may be katakana)
         if not entry_rows:
             cursor.execute("""
                 SELECT DISTINCT e.entry_id, e.ent_seq
                 FROM entries e
                 JOIN kanji k ON e.entry_id = k.entry_id
-                WHERE k.kanji_text = ?
+                WHERE k.kanji_text = ? OR k.kanji_text = ?
                 LIMIT ?
-            """, (input_text, max_results))
+            """, (input_text, normalized_input, max_results))
             entry_rows = cursor.fetchall()
         
         if not entry_rows:
@@ -169,10 +176,14 @@ class SQLiteDictionary(Dictionary):
             kana_rows = cursor.fetchall()
             
             # Check if any kana matches (only if no kanji match, like 10ten Reader)
+            # 10ten Reader compares kanaToHiragana(entry_reading) === matchingText (which is already hiragana)
+            # So we normalize both sides to hiragana for comparison
             kana_match_found = False
             if not kanji_match_found:
                 for kana_row in kana_rows:
-                    if kana_row['reading_text'] == normalized_matching:
+                    kana_text = kana_row['reading_text']
+                    # Normalize entry reading to hiragana and compare with normalized_matching (already hiragana)
+                    if kana_to_hiragana(kana_text) == normalized_matching:
                         kana_match_found = True
                         break
             
@@ -193,11 +204,12 @@ class SQLiteDictionary(Dictionary):
                 ))
             
             # Build kana readings with matchRange (like 10ten Reader)
+            # 10ten Reader compares: kanaToHiragana(key) === matchingText (both normalized to hiragana)
             kana_readings = []
             for kana_row in kana_rows:
                 kana_text = kana_row['reading_text']
-                # Check if this kana matches the matching_text (normalized)
-                matches = kana_text == normalized_matching
+                # Normalize entry reading to hiragana and compare with normalized_matching (already hiragana)
+                matches = kana_to_hiragana(kana_text) == normalized_matching
                 
                 kana_readings.append(KanaReading(
                     text=kana_text,
