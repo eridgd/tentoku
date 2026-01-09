@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.1.8] - 2026-01-09
+
+### Fixed
+- Fixed matchRange tracking to correctly identify which kanji/kana readings matched the input text
+- Fixed priority calculation to only use priorities from readings that actually matched (matching 10ten Reader behavior)
+- Fixed katakana normalization to properly handle katakana loanwords (e.g., 'ベッド')
+- Fixed tokenization to continue trying shorter matches even after finding longer matches, ensuring best match selection
+- Fixed sorting to use matchRange instead of matching_text parameter
+
+### Changed
+- Improved tokenization match selection: now considers multiple candidates and prefers longest matches while maintaining priority
+- Updated sorting algorithm to match 10ten Reader's behavior more closely
+
+### Added
+- Comprehensive test coverage for match_range tracking (`tests/test_match_range.py`)
+- Test suite for katakana normalization (`tests/test_katakana_normalization.py`)
+- Additional tests for sorting and priority calculation
+
 ## [0.1.7] - 2026-01-07
 
 ### Added
