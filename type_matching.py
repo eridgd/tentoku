@@ -7,8 +7,15 @@ based on their part-of-speech tags.
 
 from ._types import WordEntry, WordType
 
+# Try to import Cython-optimized version, fall back to Python if not available
+try:
+    from .type_matching_cy import entry_matches_type as _entry_matches_type_cy
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
 
-def entry_matches_type(entry: WordEntry, word_type: int) -> bool:
+
+def _entry_matches_type_py(entry: WordEntry, word_type: int) -> bool:
     """
     Tests if a given entry matches the type of a generated deinflection.
     
@@ -65,6 +72,13 @@ def entry_matches_type(entry: WordEntry, word_type: int) -> bool:
     if word_type & WordType.NounVS:
         if has_matching_sense(lambda pos: pos == 'vs' or ('noun or participle' in pos.lower() and 'suru' in pos.lower())):
             return True
-    
+
     return False
+
+
+# Use Cython version if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    entry_matches_type = _entry_matches_type_cy
+else:
+    entry_matches_type = _entry_matches_type_py
 

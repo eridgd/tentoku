@@ -5,6 +5,13 @@ Yoon are combinations like きゃ, しゅ, ちょ where a consonant + small や/
 form a single mora.
 """
 
+# Try to import Cython-optimized version, fall back to Python if not available
+try:
+    from .yoon_cy import ends_in_yoon as _ends_in_yoon_cy
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
+
 # きしちにひみりぎじびぴ
 YOON_START = [
     0x304d, 0x3057, 0x3061, 0x306b, 0x3072, 0x307f, 0x308a, 0x304e, 0x3058,
@@ -15,7 +22,7 @@ YOON_START = [
 SMALL_Y = [0x3083, 0x3085, 0x3087]
 
 
-def ends_in_yoon(input_text: str) -> bool:
+def _ends_in_yoon_py(input_text: str) -> bool:
     """
     Check if the input ends in a yoon (拗音).
     
@@ -46,4 +53,11 @@ def ends_in_yoon(input_text: str) -> bool:
         last_cp in SMALL_Y and
         second_last_cp in YOON_START
     )
+
+
+# Use Cython version if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    ends_in_yoon = _ends_in_yoon_cy
+else:
+    ends_in_yoon = _ends_in_yoon_py
 

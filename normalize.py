@@ -7,6 +7,19 @@ Handles Unicode normalization, full-width number conversion, and ZWNJ stripping.
 import unicodedata
 from typing import Tuple, List
 
+# Try to import Cython-optimized versions, fall back to Python if not available
+try:
+    from .normalize_cy import (
+        normalize_input as _normalize_input_cy,
+        kana_to_hiragana as _kana_to_hiragana_cy,
+        half_to_full_width_num as _half_to_full_width_num_cy,
+        to_normalized as _to_normalized_cy,
+        do_strip_zwnj as _do_strip_zwnj_cy,
+    )
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
+
 
 ZWNJ = 0x200C  # Zero-width non-joiner
 
@@ -116,13 +129,13 @@ def do_strip_zwnj(normalized: str, input_lengths: List[int]) -> Tuple[str, List[
     return ''.join(result), new_lengths
 
 
-def normalize_input(
+def _normalize_input_py(
     input_text: str,
     make_numbers_full_width: bool = True,
     strip_zwnj: bool = True
 ) -> Tuple[str, List[int]]:
     """
-    Normalize input text for dictionary lookup.
+    Normalize input text for dictionary lookup (Python fallback implementation).
     
     This method returns an array of input lengths which use 16-bit character
     offsets as opposed to Unicode codepoints. This allows us to use .length,
@@ -161,9 +174,17 @@ def normalize_input(
     return normalized, input_lengths
 
 
-def kana_to_hiragana(text: str) -> str:
+# Use Cython version if available, otherwise use Python fallback
+# Fixed: Replace function directly instead of wrapping to preserve Cython function type
+if _CYTHON_AVAILABLE:
+    normalize_input = _normalize_input_cy
+else:
+    normalize_input = _normalize_input_py
+
+
+def _kana_to_hiragana_py(text: str) -> str:
     """
-    Convert katakana to hiragana.
+    Convert katakana to hiragana (Python fallback implementation).
     
     Args:
         text: Input text (may contain katakana)
@@ -190,4 +211,12 @@ def kana_to_hiragana(text: str) -> str:
         else:
             result.append(char)
     return ''.join(result)
+
+
+# Use Cython version if available, otherwise use Python fallback
+# Fixed: Replace function directly instead of wrapping to preserve Cython function type
+if _CYTHON_AVAILABLE:
+    kana_to_hiragana = _kana_to_hiragana_cy
+else:
+    kana_to_hiragana = _kana_to_hiragana_py
 

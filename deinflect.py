@@ -10,8 +10,15 @@ from ._types import CandidateWord, WordType, Reason
 from .deinflect_rules import get_deinflect_rule_groups
 from .normalize import kana_to_hiragana
 
+# Try to import Cython-optimized version, fall back to Python if not available
+try:
+    from .deinflect_cy import deinflect as _deinflect_cy
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
 
-def deinflect(word: str) -> List[CandidateWord]:
+
+def _deinflect_py(word: str) -> List[CandidateWord]:
     """
     Returns an array of possible de-inflected versions of a word.
     
@@ -189,6 +196,13 @@ def deinflect(word: str) -> List[CandidateWord]:
     
     # Post-process to filter out any lingering intermediate forms
     result = [r for r in result if r.type & WordType.All]
-    
+
     return result
+
+
+# Use Cython version if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    deinflect = _deinflect_cy
+else:
+    deinflect = _deinflect_py
 

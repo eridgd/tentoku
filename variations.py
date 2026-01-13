@@ -6,12 +6,22 @@ Handles choon (ー) expansion and kyuujitai (旧字体) to shinjitai (新字体)
 
 from typing import List
 
+# Try to import Cython-optimized versions, fall back to Python if not available
+try:
+    from .variations_cy import (
+        expand_choon as _expand_choon_cy,
+        kyuujitai_to_shinjitai as _kyuujitai_to_shinjitai_cy,
+    )
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
+
 # Choon (ー) can represent various vowel extensions
 # When we see ー, we need to try different possibilities
 CHOON = 'ー'
 
 
-def expand_choon(text: str) -> List[str]:
+def _expand_choon_py(text: str) -> List[str]:
     """
     Expand choon (ー) to its various possibilities.
     
@@ -106,7 +116,7 @@ KYUUJITAI_TO_SHINJITAI = {
 }
 
 
-def kyuujitai_to_shinjitai(text: str) -> str:
+def _kyuujitai_to_shinjitai_py(text: str) -> str:
     """
     Convert kyuujitai (旧字体, old kanji forms) to shinjitai (新字体, new kanji forms).
     
@@ -127,4 +137,13 @@ def kyuujitai_to_shinjitai(text: str) -> str:
             result.append(char)
     
     return ''.join(result) if changed else text
+
+
+# Use Cython versions if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    expand_choon = _expand_choon_cy
+    kyuujitai_to_shinjitai = _kyuujitai_to_shinjitai_cy
+else:
+    expand_choon = _expand_choon_py
+    kyuujitai_to_shinjitai = _kyuujitai_to_shinjitai_py
 

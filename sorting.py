@@ -8,6 +8,13 @@ results based on deinflection steps, match type, and priority.
 from typing import List, Dict, Optional
 from ._types import WordEntry, WordResult, Reason
 
+# Try to import Cython-optimized version, fall back to Python if not available
+try:
+    from .sorting_cy import sort_word_results as _sort_word_results_cy
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
+
 
 # Priority score assignments
 PRIORITY_ASSIGNMENTS: Dict[str, int] = {
@@ -244,7 +251,7 @@ def get_kana_headword_type(entry: WordEntry) -> int:
     return 2
 
 
-def sort_word_results(results: List[WordResult]) -> List[WordResult]:
+def _sort_word_results_py(results: List[WordResult]) -> List[WordResult]:
     """
     Sort word results by deinflection steps, match type, and priority.
     
@@ -293,4 +300,11 @@ def sort_word_results(results: List[WordResult]) -> List[WordResult]:
         )
     
     return sorted(results, key=sort_key)
+
+
+# Use Cython version if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    sort_word_results = _sort_word_results_cy
+else:
+    sort_word_results = _sort_word_results_py
 

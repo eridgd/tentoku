@@ -15,6 +15,18 @@ from .variations import expand_choon, kyuujitai_to_shinjitai
 from .yoon import ends_in_yoon
 from .normalize import normalize_input
 
+# Try to import Cython-optimized versions, fall back to Python if not available
+try:
+    from .word_search_cy import (
+        word_search as _word_search_cy,
+        lookup_candidates as _lookup_candidates_cy,
+        is_only_digits as _is_only_digits_cy,
+        WordSearchResult as _WordSearchResult_cy,
+    )
+    _CYTHON_AVAILABLE = True
+except ImportError:
+    _CYTHON_AVAILABLE = False
+
 
 class WordSearchResult:
     """Result from word search."""
@@ -25,7 +37,7 @@ class WordSearchResult:
         self.more = more
 
 
-def is_only_digits(text: str) -> bool:
+def _is_only_digits_py(text: str) -> bool:
     """
     Check if text contains only digits, commas, and periods.
     
@@ -58,7 +70,7 @@ def is_only_digits(text: str) -> bool:
     return True
 
 
-def word_search(
+def _word_search_py(
     input_text: str,
     dictionary: Dictionary,
     max_results: int = 7,
@@ -99,7 +111,7 @@ def word_search(
     
     while current_input:
         # If we only have digits left, don't bother looking them up
-        if is_only_digits(current_input):
+        if _is_only_digits_py(current_input):
             break
         
         variations = [current_input]
@@ -120,7 +132,7 @@ def word_search(
         for variant in variations:
             # Pass current_input (the shortened input we're trying) as matching_text
             # This ensures matchRange is set correctly for the current search length
-            word_results = lookup_candidates(
+            word_results = _lookup_candidates_py(
                 variant,
                 dictionary,
                 have,
@@ -184,7 +196,7 @@ def word_search(
     )
 
 
-def lookup_candidates(
+def _lookup_candidates_py(
     input_text: str,
     dictionary: Dictionary,
     existing_entries: Set[int],
@@ -249,4 +261,18 @@ def lookup_candidates(
         candidate_results = sort_word_results(candidate_results)
     
     return candidate_results[:max_results]
+
+
+# Use Cython versions if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    is_only_digits = _is_only_digits_cy
+    word_search = _word_search_cy
+    lookup_candidates = _lookup_candidates_cy
+    # Use Cython's WordSearchResult if available
+    WordSearchResult = _WordSearchResult_cy
+else:
+    is_only_digits = _is_only_digits_py
+    word_search = _word_search_py
+    lookup_candidates = _lookup_candidates_py
+    # Python WordSearchResult is already defined above
 

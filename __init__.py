@@ -33,5 +33,45 @@ __all__ = [
     "get_default_database_path",
     "find_database_path",
     "build_database",
+    "is_using_cython",
+    "verify_cython_status",
 ]
+
+
+def is_using_cython():
+    """
+    Check if Cython optimizations are active.
+
+    Returns:
+        bool: True if all modules are using Cython, False otherwise
+    """
+    try:
+        from .verify_cython import get_cython_status
+        return get_cython_status()
+    except ImportError:
+        return False
+
+
+def verify_cython_status(verbose=True):
+    """
+    Verify and optionally print the status of Cython optimizations.
+
+    Args:
+        verbose: If True, print detailed report. If False, just return status.
+
+    Returns:
+        bool: True if all modules are using Cython, False otherwise
+    """
+    try:
+        from .verify_cython import print_verification_report, verify_all_modules
+        if verbose:
+            print_verification_report()
+        else:
+            _, all_cython = verify_all_modules()
+            return all_cython
+        return is_using_cython()
+    except ImportError:
+        if verbose:
+            print("Warning: verify_cython module not available")
+        return False
 
