@@ -1,0 +1,147 @@
+======================================================================
+CYTHON PERFORMANCE BENCHMARKS
+======================================================================
+
+Warmup...
+
+======================================================================
+NORMALIZE BENCHMARK
+======================================================================
+
+Short text (6 chars):
+  normalize_input:
+    Python:  0.005 ms
+    Cython:  0.001 ms
+    Speedup: 4.83x
+  kana_to_hiragana:
+    Python:  0.001 ms
+    Cython:  0.000 ms
+    Speedup: 2.76x
+
+Medium text (24 chars):
+  normalize_input:
+    Python:  0.017 ms
+    Cython:  0.003 ms
+    Speedup: 5.99x
+  kana_to_hiragana:
+    Python:  0.003 ms
+    Cython:  0.001 ms
+    Speedup: 3.53x
+
+Long text (325 chars):
+  normalize_input:
+    Python:  0.233 ms
+    Cython:  0.032 ms
+    Speedup: 7.27x
+  kana_to_hiragana:
+    Python:  0.040 ms
+    Cython:  0.010 ms
+    Speedup: 4.05x
+
+Very Long text (720 chars):
+  normalize_input:
+    Python:  0.522 ms
+    Cython:  0.069 ms
+    Speedup: 7.58x
+  kana_to_hiragana:
+    Python:  0.090 ms
+    Cython:  0.025 ms
+    Speedup: 3.54x
+
+======================================================================
+DEINFLECT BENCHMARK
+======================================================================
+
+Simple: '食べました'
+  Python:  0.156 ms
+  Cython:  0.124 ms
+  Speedup: 1.27x
+
+Medium: '読んでいます'
+  Python:  0.142 ms
+  Cython:  0.115 ms
+  Speedup: 1.23x
+
+Complex: '食べさせられませんでした'
+  Python:  0.327 ms
+  Cython:  0.234 ms
+  Speedup: 1.40x
+
+======================================================================
+VARIATIONS BENCHMARK
+======================================================================
+
+Short (4 chars):
+  expand_choon:
+    Python:  0.002 ms
+    Cython:  0.001 ms
+    Speedup: 1.67x
+
+Medium (8 chars):
+  expand_choon:
+    Python:  0.002 ms
+    Cython:  0.001 ms
+    Speedup: 1.93x
+
+Long (85 chars):
+  expand_choon:
+    Python:  0.005 ms
+    Cython:  0.001 ms
+    Speedup: 5.97x
+
+======================================================================
+YOON BENCHMARK
+======================================================================
+
+With yoon:
+  Python:  0.392 μs
+  Cython:  0.067 μs
+  Speedup: 5.83x
+
+Without yoon:
+  Python:  0.431 μs
+  Cython:  0.068 μs
+  Speedup: 6.30x
+
+Long with yoon:
+  Python:  0.555 μs
+  Cython:  0.069 μs
+  Speedup: 8.05x
+
+======================================================================
+LONG TEXT PROCESSING BENCHMARK
+======================================================================
+
+Text length: 39 chars (1x base)
+  normalize_input:
+    Python:  0.028 ms
+    Cython:  0.004 ms
+    Speedup: 6.34x
+
+Text length: 195 chars (5x base)
+  normalize_input:
+    Python:  0.133 ms
+    Cython:  0.020 ms
+    Speedup: 6.74x
+
+Text length: 390 chars (10x base)
+  normalize_input:
+    Python:  0.281 ms
+    Cython:  0.038 ms
+    Speedup: 7.36x
+
+Text length: 780 chars (20x base)
+  normalize_input:
+    Python:  0.569 ms
+    Cython:  0.075 ms
+    Speedup: 7.60x
+
+Text length: 1950 chars (50x base)
+  normalize_input:
+    Python:  1.434 ms
+    Cython:  0.185 ms
+    Speedup: 7.75x
+
+======================================================================
+ALL BENCHMARKS COMPLETED!
+======================================================================
