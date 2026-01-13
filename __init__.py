@@ -11,7 +11,16 @@ __version__ = "0.1.8"
 # Import using relative imports to avoid conflicts with stdlib tokenize
 from . import tokenizer as _tokenize_module
 from .dictionary import Dictionary
-from .sqlite_dict import SQLiteDictionary
+from .sqlite_dict import SQLiteDictionary as _SQLiteDictionary_Python
+
+# Try to import fast Cython version, fall back to Python version
+try:
+    from .sqlite_dict_cy import FastSQLiteDictionary as SQLiteDictionary
+    _FAST_SQLITE_AVAILABLE = True
+except ImportError:
+    SQLiteDictionary = _SQLiteDictionary_Python
+    _FAST_SQLITE_AVAILABLE = False
+
 from ._types import (
     WordEntry, WordResult, Token, WordType, Reason
 )
@@ -47,7 +56,7 @@ def is_using_cython():
     """
     try:
         from .verify_cython import get_cython_status
-        return get_cython_status()
+        return get_cython_status() and _FAST_SQLITE_AVAILABLE
     except ImportError:
         return False
 

@@ -82,9 +82,26 @@ def print_verification_report():
             status = "✓ Cython" if is_cython else "✗ Python"
             print(f"  {func_name:<30} {status}")
 
+    # Check for fast SQLite dictionary
+    print("\nsqlite_dict:")
+    try:
+        # Try both import styles (installed package vs local)
+        try:
+            from tentoku.sqlite_dict_cy import FastSQLiteDictionary
+        except ImportError:
+            from sqlite_dict_cy import FastSQLiteDictionary
+        print(f"  {'FastSQLiteDictionary':<30} ✓ Cython (with caching)")
+        fast_sqlite = True
+    except ImportError:
+        print(f"  {'SQLiteDictionary':<30} ✗ Python")
+        fast_sqlite = False
+
     print("\n" + "=" * 70)
-    if all_cython:
-        print("✓ ALL MODULES USING CYTHON")
+    if all_cython and fast_sqlite:
+        print("✓ ALL MODULES USING CYTHON (INCLUDING FAST SQLITE)")
+    elif all_cython:
+        print("✓ ALL CORE MODULES USING CYTHON")
+        print("  (FastSQLiteDictionary not available, using standard SQLiteDictionary)")
     else:
         print("✗ SOME MODULES NOT USING CYTHON")
         print("\nThis is expected if:")
@@ -92,7 +109,7 @@ def print_verification_report():
         print("  2. Package was installed without build step")
     print("=" * 70)
 
-    return all_cython
+    return all_cython and fast_sqlite
 
 
 def get_cython_status():
