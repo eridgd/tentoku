@@ -139,8 +139,9 @@ def word_search(
             include_variants = False
             break
 
-        # Break if too many results
-        if len(results) >= max_results * 10:
+        # Don't break early - continue trying shorter matches to find all possible results
+        # Only break if we have collected way too many results
+        if len(results) >= max_results * 5:
             break
 
         # Shorten input
@@ -200,7 +201,8 @@ def lookup_candidates(
 
     for candidate_index, candidate in enumerate(candidates):
         # Look up in dictionary
-        lookup_max = max(max_results * 3, 20)
+        # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
+        lookup_max = max_results * 2
         matching_text = original_search_text if original_search_text is not None else input_text
         word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=matching_text)
 

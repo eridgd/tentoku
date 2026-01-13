@@ -159,18 +159,15 @@ def _word_search_py(
             
             # Mark that we found a match, but continue to try shorter matches
             found_match = True
-            
+
             # Continue refining this variant excluding all others
             current_input = variant
             include_variants = False
             break
-        
-        # Don't break early - continue trying shorter matches
-        # We need to collect results from all match lengths, then sort them together
-        # This is different from 10ten Reader's interactive lookup behavior
-        # For tokenization, we want the best match by priority, not just the longest match
-        # Only break if we have way too many results (to avoid excessive work)
-        if len(results) >= max_results * 10:
+
+        # Don't break early - continue trying shorter matches to find all possible results
+        # Only break if we have collected way too many results
+        if len(results) >= max_results * 5:
             break
         
         # Shorten input to try shorter matches, but don't split a ようおん (e.g. きゃ)
@@ -225,8 +222,8 @@ def _lookup_candidates_py(
     for candidate_index, candidate in enumerate(candidates):
         # Look up this candidate in the dictionary
         # Get more results than max_results so we can sort and pick the best ones
-        # Use a multiplier to ensure we get enough results for proper sorting
-        lookup_max = max(max_results * 3, 20)  # Get at least 20 or 3x max_results
+        # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
+        lookup_max = max_results * 2
         # Pass original_search_text (or input_text if not provided) as matching_text
         # matchRange should be based on the original input text, not the deinflected form
         # This matches 10ten Reader's behavior where matchingText is the original input

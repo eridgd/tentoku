@@ -11,15 +11,11 @@ __version__ = "0.1.8"
 # Import using relative imports to avoid conflicts with stdlib tokenize
 from . import tokenizer as _tokenize_module
 from .dictionary import Dictionary
-from .sqlite_dict import SQLiteDictionary as _SQLiteDictionary_Python
+from .sqlite_dict import SQLiteDictionary
 
-# Try to import fast Cython version, fall back to Python version
-try:
-    from .sqlite_dict_cy import FastSQLiteDictionary as SQLiteDictionary
-    _FAST_SQLITE_AVAILABLE = True
-except ImportError:
-    SQLiteDictionary = _SQLiteDictionary_Python
-    _FAST_SQLITE_AVAILABLE = False
+# Note: FastSQLiteDictionary was removed as it was actually slower than the standard version
+# The caching overhead and query complexity made it perform worse in practice
+_FAST_SQLITE_AVAILABLE = False
 
 from ._types import (
     WordEntry, WordResult, Token, WordType, Reason

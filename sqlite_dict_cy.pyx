@@ -137,18 +137,27 @@ class FastSQLiteDictionary(Dictionary):
         cdef str normalized_input = kana_to_hiragana(input_text)
         cdef str normalized_matching = kana_to_hiragana(text_for_match_range)
 
-        # Optimized query - fetch entry_ids first
+        # Try reading first (most common case) - much faster than LEFT JOIN
         cursor.execute("""
             SELECT DISTINCT e.entry_id, e.ent_seq
             FROM entries e
-            LEFT JOIN readings r ON e.entry_id = r.entry_id
-            LEFT JOIN kanji k ON e.entry_id = k.entry_id
+            JOIN readings r ON e.entry_id = r.entry_id
             WHERE r.reading_text = ? OR r.reading_text = ?
-               OR k.kanji_text = ? OR k.kanji_text = ?
             LIMIT ?
-        """, (input_text, normalized_input, input_text, normalized_input, max_results))
+        """, (input_text, normalized_input, max_results))
 
         cdef list entry_rows = cursor.fetchall()
+
+        # If no results from reading, try kanji match
+        if not entry_rows:
+            cursor.execute("""
+                SELECT DISTINCT e.entry_id, e.ent_seq
+                FROM entries e
+                JOIN kanji k ON e.entry_id = k.entry_id
+                WHERE k.kanji_text = ? OR k.kanji_text = ?
+                LIMIT ?
+            """, (input_text, normalized_input, max_results))
+            entry_rows = cursor.fetchall()
 
         if not entry_rows:
             return []

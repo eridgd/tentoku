@@ -2484,7 +2484,7 @@ typedef struct {
   __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_values;
   PyObject *__pyx_tuple[1];
   PyObject *__pyx_codeobj_tab[7];
-  PyObject *__pyx_string_tab[173];
+  PyObject *__pyx_string_tab[174];
   PyObject *__pyx_number_tab[2];
 /* #### Code section: module_state_contents ### */
 /* CommonTypesMetaclass.module_state_decls */
@@ -2542,163 +2542,164 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #define __pyx_kp_u_PRAGMA_temp_store_MEMORY __pyx_string_tab[13]
 #define __pyx_kp_u_Please_check_your_internet_conn __pyx_string_tab[14]
 #define __pyx_kp_u_SELECT_DISTINCT_e_entry_id_e_en __pyx_string_tab[15]
-#define __pyx_kp_u_SELECT_dial_FROM_sense_dial_WHER __pyx_string_tab[16]
-#define __pyx_kp_u_SELECT_field_FROM_sense_field_WH __pyx_string_tab[17]
-#define __pyx_kp_u_SELECT_gloss_text_lang_g_type_F __pyx_string_tab[18]
-#define __pyx_kp_u_SELECT_kanji_text_priority_info __pyx_string_tab[19]
-#define __pyx_kp_u_SELECT_misc_FROM_sense_misc_WHER __pyx_string_tab[20]
-#define __pyx_kp_u_SELECT_pos_FROM_sense_pos_WHERE __pyx_string_tab[21]
-#define __pyx_kp_u_SELECT_reading_text_no_kanji_pr __pyx_string_tab[22]
-#define __pyx_kp_u_SELECT_s_sense_id_s_sense_index __pyx_string_tab[23]
-#define __pyx_kp_u_Set_auto_build_True_to_automati __pyx_string_tab[24]
-#define __pyx_kp_u_This_is_a_one_time_operation_The __pyx_string_tab[25]
-#define __pyx_kp_u__2 __pyx_string_tab[26]
-#define __pyx_kp_u__3 __pyx_string_tab[27]
-#define __pyx_kp_u_add_note __pyx_string_tab[28]
-#define __pyx_kp_u_sqlite_dict_cy_pyx __pyx_string_tab[29]
-#define __pyx_n_u_Dictionary __pyx_string_tab[30]
-#define __pyx_n_u_FastSQLiteDictionary __pyx_string_tab[31]
-#define __pyx_n_u_FastSQLiteDictionary___enter __pyx_string_tab[32]
-#define __pyx_n_u_FastSQLiteDictionary___exit __pyx_string_tab[33]
-#define __pyx_n_u_FastSQLiteDictionary___init __pyx_string_tab[34]
-#define __pyx_n_u_FastSQLiteDictionary__build_sens __pyx_string_tab[35]
-#define __pyx_n_u_FastSQLiteDictionary__connect __pyx_string_tab[36]
-#define __pyx_n_u_FastSQLiteDictionary_close __pyx_string_tab[37]
-#define __pyx_n_u_FastSQLiteDictionary_get_words __pyx_string_tab[38]
-#define __pyx_n_u_Gloss __pyx_string_tab[39]
-#define __pyx_n_u_KanaReading __pyx_string_tab[40]
-#define __pyx_n_u_KanjiReading __pyx_string_tab[41]
-#define __pyx_n_u_List __pyx_string_tab[42]
-#define __pyx_n_u_Optional __pyx_string_tab[43]
-#define __pyx_n_u_Path __pyx_string_tab[44]
-#define __pyx_n_u_Pyx_PyDict_NextRef __pyx_string_tab[45]
-#define __pyx_n_u_Row __pyx_string_tab[46]
-#define __pyx_n_u_Sense __pyx_string_tab[47]
-#define __pyx_n_u_WordEntry __pyx_string_tab[48]
-#define __pyx_n_u_asyncio_coroutines __pyx_string_tab[49]
-#define __pyx_n_u_auto_build __pyx_string_tab[50]
-#define __pyx_n_u_auto_download __pyx_string_tab[51]
-#define __pyx_n_u_bool __pyx_string_tab[52]
-#define __pyx_n_u_build_database __pyx_string_tab[53]
-#define __pyx_n_u_build_senses __pyx_string_tab[54]
-#define __pyx_n_u_cache __pyx_string_tab[55]
-#define __pyx_n_u_cache_key __pyx_string_tab[56]
-#define __pyx_n_u_cache_size __pyx_string_tab[57]
-#define __pyx_n_u_clear __pyx_string_tab[58]
-#define __pyx_n_u_cline_in_traceback __pyx_string_tab[59]
-#define __pyx_n_u_close __pyx_string_tab[60]
-#define __pyx_n_u_conn __pyx_string_tab[61]
-#define __pyx_n_u_connect __pyx_string_tab[62]
-#define __pyx_n_u_connect_2 __pyx_string_tab[63]
-#define __pyx_n_u_cursor __pyx_string_tab[64]
-#define __pyx_n_u_db_path __pyx_string_tab[65]
-#define __pyx_n_u_db_path_obj __pyx_string_tab[66]
-#define __pyx_n_u_dial __pyx_string_tab[67]
-#define __pyx_n_u_doc __pyx_string_tab[68]
-#define __pyx_n_u_download_dir __pyx_string_tab[69]
-#define __pyx_n_u_eng __pyx_string_tab[70]
-#define __pyx_n_u_ent_seq __pyx_string_tab[71]
-#define __pyx_n_u_enter __pyx_string_tab[72]
-#define __pyx_n_u_entries __pyx_string_tab[73]
-#define __pyx_n_u_entry_id __pyx_string_tab[74]
-#define __pyx_n_u_entry_rows __pyx_string_tab[75]
-#define __pyx_n_u_exc_tb __pyx_string_tab[76]
-#define __pyx_n_u_exc_type __pyx_string_tab[77]
-#define __pyx_n_u_exc_val __pyx_string_tab[78]
-#define __pyx_n_u_execute __pyx_string_tab[79]
-#define __pyx_n_u_exists __pyx_string_tab[80]
-#define __pyx_n_u_exit __pyx_string_tab[81]
-#define __pyx_n_u_fetchall __pyx_string_tab[82]
-#define __pyx_n_u_field __pyx_string_tab[83]
-#define __pyx_n_u_fields __pyx_string_tab[84]
-#define __pyx_n_u_find_database_path __pyx_string_tab[85]
-#define __pyx_n_u_func __pyx_string_tab[86]
-#define __pyx_n_u_g_type __pyx_string_tab[87]
-#define __pyx_n_u_get_default_database_path __pyx_string_tab[88]
-#define __pyx_n_u_get_words __pyx_string_tab[89]
-#define __pyx_n_u_gettempdir __pyx_string_tab[90]
-#define __pyx_n_u_gloss_text __pyx_string_tab[91]
-#define __pyx_n_u_glosses __pyx_string_tab[92]
-#define __pyx_n_u_index __pyx_string_tab[93]
-#define __pyx_n_u_info __pyx_string_tab[94]
-#define __pyx_n_u_init __pyx_string_tab[95]
-#define __pyx_n_u_input_text __pyx_string_tab[96]
-#define __pyx_n_u_int __pyx_string_tab[97]
-#define __pyx_n_u_is_coroutine __pyx_string_tab[98]
-#define __pyx_n_u_items __pyx_string_tab[99]
-#define __pyx_n_u_kana_match_found __pyx_string_tab[100]
-#define __pyx_n_u_kana_readings __pyx_string_tab[101]
-#define __pyx_n_u_kana_row __pyx_string_tab[102]
-#define __pyx_n_u_kana_rows __pyx_string_tab[103]
-#define __pyx_n_u_kana_text __pyx_string_tab[104]
-#define __pyx_n_u_kana_to_hiragana __pyx_string_tab[105]
-#define __pyx_n_u_kanji_match_found __pyx_string_tab[106]
-#define __pyx_n_u_kanji_normalized __pyx_string_tab[107]
-#define __pyx_n_u_kanji_readings __pyx_string_tab[108]
-#define __pyx_n_u_kanji_row __pyx_string_tab[109]
-#define __pyx_n_u_kanji_rows __pyx_string_tab[110]
-#define __pyx_n_u_kanji_text __pyx_string_tab[111]
-#define __pyx_n_u_key __pyx_string_tab[112]
-#define __pyx_n_u_keys __pyx_string_tab[113]
-#define __pyx_n_u_keys_to_remove __pyx_string_tab[114]
-#define __pyx_n_u_lang __pyx_string_tab[115]
-#define __pyx_n_u_main __pyx_string_tab[116]
-#define __pyx_n_u_match __pyx_string_tab[117]
-#define __pyx_n_u_match_range __pyx_string_tab[118]
-#define __pyx_n_u_matches __pyx_string_tab[119]
-#define __pyx_n_u_matching_text __pyx_string_tab[120]
-#define __pyx_n_u_max_results __pyx_string_tab[121]
-#define __pyx_n_u_metaclass __pyx_string_tab[122]
-#define __pyx_n_u_misc __pyx_string_tab[123]
-#define __pyx_n_u_module __pyx_string_tab[124]
-#define __pyx_n_u_mro_entries __pyx_string_tab[125]
-#define __pyx_n_u_name __pyx_string_tab[126]
-#define __pyx_n_u_no_kanji __pyx_string_tab[127]
-#define __pyx_n_u_normalized_input __pyx_string_tab[128]
-#define __pyx_n_u_normalized_matching __pyx_string_tab[129]
-#define __pyx_n_u_pathlib __pyx_string_tab[130]
-#define __pyx_n_u_pop __pyx_string_tab[131]
-#define __pyx_n_u_pos __pyx_string_tab[132]
-#define __pyx_n_u_pos_tags __pyx_string_tab[133]
-#define __pyx_n_u_prepare __pyx_string_tab[134]
-#define __pyx_n_u_print __pyx_string_tab[135]
-#define __pyx_n_u_priority __pyx_string_tab[136]
-#define __pyx_n_u_qualname __pyx_string_tab[137]
-#define __pyx_n_u_reading_text __pyx_string_tab[138]
-#define __pyx_n_u_row __pyx_string_tab[139]
-#define __pyx_n_u_row_factory __pyx_string_tab[140]
-#define __pyx_n_u_self __pyx_string_tab[141]
-#define __pyx_n_u_sense_id __pyx_string_tab[142]
-#define __pyx_n_u_sense_index __pyx_string_tab[143]
-#define __pyx_n_u_sense_row __pyx_string_tab[144]
-#define __pyx_n_u_sense_rows __pyx_string_tab[145]
-#define __pyx_n_u_senses __pyx_string_tab[146]
-#define __pyx_n_u_set_name __pyx_string_tab[147]
-#define __pyx_n_u_setdefault __pyx_string_tab[148]
-#define __pyx_n_u_show_progress __pyx_string_tab[149]
-#define __pyx_n_u_sqlite3 __pyx_string_tab[150]
-#define __pyx_n_u_success __pyx_string_tab[151]
-#define __pyx_n_u_tempfile __pyx_string_tab[152]
-#define __pyx_n_u_tentoku __pyx_string_tab[153]
-#define __pyx_n_u_tentoku__types __pyx_string_tab[154]
-#define __pyx_n_u_tentoku_build_database __pyx_string_tab[155]
-#define __pyx_n_u_tentoku_database_path __pyx_string_tab[156]
-#define __pyx_n_u_tentoku_dictionary __pyx_string_tab[157]
-#define __pyx_n_u_tentoku_normalize_cy __pyx_string_tab[158]
-#define __pyx_n_u_tentoku_sqlite_dict_cy __pyx_string_tab[159]
-#define __pyx_n_u_test __pyx_string_tab[160]
-#define __pyx_n_u_text __pyx_string_tab[161]
-#define __pyx_n_u_text_for_match_range __pyx_string_tab[162]
-#define __pyx_n_u_typing __pyx_string_tab[163]
-#define __pyx_n_u_values __pyx_string_tab[164]
-#define __pyx_n_u_xml_path __pyx_string_tab[165]
-#define __pyx_kp_b_iso88591_9_4t1_4xwa_q_Qa_z_D_t7_1_T_gQ_9 __pyx_string_tab[166]
-#define __pyx_kp_b_iso88591_A_1_M_y_1_q_1G4wfIQ_1_a_Q_AQ_AXS __pyx_string_tab[167]
-#define __pyx_kp_b_iso88591_A_4q_V1_4xwa_vQ __pyx_string_tab[168]
-#define __pyx_kp_b_iso88591_A_F __pyx_string_tab[169]
-#define __pyx_kp_b_iso88591_A_HG81Cq_A_E_q_U_haq_haq_haq_haq __pyx_string_tab[170]
-#define __pyx_kp_b_iso88591_A_q __pyx_string_tab[171]
-#define __pyx_kp_b_iso88591_y_6l_83a_31_aq_Kq_4t87_T_4q_4q __pyx_string_tab[172]
+#define __pyx_kp_u_SELECT_DISTINCT_e_entry_id_e_en_2 __pyx_string_tab[16]
+#define __pyx_kp_u_SELECT_dial_FROM_sense_dial_WHER __pyx_string_tab[17]
+#define __pyx_kp_u_SELECT_field_FROM_sense_field_WH __pyx_string_tab[18]
+#define __pyx_kp_u_SELECT_gloss_text_lang_g_type_F __pyx_string_tab[19]
+#define __pyx_kp_u_SELECT_kanji_text_priority_info __pyx_string_tab[20]
+#define __pyx_kp_u_SELECT_misc_FROM_sense_misc_WHER __pyx_string_tab[21]
+#define __pyx_kp_u_SELECT_pos_FROM_sense_pos_WHERE __pyx_string_tab[22]
+#define __pyx_kp_u_SELECT_reading_text_no_kanji_pr __pyx_string_tab[23]
+#define __pyx_kp_u_SELECT_s_sense_id_s_sense_index __pyx_string_tab[24]
+#define __pyx_kp_u_Set_auto_build_True_to_automati __pyx_string_tab[25]
+#define __pyx_kp_u_This_is_a_one_time_operation_The __pyx_string_tab[26]
+#define __pyx_kp_u__2 __pyx_string_tab[27]
+#define __pyx_kp_u__3 __pyx_string_tab[28]
+#define __pyx_kp_u_add_note __pyx_string_tab[29]
+#define __pyx_kp_u_sqlite_dict_cy_pyx __pyx_string_tab[30]
+#define __pyx_n_u_Dictionary __pyx_string_tab[31]
+#define __pyx_n_u_FastSQLiteDictionary __pyx_string_tab[32]
+#define __pyx_n_u_FastSQLiteDictionary___enter __pyx_string_tab[33]
+#define __pyx_n_u_FastSQLiteDictionary___exit __pyx_string_tab[34]
+#define __pyx_n_u_FastSQLiteDictionary___init __pyx_string_tab[35]
+#define __pyx_n_u_FastSQLiteDictionary__build_sens __pyx_string_tab[36]
+#define __pyx_n_u_FastSQLiteDictionary__connect __pyx_string_tab[37]
+#define __pyx_n_u_FastSQLiteDictionary_close __pyx_string_tab[38]
+#define __pyx_n_u_FastSQLiteDictionary_get_words __pyx_string_tab[39]
+#define __pyx_n_u_Gloss __pyx_string_tab[40]
+#define __pyx_n_u_KanaReading __pyx_string_tab[41]
+#define __pyx_n_u_KanjiReading __pyx_string_tab[42]
+#define __pyx_n_u_List __pyx_string_tab[43]
+#define __pyx_n_u_Optional __pyx_string_tab[44]
+#define __pyx_n_u_Path __pyx_string_tab[45]
+#define __pyx_n_u_Pyx_PyDict_NextRef __pyx_string_tab[46]
+#define __pyx_n_u_Row __pyx_string_tab[47]
+#define __pyx_n_u_Sense __pyx_string_tab[48]
+#define __pyx_n_u_WordEntry __pyx_string_tab[49]
+#define __pyx_n_u_asyncio_coroutines __pyx_string_tab[50]
+#define __pyx_n_u_auto_build __pyx_string_tab[51]
+#define __pyx_n_u_auto_download __pyx_string_tab[52]
+#define __pyx_n_u_bool __pyx_string_tab[53]
+#define __pyx_n_u_build_database __pyx_string_tab[54]
+#define __pyx_n_u_build_senses __pyx_string_tab[55]
+#define __pyx_n_u_cache __pyx_string_tab[56]
+#define __pyx_n_u_cache_key __pyx_string_tab[57]
+#define __pyx_n_u_cache_size __pyx_string_tab[58]
+#define __pyx_n_u_clear __pyx_string_tab[59]
+#define __pyx_n_u_cline_in_traceback __pyx_string_tab[60]
+#define __pyx_n_u_close __pyx_string_tab[61]
+#define __pyx_n_u_conn __pyx_string_tab[62]
+#define __pyx_n_u_connect __pyx_string_tab[63]
+#define __pyx_n_u_connect_2 __pyx_string_tab[64]
+#define __pyx_n_u_cursor __pyx_string_tab[65]
+#define __pyx_n_u_db_path __pyx_string_tab[66]
+#define __pyx_n_u_db_path_obj __pyx_string_tab[67]
+#define __pyx_n_u_dial __pyx_string_tab[68]
+#define __pyx_n_u_doc __pyx_string_tab[69]
+#define __pyx_n_u_download_dir __pyx_string_tab[70]
+#define __pyx_n_u_eng __pyx_string_tab[71]
+#define __pyx_n_u_ent_seq __pyx_string_tab[72]
+#define __pyx_n_u_enter __pyx_string_tab[73]
+#define __pyx_n_u_entries __pyx_string_tab[74]
+#define __pyx_n_u_entry_id __pyx_string_tab[75]
+#define __pyx_n_u_entry_rows __pyx_string_tab[76]
+#define __pyx_n_u_exc_tb __pyx_string_tab[77]
+#define __pyx_n_u_exc_type __pyx_string_tab[78]
+#define __pyx_n_u_exc_val __pyx_string_tab[79]
+#define __pyx_n_u_execute __pyx_string_tab[80]
+#define __pyx_n_u_exists __pyx_string_tab[81]
+#define __pyx_n_u_exit __pyx_string_tab[82]
+#define __pyx_n_u_fetchall __pyx_string_tab[83]
+#define __pyx_n_u_field __pyx_string_tab[84]
+#define __pyx_n_u_fields __pyx_string_tab[85]
+#define __pyx_n_u_find_database_path __pyx_string_tab[86]
+#define __pyx_n_u_func __pyx_string_tab[87]
+#define __pyx_n_u_g_type __pyx_string_tab[88]
+#define __pyx_n_u_get_default_database_path __pyx_string_tab[89]
+#define __pyx_n_u_get_words __pyx_string_tab[90]
+#define __pyx_n_u_gettempdir __pyx_string_tab[91]
+#define __pyx_n_u_gloss_text __pyx_string_tab[92]
+#define __pyx_n_u_glosses __pyx_string_tab[93]
+#define __pyx_n_u_index __pyx_string_tab[94]
+#define __pyx_n_u_info __pyx_string_tab[95]
+#define __pyx_n_u_init __pyx_string_tab[96]
+#define __pyx_n_u_input_text __pyx_string_tab[97]
+#define __pyx_n_u_int __pyx_string_tab[98]
+#define __pyx_n_u_is_coroutine __pyx_string_tab[99]
+#define __pyx_n_u_items __pyx_string_tab[100]
+#define __pyx_n_u_kana_match_found __pyx_string_tab[101]
+#define __pyx_n_u_kana_readings __pyx_string_tab[102]
+#define __pyx_n_u_kana_row __pyx_string_tab[103]
+#define __pyx_n_u_kana_rows __pyx_string_tab[104]
+#define __pyx_n_u_kana_text __pyx_string_tab[105]
+#define __pyx_n_u_kana_to_hiragana __pyx_string_tab[106]
+#define __pyx_n_u_kanji_match_found __pyx_string_tab[107]
+#define __pyx_n_u_kanji_normalized __pyx_string_tab[108]
+#define __pyx_n_u_kanji_readings __pyx_string_tab[109]
+#define __pyx_n_u_kanji_row __pyx_string_tab[110]
+#define __pyx_n_u_kanji_rows __pyx_string_tab[111]
+#define __pyx_n_u_kanji_text __pyx_string_tab[112]
+#define __pyx_n_u_key __pyx_string_tab[113]
+#define __pyx_n_u_keys __pyx_string_tab[114]
+#define __pyx_n_u_keys_to_remove __pyx_string_tab[115]
+#define __pyx_n_u_lang __pyx_string_tab[116]
+#define __pyx_n_u_main __pyx_string_tab[117]
+#define __pyx_n_u_match __pyx_string_tab[118]
+#define __pyx_n_u_match_range __pyx_string_tab[119]
+#define __pyx_n_u_matches __pyx_string_tab[120]
+#define __pyx_n_u_matching_text __pyx_string_tab[121]
+#define __pyx_n_u_max_results __pyx_string_tab[122]
+#define __pyx_n_u_metaclass __pyx_string_tab[123]
+#define __pyx_n_u_misc __pyx_string_tab[124]
+#define __pyx_n_u_module __pyx_string_tab[125]
+#define __pyx_n_u_mro_entries __pyx_string_tab[126]
+#define __pyx_n_u_name __pyx_string_tab[127]
+#define __pyx_n_u_no_kanji __pyx_string_tab[128]
+#define __pyx_n_u_normalized_input __pyx_string_tab[129]
+#define __pyx_n_u_normalized_matching __pyx_string_tab[130]
+#define __pyx_n_u_pathlib __pyx_string_tab[131]
+#define __pyx_n_u_pop __pyx_string_tab[132]
+#define __pyx_n_u_pos __pyx_string_tab[133]
+#define __pyx_n_u_pos_tags __pyx_string_tab[134]
+#define __pyx_n_u_prepare __pyx_string_tab[135]
+#define __pyx_n_u_print __pyx_string_tab[136]
+#define __pyx_n_u_priority __pyx_string_tab[137]
+#define __pyx_n_u_qualname __pyx_string_tab[138]
+#define __pyx_n_u_reading_text __pyx_string_tab[139]
+#define __pyx_n_u_row __pyx_string_tab[140]
+#define __pyx_n_u_row_factory __pyx_string_tab[141]
+#define __pyx_n_u_self __pyx_string_tab[142]
+#define __pyx_n_u_sense_id __pyx_string_tab[143]
+#define __pyx_n_u_sense_index __pyx_string_tab[144]
+#define __pyx_n_u_sense_row __pyx_string_tab[145]
+#define __pyx_n_u_sense_rows __pyx_string_tab[146]
+#define __pyx_n_u_senses __pyx_string_tab[147]
+#define __pyx_n_u_set_name __pyx_string_tab[148]
+#define __pyx_n_u_setdefault __pyx_string_tab[149]
+#define __pyx_n_u_show_progress __pyx_string_tab[150]
+#define __pyx_n_u_sqlite3 __pyx_string_tab[151]
+#define __pyx_n_u_success __pyx_string_tab[152]
+#define __pyx_n_u_tempfile __pyx_string_tab[153]
+#define __pyx_n_u_tentoku __pyx_string_tab[154]
+#define __pyx_n_u_tentoku__types __pyx_string_tab[155]
+#define __pyx_n_u_tentoku_build_database __pyx_string_tab[156]
+#define __pyx_n_u_tentoku_database_path __pyx_string_tab[157]
+#define __pyx_n_u_tentoku_dictionary __pyx_string_tab[158]
+#define __pyx_n_u_tentoku_normalize_cy __pyx_string_tab[159]
+#define __pyx_n_u_tentoku_sqlite_dict_cy __pyx_string_tab[160]
+#define __pyx_n_u_test __pyx_string_tab[161]
+#define __pyx_n_u_text __pyx_string_tab[162]
+#define __pyx_n_u_text_for_match_range __pyx_string_tab[163]
+#define __pyx_n_u_typing __pyx_string_tab[164]
+#define __pyx_n_u_values __pyx_string_tab[165]
+#define __pyx_n_u_xml_path __pyx_string_tab[166]
+#define __pyx_kp_b_iso88591_9_4t1_4xwa_q_Qa_z_D_t7_1_T_gQ_9 __pyx_string_tab[167]
+#define __pyx_kp_b_iso88591_A_1_M_y_1_q_1G4wfIQ_1_a_Q_AQ_AXS __pyx_string_tab[168]
+#define __pyx_kp_b_iso88591_A_4q_V1_4xwa_vQ __pyx_string_tab[169]
+#define __pyx_kp_b_iso88591_A_F __pyx_string_tab[170]
+#define __pyx_kp_b_iso88591_A_HG81Cq_A_E_q_U_haq_haq_haq_haq __pyx_string_tab[171]
+#define __pyx_kp_b_iso88591_A_q __pyx_string_tab[172]
+#define __pyx_kp_b_iso88591_y_6l_83a_31_aq_Kq_4t87_T_4q_4q __pyx_string_tab[173]
 #define __pyx_int_0 __pyx_number_tab[0]
 #define __pyx_int_1000 __pyx_number_tab[1]
 /* #### Code section: module_state_clear ### */
@@ -2717,7 +2718,7 @@ static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
   #endif
   for (int i=0; i<1; ++i) { Py_CLEAR(clear_module_state->__pyx_tuple[i]); }
   for (int i=0; i<7; ++i) { Py_CLEAR(clear_module_state->__pyx_codeobj_tab[i]); }
-  for (int i=0; i<173; ++i) { Py_CLEAR(clear_module_state->__pyx_string_tab[i]); }
+  for (int i=0; i<174; ++i) { Py_CLEAR(clear_module_state->__pyx_string_tab[i]); }
   for (int i=0; i<2; ++i) { Py_CLEAR(clear_module_state->__pyx_number_tab[i]); }
 /* #### Code section: module_state_clear_contents ### */
 /* CommonTypesMetaclass.module_state_clear */
@@ -2743,7 +2744,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_empty_unicode);
   for (int i=0; i<1; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_tuple[i]); }
   for (int i=0; i<7; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_codeobj_tab[i]); }
-  for (int i=0; i<173; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_string_tab[i]); }
+  for (int i=0; i<174; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_string_tab[i]); }
   for (int i=0; i<2; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_number_tab[i]); }
 /* #### Code section: module_state_traverse_contents ### */
 /* CommonTypesMetaclass.module_state_traverse */
@@ -4425,7 +4426,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *         cdef str normalized_input = kana_to_hiragana(input_text)
  *         cdef str normalized_matching = kana_to_hiragana(text_for_match_range)             # <<<<<<<<<<<<<<
  * 
- *         # Optimized query - fetch entry_ids first
+ *         # Try reading first (most common case) - much faster than LEFT JOIN
 */
   __pyx_t_8 = NULL;
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
@@ -4456,7 +4457,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 
   /* "tentoku/sqlite_dict_cy.pyx":141
  * 
- *         # Optimized query - fetch entry_ids first
+ *         # Try reading first (most common case) - much faster than LEFT JOIN
  *         cursor.execute("""             # <<<<<<<<<<<<<<
  *             SELECT DISTINCT e.entry_id, e.ent_seq
  *             FROM entries e
@@ -4464,31 +4465,25 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
   __pyx_t_4 = __pyx_v_cursor;
   __Pyx_INCREF(__pyx_t_4);
 
-  /* "tentoku/sqlite_dict_cy.pyx":149
- *                OR k.kanji_text = ? OR k.kanji_text = ?
+  /* "tentoku/sqlite_dict_cy.pyx":147
+ *             WHERE r.reading_text = ? OR r.reading_text = ?
  *             LIMIT ?
- *         """, (input_text, normalized_input, input_text, normalized_input, max_results))             # <<<<<<<<<<<<<<
+ *         """, (input_text, normalized_input, max_results))             # <<<<<<<<<<<<<<
  * 
  *         cdef list entry_rows = cursor.fetchall()
 */
-  __pyx_t_8 = __Pyx_PyLong_From_int(__pyx_v_max_results); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyLong_From_int(__pyx_v_max_results); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_1 = PyTuple_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_input_text);
   __Pyx_GIVEREF(__pyx_v_input_text);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_input_text) != (0)) __PYX_ERR(0, 149, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_input_text) != (0)) __PYX_ERR(0, 147, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_normalized_input);
   __Pyx_GIVEREF(__pyx_v_normalized_input);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_normalized_input) != (0)) __PYX_ERR(0, 149, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_v_input_text);
-  __Pyx_GIVEREF(__pyx_v_input_text);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_v_input_text) != (0)) __PYX_ERR(0, 149, __pyx_L1_error);
-  __Pyx_INCREF(__pyx_v_normalized_input);
-  __Pyx_GIVEREF(__pyx_v_normalized_input);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_v_normalized_input) != (0)) __PYX_ERR(0, 149, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_normalized_input) != (0)) __PYX_ERR(0, 147, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_8);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_t_8) != (0)) __PYX_ERR(0, 149, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_8) != (0)) __PYX_ERR(0, 147, __pyx_L1_error);
   __pyx_t_8 = 0;
   __pyx_t_5 = 0;
   {
@@ -4501,12 +4496,12 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":151
- *         """, (input_text, normalized_input, input_text, normalized_input, max_results))
+  /* "tentoku/sqlite_dict_cy.pyx":149
+ *         """, (input_text, normalized_input, max_results))
  * 
  *         cdef list entry_rows = cursor.fetchall()             # <<<<<<<<<<<<<<
  * 
- *         if not entry_rows:
+ *         # If no results from reading, try kanji match
 */
   __pyx_t_1 = __pyx_v_cursor;
   __Pyx_INCREF(__pyx_t_1);
@@ -4515,32 +4510,121 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
     __pyx_t_6 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 151, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
   }
-  if (!(likely(PyList_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_6))) __PYX_ERR(0, 151, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_6))) __PYX_ERR(0, 149, __pyx_L1_error)
   __pyx_v_entry_rows = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":153
- *         cdef list entry_rows = cursor.fetchall()
+  /* "tentoku/sqlite_dict_cy.pyx":152
  * 
+ *         # If no results from reading, try kanji match
  *         if not entry_rows:             # <<<<<<<<<<<<<<
- *             return []
- * 
+ *             cursor.execute("""
+ *                 SELECT DISTINCT e.entry_id, e.ent_seq
 */
   if (__pyx_v_entry_rows == Py_None) __pyx_t_3 = 0;
   else
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_entry_rows);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 153, __pyx_L1_error)
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 152, __pyx_L1_error)
     __pyx_t_3 = (__pyx_temp != 0);
   }
 
   __pyx_t_2 = (!__pyx_t_3);
   if (__pyx_t_2) {
 
-    /* "tentoku/sqlite_dict_cy.pyx":154
+    /* "tentoku/sqlite_dict_cy.pyx":153
+ *         # If no results from reading, try kanji match
+ *         if not entry_rows:
+ *             cursor.execute("""             # <<<<<<<<<<<<<<
+ *                 SELECT DISTINCT e.entry_id, e.ent_seq
+ *                 FROM entries e
+*/
+    __pyx_t_1 = __pyx_v_cursor;
+    __Pyx_INCREF(__pyx_t_1);
+
+    /* "tentoku/sqlite_dict_cy.pyx":159
+ *                 WHERE k.kanji_text = ? OR k.kanji_text = ?
+ *                 LIMIT ?
+ *             """, (input_text, normalized_input, max_results))             # <<<<<<<<<<<<<<
+ *             entry_rows = cursor.fetchall()
+ * 
+*/
+    __pyx_t_4 = __Pyx_PyLong_From_int(__pyx_v_max_results); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_8 = PyTuple_New(3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_INCREF(__pyx_v_input_text);
+    __Pyx_GIVEREF(__pyx_v_input_text);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_v_input_text) != (0)) __PYX_ERR(0, 159, __pyx_L1_error);
+    __Pyx_INCREF(__pyx_v_normalized_input);
+    __Pyx_GIVEREF(__pyx_v_normalized_input);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_v_normalized_input) != (0)) __PYX_ERR(0, 159, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_4);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 2, __pyx_t_4) != (0)) __PYX_ERR(0, 159, __pyx_L1_error);
+    __pyx_t_4 = 0;
+    __pyx_t_5 = 0;
+    {
+      PyObject *__pyx_callargs[3] = {__pyx_t_1, __pyx_mstate_global->__pyx_kp_u_SELECT_DISTINCT_e_entry_id_e_en_2, __pyx_t_8};
+      __pyx_t_6 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 153, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+    }
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+    /* "tentoku/sqlite_dict_cy.pyx":160
+ *                 LIMIT ?
+ *             """, (input_text, normalized_input, max_results))
+ *             entry_rows = cursor.fetchall()             # <<<<<<<<<<<<<<
+ * 
+ *         if not entry_rows:
+*/
+    __pyx_t_8 = __pyx_v_cursor;
+    __Pyx_INCREF(__pyx_t_8);
+    __pyx_t_5 = 0;
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_8, NULL};
+      __pyx_t_6 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 160, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+    }
+    if (!(likely(PyList_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_6))) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_DECREF_SET(__pyx_v_entry_rows, ((PyObject*)__pyx_t_6));
+    __pyx_t_6 = 0;
+
+    /* "tentoku/sqlite_dict_cy.pyx":152
+ * 
+ *         # If no results from reading, try kanji match
+ *         if not entry_rows:             # <<<<<<<<<<<<<<
+ *             cursor.execute("""
+ *                 SELECT DISTINCT e.entry_id, e.ent_seq
+*/
+  }
+
+  /* "tentoku/sqlite_dict_cy.pyx":162
+ *             entry_rows = cursor.fetchall()
+ * 
+ *         if not entry_rows:             # <<<<<<<<<<<<<<
+ *             return []
+ * 
+*/
+  if (__pyx_v_entry_rows == Py_None) __pyx_t_2 = 0;
+  else
+  {
+    Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_entry_rows);
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_2 = (__pyx_temp != 0);
+  }
+
+  __pyx_t_3 = (!__pyx_t_2);
+  if (__pyx_t_3) {
+
+    /* "tentoku/sqlite_dict_cy.pyx":163
  * 
  *         if not entry_rows:
  *             return []             # <<<<<<<<<<<<<<
@@ -4548,14 +4632,14 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *         # Build entries list
 */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 163, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_r = __pyx_t_6;
     __pyx_t_6 = 0;
     goto __pyx_L0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":153
- *         cdef list entry_rows = cursor.fetchall()
+    /* "tentoku/sqlite_dict_cy.pyx":162
+ *             entry_rows = cursor.fetchall()
  * 
  *         if not entry_rows:             # <<<<<<<<<<<<<<
  *             return []
@@ -4563,19 +4647,19 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
   }
 
-  /* "tentoku/sqlite_dict_cy.pyx":157
+  /* "tentoku/sqlite_dict_cy.pyx":166
  * 
  *         # Build entries list
  *         cdef list entries = []             # <<<<<<<<<<<<<<
  *         cdef object row, entry_id, ent_seq
  *         cdef list kanji_rows, kana_rows, sense_rows
 */
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_v_entries = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":166
+  /* "tentoku/sqlite_dict_cy.pyx":175
  *         cdef bint matches
  * 
  *         for row in entry_rows:             # <<<<<<<<<<<<<<
@@ -4584,7 +4668,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
   if (unlikely(__pyx_v_entry_rows == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 166, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
   __pyx_t_6 = __pyx_v_entry_rows; __Pyx_INCREF(__pyx_t_6);
   __pyx_t_9 = 0;
@@ -4592,96 +4676,96 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_6);
       #if !CYTHON_ASSUME_SAFE_SIZE
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
       #endif
       if (__pyx_t_9 >= __pyx_temp) break;
     }
-    __pyx_t_1 = __Pyx_PyList_GetItemRefFast(__pyx_t_6, __pyx_t_9, __Pyx_ReferenceSharing_OwnStrongReference);
+    __pyx_t_8 = __Pyx_PyList_GetItemRefFast(__pyx_t_6, __pyx_t_9, __Pyx_ReferenceSharing_OwnStrongReference);
     ++__pyx_t_9;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_1);
-    __pyx_t_1 = 0;
+    if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 175, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_8);
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":167
+    /* "tentoku/sqlite_dict_cy.pyx":176
  * 
  *         for row in entry_rows:
  *             entry_id = row['entry_id']             # <<<<<<<<<<<<<<
  *             ent_seq = row['ent_seq']
  * 
 */
-    __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_mstate_global->__pyx_n_u_entry_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_XDECREF_SET(__pyx_v_entry_id, __pyx_t_1);
-    __pyx_t_1 = 0;
+    __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_mstate_global->__pyx_n_u_entry_id); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_XDECREF_SET(__pyx_v_entry_id, __pyx_t_8);
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":168
+    /* "tentoku/sqlite_dict_cy.pyx":177
  *         for row in entry_rows:
  *             entry_id = row['entry_id']
  *             ent_seq = row['ent_seq']             # <<<<<<<<<<<<<<
  * 
  *             # Get kanji readings
 */
-    __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_mstate_global->__pyx_n_u_ent_seq); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_XDECREF_SET(__pyx_v_ent_seq, __pyx_t_1);
-    __pyx_t_1 = 0;
+    __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_row, __pyx_mstate_global->__pyx_n_u_ent_seq); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_XDECREF_SET(__pyx_v_ent_seq, __pyx_t_8);
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":171
+    /* "tentoku/sqlite_dict_cy.pyx":180
  * 
  *             # Get kanji readings
  *             cursor.execute("""             # <<<<<<<<<<<<<<
  *                 SELECT kanji_text, priority, info
  *                 FROM kanji
 */
-    __pyx_t_4 = __pyx_v_cursor;
-    __Pyx_INCREF(__pyx_t_4);
+    __pyx_t_1 = __pyx_v_cursor;
+    __Pyx_INCREF(__pyx_t_1);
 
-    /* "tentoku/sqlite_dict_cy.pyx":176
+    /* "tentoku/sqlite_dict_cy.pyx":185
  *                 WHERE entry_id = ?
  *                 ORDER BY kanji_id
  *             """, (entry_id,))             # <<<<<<<<<<<<<<
  *             kanji_rows = cursor.fetchall()
  * 
 */
-    __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 176, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 185, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_v_entry_id);
     __Pyx_GIVEREF(__pyx_v_entry_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_v_entry_id) != (0)) __PYX_ERR(0, 176, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_entry_id) != (0)) __PYX_ERR(0, 185, __pyx_L1_error);
     __pyx_t_5 = 0;
     {
-      PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_SELECT_kanji_text_priority_info, __pyx_t_8};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      PyObject *__pyx_callargs[3] = {__pyx_t_1, __pyx_mstate_global->__pyx_kp_u_SELECT_kanji_text_priority_info, __pyx_t_4};
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 180, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":177
+    /* "tentoku/sqlite_dict_cy.pyx":186
  *                 ORDER BY kanji_id
  *             """, (entry_id,))
  *             kanji_rows = cursor.fetchall()             # <<<<<<<<<<<<<<
  * 
  *             # Determine if we matched on kanji or kana
 */
-    __pyx_t_8 = __pyx_v_cursor;
-    __Pyx_INCREF(__pyx_t_8);
+    __pyx_t_4 = __pyx_v_cursor;
+    __Pyx_INCREF(__pyx_t_4);
     __pyx_t_5 = 0;
     {
-      PyObject *__pyx_callargs[2] = {__pyx_t_8, NULL};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 186, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 177, __pyx_L1_error)
-    __Pyx_XDECREF_SET(__pyx_v_kanji_rows, ((PyObject*)__pyx_t_1));
-    __pyx_t_1 = 0;
+    if (!(likely(PyList_CheckExact(__pyx_t_8))||((__pyx_t_8) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_8))) __PYX_ERR(0, 186, __pyx_L1_error)
+    __Pyx_XDECREF_SET(__pyx_v_kanji_rows, ((PyObject*)__pyx_t_8));
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":180
+    /* "tentoku/sqlite_dict_cy.pyx":189
  * 
  *             # Determine if we matched on kanji or kana
  *             kanji_match_found = False             # <<<<<<<<<<<<<<
@@ -4690,7 +4774,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     __pyx_v_kanji_match_found = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":181
+    /* "tentoku/sqlite_dict_cy.pyx":190
  *             # Determine if we matched on kanji or kana
  *             kanji_match_found = False
  *             for kanji_row in kanji_rows:             # <<<<<<<<<<<<<<
@@ -4699,63 +4783,63 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     if (unlikely(__pyx_v_kanji_rows == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 181, __pyx_L1_error)
+      __PYX_ERR(0, 190, __pyx_L1_error)
     }
-    __pyx_t_1 = __pyx_v_kanji_rows; __Pyx_INCREF(__pyx_t_1);
+    __pyx_t_8 = __pyx_v_kanji_rows; __Pyx_INCREF(__pyx_t_8);
     __pyx_t_10 = 0;
     for (;;) {
       {
-        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_8);
         #if !CYTHON_ASSUME_SAFE_SIZE
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 181, __pyx_L1_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 190, __pyx_L1_error)
         #endif
         if (__pyx_t_10 >= __pyx_temp) break;
       }
-      __pyx_t_8 = __Pyx_PyList_GetItemRefFast(__pyx_t_1, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
+      __pyx_t_4 = __Pyx_PyList_GetItemRefFast(__pyx_t_8, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
       ++__pyx_t_10;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 181, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_XDECREF_SET(__pyx_v_kanji_row, __pyx_t_8);
-      __pyx_t_8 = 0;
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_XDECREF_SET(__pyx_v_kanji_row, __pyx_t_4);
+      __pyx_t_4 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":182
+      /* "tentoku/sqlite_dict_cy.pyx":191
  *             kanji_match_found = False
  *             for kanji_row in kanji_rows:
  *                 if kana_to_hiragana(kanji_row['kanji_text']) == normalized_matching:             # <<<<<<<<<<<<<<
  *                     kanji_match_found = True
  *                     break
 */
-      __pyx_t_4 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 182, __pyx_L1_error)
+      __pyx_t_1 = NULL;
+      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_12 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_kanji_text); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 182, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_kanji_text); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
       if (unlikely(PyMethod_Check(__pyx_t_11))) {
-        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_11);
-        assert(__pyx_t_4);
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_11);
+        assert(__pyx_t_1);
         PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_11);
-        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx__function);
         __Pyx_DECREF_SET(__pyx_t_11, __pyx__function);
         __pyx_t_5 = 0;
       }
       #endif
       {
-        PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_12};
-        __pyx_t_8 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_11, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_t_12};
+        __pyx_t_4 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_11, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 182, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_8);
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
       }
-      __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_t_8, __pyx_v_normalized_matching, Py_EQ)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (__pyx_t_2) {
+      __pyx_t_3 = (__Pyx_PyUnicode_Equals(__pyx_t_4, __pyx_v_normalized_matching, Py_EQ)); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (__pyx_t_3) {
 
-        /* "tentoku/sqlite_dict_cy.pyx":183
+        /* "tentoku/sqlite_dict_cy.pyx":192
  *             for kanji_row in kanji_rows:
  *                 if kana_to_hiragana(kanji_row['kanji_text']) == normalized_matching:
  *                     kanji_match_found = True             # <<<<<<<<<<<<<<
@@ -4764,16 +4848,16 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
         __pyx_v_kanji_match_found = 1;
 
-        /* "tentoku/sqlite_dict_cy.pyx":184
+        /* "tentoku/sqlite_dict_cy.pyx":193
  *                 if kana_to_hiragana(kanji_row['kanji_text']) == normalized_matching:
  *                     kanji_match_found = True
  *                     break             # <<<<<<<<<<<<<<
  * 
  *             # Get kana readings
 */
-        goto __pyx_L10_break;
+        goto __pyx_L11_break;
 
-        /* "tentoku/sqlite_dict_cy.pyx":182
+        /* "tentoku/sqlite_dict_cy.pyx":191
  *             kanji_match_found = False
  *             for kanji_row in kanji_rows:
  *                 if kana_to_hiragana(kanji_row['kanji_text']) == normalized_matching:             # <<<<<<<<<<<<<<
@@ -4782,7 +4866,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
       }
 
-      /* "tentoku/sqlite_dict_cy.pyx":181
+      /* "tentoku/sqlite_dict_cy.pyx":190
  *             # Determine if we matched on kanji or kana
  *             kanji_match_found = False
  *             for kanji_row in kanji_rows:             # <<<<<<<<<<<<<<
@@ -4790,47 +4874,47 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                     kanji_match_found = True
 */
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    goto __pyx_L12_for_end;
-    __pyx_L10_break:;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    goto __pyx_L12_for_end;
-    __pyx_L12_for_end:;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    goto __pyx_L13_for_end;
+    __pyx_L11_break:;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    goto __pyx_L13_for_end;
+    __pyx_L13_for_end:;
 
-    /* "tentoku/sqlite_dict_cy.pyx":187
+    /* "tentoku/sqlite_dict_cy.pyx":196
  * 
  *             # Get kana readings
  *             cursor.execute("""             # <<<<<<<<<<<<<<
  *                 SELECT reading_text, no_kanji, priority, info
  *                 FROM readings
 */
-    __pyx_t_8 = __pyx_v_cursor;
-    __Pyx_INCREF(__pyx_t_8);
+    __pyx_t_4 = __pyx_v_cursor;
+    __Pyx_INCREF(__pyx_t_4);
 
-    /* "tentoku/sqlite_dict_cy.pyx":192
+    /* "tentoku/sqlite_dict_cy.pyx":201
  *                 WHERE entry_id = ?
  *                 ORDER BY reading_id
  *             """, (entry_id,))             # <<<<<<<<<<<<<<
  *             kana_rows = cursor.fetchall()
  * 
 */
-    __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 192, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 201, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_INCREF(__pyx_v_entry_id);
     __Pyx_GIVEREF(__pyx_v_entry_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_v_entry_id) != (0)) __PYX_ERR(0, 192, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_v_entry_id) != (0)) __PYX_ERR(0, 201, __pyx_L1_error);
     __pyx_t_5 = 0;
     {
-      PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_mstate_global->__pyx_kp_u_SELECT_reading_text_no_kanji_pr, __pyx_t_11};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_SELECT_reading_text_no_kanji_pr, __pyx_t_11};
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 196, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":193
+    /* "tentoku/sqlite_dict_cy.pyx":202
  *                 ORDER BY reading_id
  *             """, (entry_id,))
  *             kana_rows = cursor.fetchall()             # <<<<<<<<<<<<<<
@@ -4842,16 +4926,16 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     __pyx_t_5 = 0;
     {
       PyObject *__pyx_callargs[2] = {__pyx_t_11, NULL};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 202, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 193, __pyx_L1_error)
-    __Pyx_XDECREF_SET(__pyx_v_kana_rows, ((PyObject*)__pyx_t_1));
-    __pyx_t_1 = 0;
+    if (!(likely(PyList_CheckExact(__pyx_t_8))||((__pyx_t_8) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_8))) __PYX_ERR(0, 202, __pyx_L1_error)
+    __Pyx_XDECREF_SET(__pyx_v_kana_rows, ((PyObject*)__pyx_t_8));
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":196
+    /* "tentoku/sqlite_dict_cy.pyx":205
  * 
  *             # Check if any kana matches
  *             kana_match_found = False             # <<<<<<<<<<<<<<
@@ -4860,17 +4944,17 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     __pyx_v_kana_match_found = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":197
+    /* "tentoku/sqlite_dict_cy.pyx":206
  *             # Check if any kana matches
  *             kana_match_found = False
  *             if not kanji_match_found:             # <<<<<<<<<<<<<<
  *                 for kana_row in kana_rows:
  *                     if kana_to_hiragana(kana_row['reading_text']) == normalized_matching:
 */
-    __pyx_t_2 = (!__pyx_v_kanji_match_found);
-    if (__pyx_t_2) {
+    __pyx_t_3 = (!__pyx_v_kanji_match_found);
+    if (__pyx_t_3) {
 
-      /* "tentoku/sqlite_dict_cy.pyx":198
+      /* "tentoku/sqlite_dict_cy.pyx":207
  *             kana_match_found = False
  *             if not kanji_match_found:
  *                 for kana_row in kana_rows:             # <<<<<<<<<<<<<<
@@ -4879,63 +4963,63 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
       if (unlikely(__pyx_v_kana_rows == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-        __PYX_ERR(0, 198, __pyx_L1_error)
+        __PYX_ERR(0, 207, __pyx_L1_error)
       }
-      __pyx_t_1 = __pyx_v_kana_rows; __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_8 = __pyx_v_kana_rows; __Pyx_INCREF(__pyx_t_8);
       __pyx_t_10 = 0;
       for (;;) {
         {
-          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_8);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 207, __pyx_L1_error)
           #endif
           if (__pyx_t_10 >= __pyx_temp) break;
         }
-        __pyx_t_11 = __Pyx_PyList_GetItemRefFast(__pyx_t_1, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
+        __pyx_t_11 = __Pyx_PyList_GetItemRefFast(__pyx_t_8, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
         ++__pyx_t_10;
-        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 198, __pyx_L1_error)
+        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 207, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_XDECREF_SET(__pyx_v_kana_row, __pyx_t_11);
         __pyx_t_11 = 0;
 
-        /* "tentoku/sqlite_dict_cy.pyx":199
+        /* "tentoku/sqlite_dict_cy.pyx":208
  *             if not kanji_match_found:
  *                 for kana_row in kana_rows:
  *                     if kana_to_hiragana(kana_row['reading_text']) == normalized_matching:             # <<<<<<<<<<<<<<
  *                         kana_match_found = True
  *                         break
 */
-        __pyx_t_8 = NULL;
-        __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 199, __pyx_L1_error)
+        __pyx_t_4 = NULL;
+        __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 208, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
-        __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_reading_text); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
+        __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_reading_text); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __pyx_t_5 = 1;
         #if CYTHON_UNPACK_METHODS
         if (unlikely(PyMethod_Check(__pyx_t_12))) {
-          __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_12);
-          assert(__pyx_t_8);
+          __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_12);
+          assert(__pyx_t_4);
           PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_12);
-          __Pyx_INCREF(__pyx_t_8);
+          __Pyx_INCREF(__pyx_t_4);
           __Pyx_INCREF(__pyx__function);
           __Pyx_DECREF_SET(__pyx_t_12, __pyx__function);
           __pyx_t_5 = 0;
         }
         #endif
         {
-          PyObject *__pyx_callargs[2] = {__pyx_t_8, __pyx_t_4};
+          PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_1};
           __pyx_t_11 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_12, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-          __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-          __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+          __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 199, __pyx_L1_error)
+          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 208, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
         }
-        __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_t_11, __pyx_v_normalized_matching, Py_EQ)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 199, __pyx_L1_error)
+        __pyx_t_3 = (__Pyx_PyUnicode_Equals(__pyx_t_11, __pyx_v_normalized_matching, Py_EQ)); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 208, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        if (__pyx_t_2) {
+        if (__pyx_t_3) {
 
-          /* "tentoku/sqlite_dict_cy.pyx":200
+          /* "tentoku/sqlite_dict_cy.pyx":209
  *                 for kana_row in kana_rows:
  *                     if kana_to_hiragana(kana_row['reading_text']) == normalized_matching:
  *                         kana_match_found = True             # <<<<<<<<<<<<<<
@@ -4944,16 +5028,16 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
           __pyx_v_kana_match_found = 1;
 
-          /* "tentoku/sqlite_dict_cy.pyx":201
+          /* "tentoku/sqlite_dict_cy.pyx":210
  *                     if kana_to_hiragana(kana_row['reading_text']) == normalized_matching:
  *                         kana_match_found = True
  *                         break             # <<<<<<<<<<<<<<
  * 
  *             # Build kanji readings with matchRange
 */
-          goto __pyx_L15_break;
+          goto __pyx_L16_break;
 
-          /* "tentoku/sqlite_dict_cy.pyx":199
+          /* "tentoku/sqlite_dict_cy.pyx":208
  *             if not kanji_match_found:
  *                 for kana_row in kana_rows:
  *                     if kana_to_hiragana(kana_row['reading_text']) == normalized_matching:             # <<<<<<<<<<<<<<
@@ -4962,7 +5046,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
         }
 
-        /* "tentoku/sqlite_dict_cy.pyx":198
+        /* "tentoku/sqlite_dict_cy.pyx":207
  *             kana_match_found = False
  *             if not kanji_match_found:
  *                 for kana_row in kana_rows:             # <<<<<<<<<<<<<<
@@ -4970,14 +5054,14 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                         kana_match_found = True
 */
       }
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      goto __pyx_L17_for_end;
-      __pyx_L15_break:;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      goto __pyx_L17_for_end;
-      __pyx_L17_for_end:;
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      goto __pyx_L18_for_end;
+      __pyx_L16_break:;
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      goto __pyx_L18_for_end;
+      __pyx_L18_for_end:;
 
-      /* "tentoku/sqlite_dict_cy.pyx":197
+      /* "tentoku/sqlite_dict_cy.pyx":206
  *             # Check if any kana matches
  *             kana_match_found = False
  *             if not kanji_match_found:             # <<<<<<<<<<<<<<
@@ -4986,19 +5070,19 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     }
 
-    /* "tentoku/sqlite_dict_cy.pyx":204
+    /* "tentoku/sqlite_dict_cy.pyx":213
  * 
  *             # Build kanji readings with matchRange
  *             kanji_readings = []             # <<<<<<<<<<<<<<
  *             for kanji_row in kanji_rows:
  *                 kanji_text = kanji_row['kanji_text']
 */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_XDECREF_SET(__pyx_v_kanji_readings, ((PyObject*)__pyx_t_1));
-    __pyx_t_1 = 0;
+    __pyx_t_8 = PyList_New(0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 213, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_XDECREF_SET(__pyx_v_kanji_readings, ((PyObject*)__pyx_t_8));
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":205
+    /* "tentoku/sqlite_dict_cy.pyx":214
  *             # Build kanji readings with matchRange
  *             kanji_readings = []
  *             for kanji_row in kanji_rows:             # <<<<<<<<<<<<<<
@@ -5007,39 +5091,39 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     if (unlikely(__pyx_v_kanji_rows == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 205, __pyx_L1_error)
+      __PYX_ERR(0, 214, __pyx_L1_error)
     }
-    __pyx_t_1 = __pyx_v_kanji_rows; __Pyx_INCREF(__pyx_t_1);
+    __pyx_t_8 = __pyx_v_kanji_rows; __Pyx_INCREF(__pyx_t_8);
     __pyx_t_10 = 0;
     for (;;) {
       {
-        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_8);
         #if !CYTHON_ASSUME_SAFE_SIZE
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 205, __pyx_L1_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 214, __pyx_L1_error)
         #endif
         if (__pyx_t_10 >= __pyx_temp) break;
       }
-      __pyx_t_11 = __Pyx_PyList_GetItemRefFast(__pyx_t_1, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
+      __pyx_t_11 = __Pyx_PyList_GetItemRefFast(__pyx_t_8, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
       ++__pyx_t_10;
-      if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 205, __pyx_L1_error)
+      if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 214, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_XDECREF_SET(__pyx_v_kanji_row, __pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":206
+      /* "tentoku/sqlite_dict_cy.pyx":215
  *             kanji_readings = []
  *             for kanji_row in kanji_rows:
  *                 kanji_text = kanji_row['kanji_text']             # <<<<<<<<<<<<<<
  *                 kanji_normalized = kana_to_hiragana(kanji_text)
  *                 matches = kanji_normalized == normalized_matching
 */
-      __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_kanji_text); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 206, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_kanji_text); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 215, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_11))||((__pyx_t_11) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_11))) __PYX_ERR(0, 206, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_11))||((__pyx_t_11) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_11))) __PYX_ERR(0, 215, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_kanji_text, ((PyObject*)__pyx_t_11));
       __pyx_t_11 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":207
+      /* "tentoku/sqlite_dict_cy.pyx":216
  *             for kanji_row in kanji_rows:
  *                 kanji_text = kanji_row['kanji_text']
  *                 kanji_normalized = kana_to_hiragana(kanji_text)             # <<<<<<<<<<<<<<
@@ -5047,74 +5131,74 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  * 
 */
       __pyx_t_12 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 216, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_4))) {
-        __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_4);
+      if (unlikely(PyMethod_Check(__pyx_t_1))) {
+        __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_1);
         assert(__pyx_t_12);
-        PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_4);
+        PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_12);
         __Pyx_INCREF(__pyx__function);
-        __Pyx_DECREF_SET(__pyx_t_4, __pyx__function);
+        __Pyx_DECREF_SET(__pyx_t_1, __pyx__function);
         __pyx_t_5 = 0;
       }
       #endif
       {
         PyObject *__pyx_callargs[2] = {__pyx_t_12, __pyx_v_kanji_text};
-        __pyx_t_11 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_4, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+        __pyx_t_11 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_1, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 207, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 216, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
       }
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_11))||((__pyx_t_11) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_11))) __PYX_ERR(0, 207, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_11))||((__pyx_t_11) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_11))) __PYX_ERR(0, 216, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_kanji_normalized, ((PyObject*)__pyx_t_11));
       __pyx_t_11 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":208
+      /* "tentoku/sqlite_dict_cy.pyx":217
  *                 kanji_text = kanji_row['kanji_text']
  *                 kanji_normalized = kana_to_hiragana(kanji_text)
  *                 matches = kanji_normalized == normalized_matching             # <<<<<<<<<<<<<<
  * 
  *                 kanji_readings.append(KanjiReading(
 */
-      __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_kanji_normalized, __pyx_v_normalized_matching, Py_EQ)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 208, __pyx_L1_error)
-      __pyx_v_matches = __pyx_t_2;
+      __pyx_t_3 = (__Pyx_PyUnicode_Equals(__pyx_v_kanji_normalized, __pyx_v_normalized_matching, Py_EQ)); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 217, __pyx_L1_error)
+      __pyx_v_matches = __pyx_t_3;
 
-      /* "tentoku/sqlite_dict_cy.pyx":210
+      /* "tentoku/sqlite_dict_cy.pyx":219
  *                 matches = kanji_normalized == normalized_matching
  * 
  *                 kanji_readings.append(KanjiReading(             # <<<<<<<<<<<<<<
  *                     text=kanji_text,
  *                     priority=kanji_row['priority'],
 */
-      __pyx_t_4 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_KanjiReading); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_1 = NULL;
+      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_KanjiReading); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 219, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
 
-      /* "tentoku/sqlite_dict_cy.pyx":212
+      /* "tentoku/sqlite_dict_cy.pyx":221
  *                 kanji_readings.append(KanjiReading(
  *                     text=kanji_text,
  *                     priority=kanji_row['priority'],             # <<<<<<<<<<<<<<
  *                     info=kanji_row['info'],
  *                     match_range=(0, len(kanji_text)) if matches else None,
 */
-      __pyx_t_8 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_priority); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 212, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_8);
+      __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_priority); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 221, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
 
-      /* "tentoku/sqlite_dict_cy.pyx":213
+      /* "tentoku/sqlite_dict_cy.pyx":222
  *                     text=kanji_text,
  *                     priority=kanji_row['priority'],
  *                     info=kanji_row['info'],             # <<<<<<<<<<<<<<
  *                     match_range=(0, len(kanji_text)) if matches else None,
  *                     match=(kanji_match_found and matches) or not kanji_match_found
 */
-      __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_info); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kanji_row, __pyx_mstate_global->__pyx_n_u_info); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
 
-      /* "tentoku/sqlite_dict_cy.pyx":214
+      /* "tentoku/sqlite_dict_cy.pyx":223
  *                     priority=kanji_row['priority'],
  *                     info=kanji_row['info'],
  *                     match_range=(0, len(kanji_text)) if matches else None,             # <<<<<<<<<<<<<<
@@ -5124,18 +5208,18 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
       if (__pyx_v_matches) {
         if (unlikely(__pyx_v_kanji_text == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-          __PYX_ERR(0, 214, __pyx_L1_error)
+          __PYX_ERR(0, 223, __pyx_L1_error)
         }
-        __pyx_t_15 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_kanji_text); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
-        __pyx_t_16 = PyLong_FromSsize_t(__pyx_t_15); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 214, __pyx_L1_error)
+        __pyx_t_15 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_kanji_text); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 223, __pyx_L1_error)
+        __pyx_t_16 = PyLong_FromSsize_t(__pyx_t_15); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 223, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
-        __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 214, __pyx_L1_error)
+        __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 223, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
         __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
         __Pyx_GIVEREF(__pyx_mstate_global->__pyx_int_0);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_mstate_global->__pyx_int_0) != (0)) __PYX_ERR(0, 214, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_mstate_global->__pyx_int_0) != (0)) __PYX_ERR(0, 223, __pyx_L1_error);
         __Pyx_GIVEREF(__pyx_t_16);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_16) != (0)) __PYX_ERR(0, 214, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_16) != (0)) __PYX_ERR(0, 223, __pyx_L1_error);
         __pyx_t_16 = 0;
         __pyx_t_14 = __pyx_t_17;
         __pyx_t_17 = 0;
@@ -5144,7 +5228,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
         __pyx_t_14 = Py_None;
       }
 
-      /* "tentoku/sqlite_dict_cy.pyx":215
+      /* "tentoku/sqlite_dict_cy.pyx":224
  *                     info=kanji_row['info'],
  *                     match_range=(0, len(kanji_text)) if matches else None,
  *                     match=(kanji_match_found and matches) or not kanji_match_found             # <<<<<<<<<<<<<<
@@ -5152,68 +5236,68 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  * 
 */
       if (!__pyx_v_kanji_match_found) {
-        goto __pyx_L21_next_or;
+        goto __pyx_L22_next_or;
       } else {
       }
       if (!__pyx_v_matches) {
       } else {
-        __pyx_t_16 = __Pyx_PyBool_FromLong(__pyx_v_matches); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 215, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyBool_FromLong(__pyx_v_matches); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 224, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         __pyx_t_17 = __pyx_t_16;
         __pyx_t_16 = 0;
-        goto __pyx_L20_bool_binop_done;
+        goto __pyx_L21_bool_binop_done;
       }
-      __pyx_L21_next_or:;
-      __pyx_t_2 = (!__pyx_v_kanji_match_found);
-      __pyx_t_16 = __Pyx_PyBool_FromLong(__pyx_t_2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 215, __pyx_L1_error)
+      __pyx_L22_next_or:;
+      __pyx_t_3 = (!__pyx_v_kanji_match_found);
+      __pyx_t_16 = __Pyx_PyBool_FromLong(__pyx_t_3); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 224, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __pyx_t_17 = __pyx_t_16;
       __pyx_t_16 = 0;
-      __pyx_L20_bool_binop_done:;
+      __pyx_L21_bool_binop_done:;
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
       if (unlikely(PyMethod_Check(__pyx_t_12))) {
-        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_12);
-        assert(__pyx_t_4);
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_12);
+        assert(__pyx_t_1);
         PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_12);
-        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx__function);
         __Pyx_DECREF_SET(__pyx_t_12, __pyx__function);
         __pyx_t_5 = 0;
       }
       #endif
       {
-        PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 5 : 0)] = {__pyx_t_4, NULL};
-        __pyx_t_16 = __Pyx_MakeVectorcallBuilderKwds(5); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 210, __pyx_L1_error)
+        PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 5 : 0)] = {__pyx_t_1, NULL};
+        __pyx_t_16 = __Pyx_MakeVectorcallBuilderKwds(5); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 219, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_text, __pyx_v_kanji_text, __pyx_t_16, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 210, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_priority, __pyx_t_8, __pyx_t_16, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 210, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_info, __pyx_t_13, __pyx_t_16, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 210, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_range, __pyx_t_14, __pyx_t_16, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 210, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match, __pyx_t_17, __pyx_t_16, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 210, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_text, __pyx_v_kanji_text, __pyx_t_16, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 219, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_priority, __pyx_t_4, __pyx_t_16, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 219, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_info, __pyx_t_13, __pyx_t_16, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 219, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_range, __pyx_t_14, __pyx_t_16, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 219, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match, __pyx_t_17, __pyx_t_16, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 219, __pyx_L1_error)
         __pyx_t_11 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_12, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_16);
-        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 210, __pyx_L1_error)
+        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 219, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
       }
 
-      /* "tentoku/sqlite_dict_cy.pyx":210
+      /* "tentoku/sqlite_dict_cy.pyx":219
  *                 matches = kanji_normalized == normalized_matching
  * 
  *                 kanji_readings.append(KanjiReading(             # <<<<<<<<<<<<<<
  *                     text=kanji_text,
  *                     priority=kanji_row['priority'],
 */
-      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_kanji_readings, __pyx_t_11); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_kanji_readings, __pyx_t_11); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 219, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":205
+      /* "tentoku/sqlite_dict_cy.pyx":214
  *             # Build kanji readings with matchRange
  *             kanji_readings = []
  *             for kanji_row in kanji_rows:             # <<<<<<<<<<<<<<
@@ -5221,21 +5305,21 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                 kanji_normalized = kana_to_hiragana(kanji_text)
 */
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":219
+    /* "tentoku/sqlite_dict_cy.pyx":228
  * 
  *             # Build kana readings with matchRange
  *             kana_readings = []             # <<<<<<<<<<<<<<
  *             for kana_row in kana_rows:
  *                 kana_text = kana_row['reading_text']
 */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_XDECREF_SET(__pyx_v_kana_readings, ((PyObject*)__pyx_t_1));
-    __pyx_t_1 = 0;
+    __pyx_t_8 = PyList_New(0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 228, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_XDECREF_SET(__pyx_v_kana_readings, ((PyObject*)__pyx_t_8));
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":220
+    /* "tentoku/sqlite_dict_cy.pyx":229
  *             # Build kana readings with matchRange
  *             kana_readings = []
  *             for kana_row in kana_rows:             # <<<<<<<<<<<<<<
@@ -5244,39 +5328,39 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     if (unlikely(__pyx_v_kana_rows == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 220, __pyx_L1_error)
+      __PYX_ERR(0, 229, __pyx_L1_error)
     }
-    __pyx_t_1 = __pyx_v_kana_rows; __Pyx_INCREF(__pyx_t_1);
+    __pyx_t_8 = __pyx_v_kana_rows; __Pyx_INCREF(__pyx_t_8);
     __pyx_t_10 = 0;
     for (;;) {
       {
-        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+        Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_8);
         #if !CYTHON_ASSUME_SAFE_SIZE
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 220, __pyx_L1_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 229, __pyx_L1_error)
         #endif
         if (__pyx_t_10 >= __pyx_temp) break;
       }
-      __pyx_t_11 = __Pyx_PyList_GetItemRefFast(__pyx_t_1, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
+      __pyx_t_11 = __Pyx_PyList_GetItemRefFast(__pyx_t_8, __pyx_t_10, __Pyx_ReferenceSharing_OwnStrongReference);
       ++__pyx_t_10;
-      if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 220, __pyx_L1_error)
+      if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 229, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_XDECREF_SET(__pyx_v_kana_row, __pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":221
+      /* "tentoku/sqlite_dict_cy.pyx":230
  *             kana_readings = []
  *             for kana_row in kana_rows:
  *                 kana_text = kana_row['reading_text']             # <<<<<<<<<<<<<<
  *                 matches = kana_to_hiragana(kana_text) == normalized_matching
  * 
 */
-      __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_reading_text); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 221, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_reading_text); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 230, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_11))||((__pyx_t_11) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_11))) __PYX_ERR(0, 221, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_11))||((__pyx_t_11) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_11))) __PYX_ERR(0, 230, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_kana_text, ((PyObject*)__pyx_t_11));
       __pyx_t_11 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":222
+      /* "tentoku/sqlite_dict_cy.pyx":231
  *             for kana_row in kana_rows:
  *                 kana_text = kana_row['reading_text']
  *                 matches = kana_to_hiragana(kana_text) == normalized_matching             # <<<<<<<<<<<<<<
@@ -5284,7 +5368,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                 kana_readings.append(KanaReading(
 */
       __pyx_t_12 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 222, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_mstate_global->__pyx_n_u_kana_to_hiragana); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 231, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -5303,16 +5387,16 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
         __pyx_t_11 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_16, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 222, __pyx_L1_error)
+        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 231, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
       }
-      __pyx_t_16 = PyObject_RichCompare(__pyx_t_11, __pyx_v_normalized_matching, Py_EQ); __Pyx_XGOTREF(__pyx_t_16); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 222, __pyx_L1_error)
+      __pyx_t_16 = PyObject_RichCompare(__pyx_t_11, __pyx_v_normalized_matching, Py_EQ); __Pyx_XGOTREF(__pyx_t_16); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 231, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_16); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_16); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-      __pyx_v_matches = __pyx_t_2;
+      __pyx_v_matches = __pyx_t_3;
 
-      /* "tentoku/sqlite_dict_cy.pyx":224
+      /* "tentoku/sqlite_dict_cy.pyx":233
  *                 matches = kana_to_hiragana(kana_text) == normalized_matching
  * 
  *                 kana_readings.append(KanaReading(             # <<<<<<<<<<<<<<
@@ -5320,44 +5404,44 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                     no_kanji=bool(kana_row['no_kanji']),
 */
       __pyx_t_11 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_KanaReading); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 224, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_KanaReading); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 233, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
 
-      /* "tentoku/sqlite_dict_cy.pyx":226
+      /* "tentoku/sqlite_dict_cy.pyx":235
  *                 kana_readings.append(KanaReading(
  *                     text=kana_text,
  *                     no_kanji=bool(kana_row['no_kanji']),             # <<<<<<<<<<<<<<
  *                     priority=kana_row['priority'],
  *                     info=kana_row['info'],
 */
-      __pyx_t_17 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_no_kanji); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 226, __pyx_L1_error)
+      __pyx_t_17 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_no_kanji); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_17);
-      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_17); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 226, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_17); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-      __pyx_t_17 = __Pyx_PyBool_FromLong((!(!__pyx_t_2))); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 226, __pyx_L1_error)
+      __pyx_t_17 = __Pyx_PyBool_FromLong((!(!__pyx_t_3))); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_17);
 
-      /* "tentoku/sqlite_dict_cy.pyx":227
+      /* "tentoku/sqlite_dict_cy.pyx":236
  *                     text=kana_text,
  *                     no_kanji=bool(kana_row['no_kanji']),
  *                     priority=kana_row['priority'],             # <<<<<<<<<<<<<<
  *                     info=kana_row['info'],
  *                     match_range=(0, len(kana_text)) if matches else None,
 */
-      __pyx_t_14 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_priority); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 227, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_priority); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 236, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
 
-      /* "tentoku/sqlite_dict_cy.pyx":228
+      /* "tentoku/sqlite_dict_cy.pyx":237
  *                     no_kanji=bool(kana_row['no_kanji']),
  *                     priority=kana_row['priority'],
  *                     info=kana_row['info'],             # <<<<<<<<<<<<<<
  *                     match_range=(0, len(kana_text)) if matches else None,
  *                     match=(kana_match_found and matches) or not kana_match_found
 */
-      __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_info); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 228, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_v_kana_row, __pyx_mstate_global->__pyx_n_u_info); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 237, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
 
-      /* "tentoku/sqlite_dict_cy.pyx":229
+      /* "tentoku/sqlite_dict_cy.pyx":238
  *                     priority=kana_row['priority'],
  *                     info=kana_row['info'],
  *                     match_range=(0, len(kana_text)) if matches else None,             # <<<<<<<<<<<<<<
@@ -5367,27 +5451,27 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
       if (__pyx_v_matches) {
         if (unlikely(__pyx_v_kana_text == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-          __PYX_ERR(0, 229, __pyx_L1_error)
+          __PYX_ERR(0, 238, __pyx_L1_error)
         }
-        __pyx_t_15 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_kana_text); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 229, __pyx_L1_error)
-        __pyx_t_4 = PyLong_FromSsize_t(__pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 229, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_19 = PyTuple_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 229, __pyx_L1_error)
+        __pyx_t_15 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_kana_text); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 238, __pyx_L1_error)
+        __pyx_t_1 = PyLong_FromSsize_t(__pyx_t_15); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_19 = PyTuple_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 238, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_19);
         __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
         __Pyx_GIVEREF(__pyx_mstate_global->__pyx_int_0);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_mstate_global->__pyx_int_0) != (0)) __PYX_ERR(0, 229, __pyx_L1_error);
-        __Pyx_GIVEREF(__pyx_t_4);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 1, __pyx_t_4) != (0)) __PYX_ERR(0, 229, __pyx_L1_error);
-        __pyx_t_4 = 0;
-        __pyx_t_8 = __pyx_t_19;
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_mstate_global->__pyx_int_0) != (0)) __PYX_ERR(0, 238, __pyx_L1_error);
+        __Pyx_GIVEREF(__pyx_t_1);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 238, __pyx_L1_error);
+        __pyx_t_1 = 0;
+        __pyx_t_4 = __pyx_t_19;
         __pyx_t_19 = 0;
       } else {
         __Pyx_INCREF(Py_None);
-        __pyx_t_8 = Py_None;
+        __pyx_t_4 = Py_None;
       }
 
-      /* "tentoku/sqlite_dict_cy.pyx":230
+      /* "tentoku/sqlite_dict_cy.pyx":239
  *                     info=kana_row['info'],
  *                     match_range=(0, len(kana_text)) if matches else None,
  *                     match=(kana_match_found and matches) or not kana_match_found             # <<<<<<<<<<<<<<
@@ -5395,24 +5479,24 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  * 
 */
       if (!__pyx_v_kana_match_found) {
-        goto __pyx_L27_next_or;
+        goto __pyx_L28_next_or;
       } else {
       }
       if (!__pyx_v_matches) {
       } else {
-        __pyx_t_4 = __Pyx_PyBool_FromLong(__pyx_v_matches); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 230, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_19 = __pyx_t_4;
-        __pyx_t_4 = 0;
-        goto __pyx_L26_bool_binop_done;
+        __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_matches); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_19 = __pyx_t_1;
+        __pyx_t_1 = 0;
+        goto __pyx_L27_bool_binop_done;
       }
-      __pyx_L27_next_or:;
-      __pyx_t_2 = (!__pyx_v_kana_match_found);
-      __pyx_t_4 = __Pyx_PyBool_FromLong(__pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 230, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_19 = __pyx_t_4;
-      __pyx_t_4 = 0;
-      __pyx_L26_bool_binop_done:;
+      __pyx_L28_next_or:;
+      __pyx_t_3 = (!__pyx_v_kana_match_found);
+      __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_19 = __pyx_t_1;
+      __pyx_t_1 = 0;
+      __pyx_L27_bool_binop_done:;
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
       if (unlikely(PyMethod_Check(__pyx_t_12))) {
@@ -5427,38 +5511,38 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
       #endif
       {
         PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 6 : 0)] = {__pyx_t_11, NULL};
-        __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 224, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_4);
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_text, __pyx_v_kana_text, __pyx_t_4, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 224, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_no_kanji, __pyx_t_17, __pyx_t_4, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 224, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_priority, __pyx_t_14, __pyx_t_4, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 224, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_info, __pyx_t_13, __pyx_t_4, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 224, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_range, __pyx_t_8, __pyx_t_4, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 224, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match, __pyx_t_19, __pyx_t_4, __pyx_callargs+1, 5) < (0)) __PYX_ERR(0, 224, __pyx_L1_error)
-        __pyx_t_16 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_12, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
+        __pyx_t_1 = __Pyx_MakeVectorcallBuilderKwds(6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_text, __pyx_v_kana_text, __pyx_t_1, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 233, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_no_kanji, __pyx_t_17, __pyx_t_1, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 233, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_priority, __pyx_t_14, __pyx_t_1, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 233, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_info, __pyx_t_13, __pyx_t_1, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 233, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_range, __pyx_t_4, __pyx_t_1, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 233, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match, __pyx_t_19, __pyx_t_1, __pyx_callargs+1, 5) < (0)) __PYX_ERR(0, 233, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_12, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_1);
         __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 224, __pyx_L1_error)
+        if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 233, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
       }
 
-      /* "tentoku/sqlite_dict_cy.pyx":224
+      /* "tentoku/sqlite_dict_cy.pyx":233
  *                 matches = kana_to_hiragana(kana_text) == normalized_matching
  * 
  *                 kana_readings.append(KanaReading(             # <<<<<<<<<<<<<<
  *                     text=kana_text,
  *                     no_kanji=bool(kana_row['no_kanji']),
 */
-      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_kana_readings, __pyx_t_16); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 224, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_kana_readings, __pyx_t_16); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 233, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":220
+      /* "tentoku/sqlite_dict_cy.pyx":229
  *             # Build kana readings with matchRange
  *             kana_readings = []
  *             for kana_row in kana_rows:             # <<<<<<<<<<<<<<
@@ -5466,9 +5550,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                 matches = kana_to_hiragana(kana_text) == normalized_matching
 */
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":234
+    /* "tentoku/sqlite_dict_cy.pyx":243
  * 
  *             # Get senses with POS tags
  *             cursor.execute("""             # <<<<<<<<<<<<<<
@@ -5478,30 +5562,30 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     __pyx_t_16 = __pyx_v_cursor;
     __Pyx_INCREF(__pyx_t_16);
 
-    /* "tentoku/sqlite_dict_cy.pyx":239
+    /* "tentoku/sqlite_dict_cy.pyx":248
  *                 WHERE s.entry_id = ?
  *                 ORDER BY s.sense_index
  *             """, (entry_id,))             # <<<<<<<<<<<<<<
  *             sense_rows = cursor.fetchall()
  * 
 */
-    __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 239, __pyx_L1_error)
+    __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 248, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_INCREF(__pyx_v_entry_id);
     __Pyx_GIVEREF(__pyx_v_entry_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_entry_id) != (0)) __PYX_ERR(0, 239, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_entry_id) != (0)) __PYX_ERR(0, 248, __pyx_L1_error);
     __pyx_t_5 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_16, __pyx_mstate_global->__pyx_kp_u_SELECT_s_sense_id_s_sense_index, __pyx_t_12};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 243, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":240
+    /* "tentoku/sqlite_dict_cy.pyx":249
  *                 ORDER BY s.sense_index
  *             """, (entry_id,))
  *             sense_rows = cursor.fetchall()             # <<<<<<<<<<<<<<
@@ -5513,16 +5597,16 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     __pyx_t_5 = 0;
     {
       PyObject *__pyx_callargs[2] = {__pyx_t_12, NULL};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 240, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 249, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 240, __pyx_L1_error)
-    __Pyx_XDECREF_SET(__pyx_v_sense_rows, ((PyObject*)__pyx_t_1));
-    __pyx_t_1 = 0;
+    if (!(likely(PyList_CheckExact(__pyx_t_8))||((__pyx_t_8) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_8))) __PYX_ERR(0, 249, __pyx_L1_error)
+    __Pyx_XDECREF_SET(__pyx_v_sense_rows, ((PyObject*)__pyx_t_8));
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":242
+    /* "tentoku/sqlite_dict_cy.pyx":251
  *             sense_rows = cursor.fetchall()
  * 
  *             senses = self._build_senses(cursor, sense_rows)             # <<<<<<<<<<<<<<
@@ -5534,16 +5618,16 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     __pyx_t_5 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_12, __pyx_v_cursor, __pyx_v_sense_rows};
-      __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_build_senses, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __pyx_t_8 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_build_senses, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 251, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
-    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 242, __pyx_L1_error)
-    __Pyx_XDECREF_SET(__pyx_v_senses, ((PyObject*)__pyx_t_1));
-    __pyx_t_1 = 0;
+    if (!(likely(PyList_CheckExact(__pyx_t_8))||((__pyx_t_8) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_8))) __PYX_ERR(0, 251, __pyx_L1_error)
+    __Pyx_XDECREF_SET(__pyx_v_senses, ((PyObject*)__pyx_t_8));
+    __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":244
+    /* "tentoku/sqlite_dict_cy.pyx":253
  *             senses = self._build_senses(cursor, sense_rows)
  * 
  *             entries.append(WordEntry(             # <<<<<<<<<<<<<<
@@ -5551,10 +5635,10 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
  *                 ent_seq=ent_seq,
 */
     __pyx_t_12 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_mstate_global->__pyx_n_u_WordEntry); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 244, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_mstate_global->__pyx_n_u_WordEntry); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 253, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
 
-    /* "tentoku/sqlite_dict_cy.pyx":249
+    /* "tentoku/sqlite_dict_cy.pyx":258
  *                 kanji_readings=kanji_readings,
  *                 kana_readings=kana_readings,
  *                 senses=senses             # <<<<<<<<<<<<<<
@@ -5575,32 +5659,32 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
     #endif
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 5 : 0)] = {__pyx_t_12, NULL};
-      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_entry_id, __pyx_v_entry_id, __pyx_t_4, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 244, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_ent_seq, __pyx_v_ent_seq, __pyx_t_4, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 244, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_kanji_readings, __pyx_v_kanji_readings, __pyx_t_4, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 244, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_kana_readings, __pyx_v_kana_readings, __pyx_t_4, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 244, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_senses, __pyx_v_senses, __pyx_t_4, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 244, __pyx_L1_error)
-      __pyx_t_1 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_16, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
-      __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_MakeVectorcallBuilderKwds(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_entry_id, __pyx_v_entry_id, __pyx_t_1, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 253, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_ent_seq, __pyx_v_ent_seq, __pyx_t_1, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 253, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_kanji_readings, __pyx_v_kanji_readings, __pyx_t_1, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 253, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_kana_readings, __pyx_v_kana_readings, __pyx_t_1, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 253, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_senses, __pyx_v_senses, __pyx_t_1, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 253, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_16, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_1);
+      __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 253, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_8);
     }
 
-    /* "tentoku/sqlite_dict_cy.pyx":244
+    /* "tentoku/sqlite_dict_cy.pyx":253
  *             senses = self._build_senses(cursor, sense_rows)
  * 
  *             entries.append(WordEntry(             # <<<<<<<<<<<<<<
  *                 entry_id=entry_id,
  *                 ent_seq=ent_seq,
 */
-    __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_entries, __pyx_t_1); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 244, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_entries, __pyx_t_8); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 253, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":166
+    /* "tentoku/sqlite_dict_cy.pyx":175
  *         cdef bint matches
  * 
  *         for row in entry_rows:             # <<<<<<<<<<<<<<
@@ -5610,63 +5694,63 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":253
+  /* "tentoku/sqlite_dict_cy.pyx":262
  * 
  *         # Cache the result
  *         if self._cache is not None:             # <<<<<<<<<<<<<<
  *             # Keep cache size bounded
  *             if len(self._cache) > 10000:
 */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 253, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_2 = (__pyx_t_6 != Py_None);
+  __pyx_t_3 = (__pyx_t_6 != Py_None);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (__pyx_t_2) {
+  if (__pyx_t_3) {
 
-    /* "tentoku/sqlite_dict_cy.pyx":255
+    /* "tentoku/sqlite_dict_cy.pyx":264
  *         if self._cache is not None:
  *             # Keep cache size bounded
  *             if len(self._cache) > 10000:             # <<<<<<<<<<<<<<
  *                 # Remove 20% of oldest entries (simple FIFO)
  *                 keys_to_remove = list(self._cache.keys())[:2000]
 */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 255, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_9 = PyObject_Length(__pyx_t_6); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 255, __pyx_L1_error)
+    __pyx_t_9 = PyObject_Length(__pyx_t_6); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 264, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_2 = (__pyx_t_9 > 0x2710);
-    if (__pyx_t_2) {
+    __pyx_t_3 = (__pyx_t_9 > 0x2710);
+    if (__pyx_t_3) {
 
-      /* "tentoku/sqlite_dict_cy.pyx":257
+      /* "tentoku/sqlite_dict_cy.pyx":266
  *             if len(self._cache) > 10000:
  *                 # Remove 20% of oldest entries (simple FIFO)
  *                 keys_to_remove = list(self._cache.keys())[:2000]             # <<<<<<<<<<<<<<
  *                 for key in keys_to_remove:
  *                     del self._cache[key]
 */
-      __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 266, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
-      __pyx_t_1 = __pyx_t_16;
-      __Pyx_INCREF(__pyx_t_1);
+      __pyx_t_8 = __pyx_t_16;
+      __Pyx_INCREF(__pyx_t_8);
       __pyx_t_5 = 0;
       {
-        PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
+        PyObject *__pyx_callargs[2] = {__pyx_t_8, NULL};
         __pyx_t_6 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_keys, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 266, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
       }
-      __pyx_t_16 = __Pyx_PySequence_ListKeepNew(__pyx_t_6); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PySequence_ListKeepNew(__pyx_t_6); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 266, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyList_GetSlice(__pyx_t_16, 0, 0x7D0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyList_GetSlice(__pyx_t_16, 0, 0x7D0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 266, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
       __pyx_v_keys_to_remove = ((PyObject*)__pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":258
+      /* "tentoku/sqlite_dict_cy.pyx":267
  *                 # Remove 20% of oldest entries (simple FIFO)
  *                 keys_to_remove = list(self._cache.keys())[:2000]
  *                 for key in keys_to_remove:             # <<<<<<<<<<<<<<
@@ -5679,30 +5763,30 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_6);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 258, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 267, __pyx_L1_error)
           #endif
           if (__pyx_t_9 >= __pyx_temp) break;
         }
         __pyx_t_16 = __Pyx_PyList_GetItemRefFast(__pyx_t_6, __pyx_t_9, __Pyx_ReferenceSharing_OwnStrongReference);
         ++__pyx_t_9;
-        if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 258, __pyx_L1_error)
+        if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 267, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_16);
         __pyx_t_16 = 0;
 
-        /* "tentoku/sqlite_dict_cy.pyx":259
+        /* "tentoku/sqlite_dict_cy.pyx":268
  *                 keys_to_remove = list(self._cache.keys())[:2000]
  *                 for key in keys_to_remove:
  *                     del self._cache[key]             # <<<<<<<<<<<<<<
  *             self._cache[cache_key] = entries
  * 
 */
-        __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 259, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 268, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
-        if (unlikely((PyObject_DelItem(__pyx_t_16, __pyx_v_key) < 0))) __PYX_ERR(0, 259, __pyx_L1_error)
+        if (unlikely((PyObject_DelItem(__pyx_t_16, __pyx_v_key) < 0))) __PYX_ERR(0, 268, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-        /* "tentoku/sqlite_dict_cy.pyx":258
+        /* "tentoku/sqlite_dict_cy.pyx":267
  *                 # Remove 20% of oldest entries (simple FIFO)
  *                 keys_to_remove = list(self._cache.keys())[:2000]
  *                 for key in keys_to_remove:             # <<<<<<<<<<<<<<
@@ -5712,7 +5796,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "tentoku/sqlite_dict_cy.pyx":255
+      /* "tentoku/sqlite_dict_cy.pyx":264
  *         if self._cache is not None:
  *             # Keep cache size bounded
  *             if len(self._cache) > 10000:             # <<<<<<<<<<<<<<
@@ -5721,20 +5805,20 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
     }
 
-    /* "tentoku/sqlite_dict_cy.pyx":260
+    /* "tentoku/sqlite_dict_cy.pyx":269
  *                 for key in keys_to_remove:
  *                     del self._cache[key]
  *             self._cache[cache_key] = entries             # <<<<<<<<<<<<<<
  * 
  *         return entries
 */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_mstate_global->__pyx_n_u_cache); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 269, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    if (unlikely(!__pyx_v_cache_key)) { __Pyx_RaiseUnboundLocalError("cache_key"); __PYX_ERR(0, 260, __pyx_L1_error) }
-    if (unlikely((PyObject_SetItem(__pyx_t_6, __pyx_v_cache_key, __pyx_v_entries) < 0))) __PYX_ERR(0, 260, __pyx_L1_error)
+    if (unlikely(!__pyx_v_cache_key)) { __Pyx_RaiseUnboundLocalError("cache_key"); __PYX_ERR(0, 269, __pyx_L1_error) }
+    if (unlikely((PyObject_SetItem(__pyx_t_6, __pyx_v_cache_key, __pyx_v_entries) < 0))) __PYX_ERR(0, 269, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":253
+    /* "tentoku/sqlite_dict_cy.pyx":262
  * 
  *         # Cache the result
  *         if self._cache is not None:             # <<<<<<<<<<<<<<
@@ -5743,7 +5827,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
 */
   }
 
-  /* "tentoku/sqlite_dict_cy.pyx":262
+  /* "tentoku/sqlite_dict_cy.pyx":271
  *             self._cache[cache_key] = entries
  * 
  *         return entries             # <<<<<<<<<<<<<<
@@ -5807,7 +5891,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_6get_
   return __pyx_r;
 }
 
-/* "tentoku/sqlite_dict_cy.pyx":264
+/* "tentoku/sqlite_dict_cy.pyx":273
  *         return entries
  * 
  *     def _build_senses(self, object cursor, list sense_rows):             # <<<<<<<<<<<<<<
@@ -5857,38 +5941,38 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_self,&__pyx_mstate_global->__pyx_n_u_cursor,&__pyx_mstate_global->__pyx_n_u_sense_rows,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 264, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 273, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 264, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 273, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 264, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 273, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 264, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 273, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_build_senses", 0) < (0)) __PYX_ERR(0, 264, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_build_senses", 0) < (0)) __PYX_ERR(0, 273, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 3; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_build_senses", 1, 3, 3, i); __PYX_ERR(0, 264, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_build_senses", 1, 3, 3, i); __PYX_ERR(0, 273, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 3)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 264, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 273, __pyx_L3_error)
       values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 264, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 273, __pyx_L3_error)
       values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 264, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 273, __pyx_L3_error)
     }
     __pyx_v_self = values[0];
     __pyx_v_cursor = values[1];
@@ -5896,7 +5980,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_build_senses", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 264, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_build_senses", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 273, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5907,7 +5991,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sense_rows), (&PyList_Type), 1, "sense_rows", 1))) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sense_rows), (&PyList_Type), 1, "sense_rows", 1))) __PYX_ERR(0, 273, __pyx_L1_error)
   __pyx_r = __pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_build_senses(__pyx_self, __pyx_v_self, __pyx_v_cursor, __pyx_v_sense_rows);
 
   /* function exit code */
@@ -5964,19 +6048,19 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_build_senses", 0);
 
-  /* "tentoku/sqlite_dict_cy.pyx":266
+  /* "tentoku/sqlite_dict_cy.pyx":275
  *     def _build_senses(self, object cursor, list sense_rows):
  *         """Build senses list from rows (optimized helper)."""
  *         cdef list senses = []             # <<<<<<<<<<<<<<
  *         cdef object sense_row, sense_id
  *         cdef list pos_tags, glosses, fields, misc, dial
 */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_senses = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":270
+  /* "tentoku/sqlite_dict_cy.pyx":279
  *         cdef list pos_tags, glosses, fields, misc, dial
  * 
  *         for sense_row in sense_rows:             # <<<<<<<<<<<<<<
@@ -5985,7 +6069,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
 */
   if (unlikely(__pyx_v_sense_rows == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 270, __pyx_L1_error)
+    __PYX_ERR(0, 279, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_v_sense_rows; __Pyx_INCREF(__pyx_t_1);
   __pyx_t_2 = 0;
@@ -5993,30 +6077,30 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
       #if !CYTHON_ASSUME_SAFE_SIZE
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 270, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 279, __pyx_L1_error)
       #endif
       if (__pyx_t_2 >= __pyx_temp) break;
     }
     __pyx_t_3 = __Pyx_PyList_GetItemRefFast(__pyx_t_1, __pyx_t_2, __Pyx_ReferenceSharing_OwnStrongReference);
     ++__pyx_t_2;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 270, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_XDECREF_SET(__pyx_v_sense_row, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":271
+    /* "tentoku/sqlite_dict_cy.pyx":280
  * 
  *         for sense_row in sense_rows:
  *             sense_id = sense_row['sense_id']             # <<<<<<<<<<<<<<
  * 
  *             # Get POS tags
 */
-    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_sense_row, __pyx_mstate_global->__pyx_n_u_sense_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_v_sense_row, __pyx_mstate_global->__pyx_n_u_sense_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_XDECREF_SET(__pyx_v_sense_id, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":274
+    /* "tentoku/sqlite_dict_cy.pyx":283
  * 
  *             # Get POS tags
  *             cursor.execute("""             # <<<<<<<<<<<<<<
@@ -6026,30 +6110,30 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __pyx_t_4 = __pyx_v_cursor;
     __Pyx_INCREF(__pyx_t_4);
 
-    /* "tentoku/sqlite_dict_cy.pyx":276
+    /* "tentoku/sqlite_dict_cy.pyx":285
  *             cursor.execute("""
  *                 SELECT pos FROM sense_pos WHERE sense_id = ?
  *             """, (sense_id,))             # <<<<<<<<<<<<<<
  *             pos_tags = [row['pos'] for row in cursor.fetchall()]
  * 
 */
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_sense_id);
     __Pyx_GIVEREF(__pyx_v_sense_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 276, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 285, __pyx_L1_error);
     __pyx_t_6 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_SELECT_pos_FROM_sense_pos_WHERE, __pyx_t_5};
       __pyx_t_3 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 274, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":277
+    /* "tentoku/sqlite_dict_cy.pyx":286
  *                 SELECT pos FROM sense_pos WHERE sense_id = ?
  *             """, (sense_id,))
  *             pos_tags = [row['pos'] for row in cursor.fetchall()]             # <<<<<<<<<<<<<<
@@ -6057,7 +6141,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *             # Get glosses
 */
     { /* enter inner scope */
-      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L7_error)
+      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L7_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_4 = __pyx_v_cursor;
       __Pyx_INCREF(__pyx_t_4);
@@ -6066,7 +6150,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
         __pyx_t_5 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 277, __pyx_L7_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 286, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_5);
       }
       if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
@@ -6074,9 +6158,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __pyx_t_7 = 0;
         __pyx_t_8 = NULL;
       } else {
-        __pyx_t_7 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 277, __pyx_L7_error)
+        __pyx_t_7 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 286, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 277, __pyx_L7_error)
+        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 286, __pyx_L7_error)
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       for (;;) {
@@ -6085,7 +6169,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 277, __pyx_L7_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 286, __pyx_L7_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6095,7 +6179,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 277, __pyx_L7_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 286, __pyx_L7_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6106,13 +6190,13 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             #endif
             ++__pyx_t_7;
           }
-          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 277, __pyx_L7_error)
+          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 286, __pyx_L7_error)
         } else {
           __pyx_t_5 = __pyx_t_8(__pyx_t_4);
           if (unlikely(!__pyx_t_5)) {
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
-              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 277, __pyx_L7_error)
+              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 286, __pyx_L7_error)
               PyErr_Clear();
             }
             break;
@@ -6121,9 +6205,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_row, __pyx_t_5);
         __pyx_t_5 = 0;
-        __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_7genexpr__pyx_v_row, __pyx_mstate_global->__pyx_n_u_pos); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 277, __pyx_L7_error)
+        __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_7genexpr__pyx_v_row, __pyx_mstate_global->__pyx_n_u_pos); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 286, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_5);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 277, __pyx_L7_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 286, __pyx_L7_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -6137,7 +6221,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __Pyx_XDECREF_SET(__pyx_v_pos_tags, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":280
+    /* "tentoku/sqlite_dict_cy.pyx":289
  * 
  *             # Get glosses
  *             cursor.execute("""             # <<<<<<<<<<<<<<
@@ -6147,30 +6231,30 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __pyx_t_4 = __pyx_v_cursor;
     __Pyx_INCREF(__pyx_t_4);
 
-    /* "tentoku/sqlite_dict_cy.pyx":285
+    /* "tentoku/sqlite_dict_cy.pyx":294
  *                 WHERE sense_id = ?
  *                 ORDER BY gloss_id
  *             """, (sense_id,))             # <<<<<<<<<<<<<<
  *             glosses = [
  *                 Gloss(
 */
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_sense_id);
     __Pyx_GIVEREF(__pyx_v_sense_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 285, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 294, __pyx_L1_error);
     __pyx_t_6 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_SELECT_gloss_text_lang_g_type_F, __pyx_t_5};
       __pyx_t_3 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":286
+    /* "tentoku/sqlite_dict_cy.pyx":295
  *                 ORDER BY gloss_id
  *             """, (sense_id,))
  *             glosses = [             # <<<<<<<<<<<<<<
@@ -6178,10 +6262,10 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *                     text=row['gloss_text'],
 */
     { /* enter inner scope */
-      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L14_error)
+      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 295, __pyx_L14_error)
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "tentoku/sqlite_dict_cy.pyx":292
+      /* "tentoku/sqlite_dict_cy.pyx":301
  *                     g_type=row['g_type']
  *                 )
  *                 for row in cursor.fetchall()             # <<<<<<<<<<<<<<
@@ -6195,7 +6279,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
         __pyx_t_5 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 292, __pyx_L14_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 301, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_5);
       }
       if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
@@ -6203,9 +6287,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __pyx_t_7 = 0;
         __pyx_t_8 = NULL;
       } else {
-        __pyx_t_7 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 292, __pyx_L14_error)
+        __pyx_t_7 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 301, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 292, __pyx_L14_error)
+        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 301, __pyx_L14_error)
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       for (;;) {
@@ -6214,7 +6298,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 292, __pyx_L14_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 301, __pyx_L14_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6224,7 +6308,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 292, __pyx_L14_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 301, __pyx_L14_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6235,13 +6319,13 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             #endif
             ++__pyx_t_7;
           }
-          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 292, __pyx_L14_error)
+          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 301, __pyx_L14_error)
         } else {
           __pyx_t_5 = __pyx_t_8(__pyx_t_4);
           if (unlikely(!__pyx_t_5)) {
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
-              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 292, __pyx_L14_error)
+              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 301, __pyx_L14_error)
               PyErr_Clear();
             }
             break;
@@ -6251,7 +6335,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_row, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "tentoku/sqlite_dict_cy.pyx":287
+        /* "tentoku/sqlite_dict_cy.pyx":296
  *             """, (sense_id,))
  *             glosses = [
  *                 Gloss(             # <<<<<<<<<<<<<<
@@ -6259,29 +6343,29 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *                     lang=row['lang'] or 'eng',
 */
         __pyx_t_9 = NULL;
-        __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_Gloss); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 287, __pyx_L14_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_Gloss); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 296, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_10);
 
-        /* "tentoku/sqlite_dict_cy.pyx":288
+        /* "tentoku/sqlite_dict_cy.pyx":297
  *             glosses = [
  *                 Gloss(
  *                     text=row['gloss_text'],             # <<<<<<<<<<<<<<
  *                     lang=row['lang'] or 'eng',
  *                     g_type=row['g_type']
 */
-        __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr1__pyx_v_row, __pyx_mstate_global->__pyx_n_u_gloss_text); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 288, __pyx_L14_error)
+        __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr1__pyx_v_row, __pyx_mstate_global->__pyx_n_u_gloss_text); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 297, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_11);
 
-        /* "tentoku/sqlite_dict_cy.pyx":289
+        /* "tentoku/sqlite_dict_cy.pyx":298
  *                 Gloss(
  *                     text=row['gloss_text'],
  *                     lang=row['lang'] or 'eng',             # <<<<<<<<<<<<<<
  *                     g_type=row['g_type']
  *                 )
 */
-        __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr1__pyx_v_row, __pyx_mstate_global->__pyx_n_u_lang); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L14_error)
+        __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr1__pyx_v_row, __pyx_mstate_global->__pyx_n_u_lang); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 298, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 289, __pyx_L14_error)
+        __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 298, __pyx_L14_error)
         if (!__pyx_t_14) {
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         } else {
@@ -6294,14 +6378,14 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __pyx_t_12 = __pyx_mstate_global->__pyx_n_u_eng;
         __pyx_L17_bool_binop_done:;
 
-        /* "tentoku/sqlite_dict_cy.pyx":290
+        /* "tentoku/sqlite_dict_cy.pyx":299
  *                     text=row['gloss_text'],
  *                     lang=row['lang'] or 'eng',
  *                     g_type=row['g_type']             # <<<<<<<<<<<<<<
  *                 )
  *                 for row in cursor.fetchall()
 */
-        __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr1__pyx_v_row, __pyx_mstate_global->__pyx_n_u_g_type); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 290, __pyx_L14_error)
+        __pyx_t_13 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr1__pyx_v_row, __pyx_mstate_global->__pyx_n_u_g_type); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 299, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_13);
         __pyx_t_6 = 1;
         #if CYTHON_UNPACK_METHODS
@@ -6317,11 +6401,11 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         #endif
         {
           PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_9, NULL};
-          __pyx_t_15 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 287, __pyx_L14_error)
+          __pyx_t_15 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 296, __pyx_L14_error)
           __Pyx_GOTREF(__pyx_t_15);
-          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_text, __pyx_t_11, __pyx_t_15, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 287, __pyx_L14_error)
-          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_lang, __pyx_t_12, __pyx_t_15, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 287, __pyx_L14_error)
-          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_g_type, __pyx_t_13, __pyx_t_15, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 287, __pyx_L14_error)
+          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_text, __pyx_t_11, __pyx_t_15, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 296, __pyx_L14_error)
+          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_lang, __pyx_t_12, __pyx_t_15, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 296, __pyx_L14_error)
+          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_g_type, __pyx_t_13, __pyx_t_15, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 296, __pyx_L14_error)
           __pyx_t_5 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_10, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_15);
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -6329,13 +6413,13 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 287, __pyx_L14_error)
+          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L14_error)
           __Pyx_GOTREF(__pyx_t_5);
         }
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 286, __pyx_L14_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 295, __pyx_L14_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "tentoku/sqlite_dict_cy.pyx":292
+        /* "tentoku/sqlite_dict_cy.pyx":301
  *                     g_type=row['g_type']
  *                 )
  *                 for row in cursor.fetchall()             # <<<<<<<<<<<<<<
@@ -6354,7 +6438,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __Pyx_XDECREF_SET(__pyx_v_glosses, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":296
+    /* "tentoku/sqlite_dict_cy.pyx":305
  * 
  *             # Get optional metadata (only if needed)
  *             cursor.execute("SELECT field FROM sense_field WHERE sense_id = ?", (sense_id,))             # <<<<<<<<<<<<<<
@@ -6363,23 +6447,23 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
 */
     __pyx_t_4 = __pyx_v_cursor;
     __Pyx_INCREF(__pyx_t_4);
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_sense_id);
     __Pyx_GIVEREF(__pyx_v_sense_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 296, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 305, __pyx_L1_error);
     __pyx_t_6 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_SELECT_field_FROM_sense_field_WH, __pyx_t_5};
       __pyx_t_3 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 296, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":297
+    /* "tentoku/sqlite_dict_cy.pyx":306
  *             # Get optional metadata (only if needed)
  *             cursor.execute("SELECT field FROM sense_field WHERE sense_id = ?", (sense_id,))
  *             fields = [row['field'] for row in cursor.fetchall()] or None             # <<<<<<<<<<<<<<
@@ -6387,7 +6471,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *             cursor.execute("SELECT misc FROM sense_misc WHERE sense_id = ?", (sense_id,))
 */
     { /* enter inner scope */
-      __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 297, __pyx_L25_error)
+      __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 306, __pyx_L25_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_10 = __pyx_v_cursor;
       __Pyx_INCREF(__pyx_t_10);
@@ -6396,7 +6480,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         PyObject *__pyx_callargs[2] = {__pyx_t_10, NULL};
         __pyx_t_4 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L25_error)
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L25_error)
         __Pyx_GOTREF(__pyx_t_4);
       }
       if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
@@ -6404,9 +6488,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __pyx_t_7 = 0;
         __pyx_t_8 = NULL;
       } else {
-        __pyx_t_7 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 297, __pyx_L25_error)
+        __pyx_t_7 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 306, __pyx_L25_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 297, __pyx_L25_error)
+        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 306, __pyx_L25_error)
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       for (;;) {
@@ -6415,7 +6499,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_10);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 297, __pyx_L25_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 306, __pyx_L25_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6425,7 +6509,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_10);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 297, __pyx_L25_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 306, __pyx_L25_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6436,13 +6520,13 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             #endif
             ++__pyx_t_7;
           }
-          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L25_error)
+          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L25_error)
         } else {
           __pyx_t_4 = __pyx_t_8(__pyx_t_10);
           if (unlikely(!__pyx_t_4)) {
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
-              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 297, __pyx_L25_error)
+              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 306, __pyx_L25_error)
               PyErr_Clear();
             }
             break;
@@ -6451,9 +6535,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_row, __pyx_t_4);
         __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr2__pyx_v_row, __pyx_mstate_global->__pyx_n_u_field); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L25_error)
+        __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr2__pyx_v_row, __pyx_mstate_global->__pyx_n_u_field); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 306, __pyx_L25_error)
         __Pyx_GOTREF(__pyx_t_4);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_5, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 297, __pyx_L25_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_5, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 306, __pyx_L25_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -6464,7 +6548,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
       goto __pyx_L1_error;
       __pyx_L29_exit_scope:;
     } /* exit inner scope */
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 297, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 306, __pyx_L1_error)
     if (!__pyx_t_14) {
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else {
@@ -6479,7 +6563,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":299
+    /* "tentoku/sqlite_dict_cy.pyx":308
  *             fields = [row['field'] for row in cursor.fetchall()] or None
  * 
  *             cursor.execute("SELECT misc FROM sense_misc WHERE sense_id = ?", (sense_id,))             # <<<<<<<<<<<<<<
@@ -6488,23 +6572,23 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
 */
     __pyx_t_5 = __pyx_v_cursor;
     __Pyx_INCREF(__pyx_t_5);
-    __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 299, __pyx_L1_error)
+    __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 308, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_INCREF(__pyx_v_sense_id);
     __Pyx_GIVEREF(__pyx_v_sense_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 299, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 308, __pyx_L1_error);
     __pyx_t_6 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_5, __pyx_mstate_global->__pyx_kp_u_SELECT_misc_FROM_sense_misc_WHER, __pyx_t_10};
       __pyx_t_3 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 308, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":300
+    /* "tentoku/sqlite_dict_cy.pyx":309
  * 
  *             cursor.execute("SELECT misc FROM sense_misc WHERE sense_id = ?", (sense_id,))
  *             misc = [row['misc'] for row in cursor.fetchall()] or None             # <<<<<<<<<<<<<<
@@ -6512,7 +6596,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *             cursor.execute("SELECT dial FROM sense_dial WHERE sense_id = ?", (sense_id,))
 */
     { /* enter inner scope */
-      __pyx_t_10 = PyList_New(0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 300, __pyx_L34_error)
+      __pyx_t_10 = PyList_New(0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 309, __pyx_L34_error)
       __Pyx_GOTREF(__pyx_t_10);
       __pyx_t_4 = __pyx_v_cursor;
       __Pyx_INCREF(__pyx_t_4);
@@ -6521,7 +6605,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         PyObject *__pyx_callargs[2] = {__pyx_t_4, NULL};
         __pyx_t_5 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L34_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 309, __pyx_L34_error)
         __Pyx_GOTREF(__pyx_t_5);
       }
       if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
@@ -6529,9 +6613,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __pyx_t_7 = 0;
         __pyx_t_8 = NULL;
       } else {
-        __pyx_t_7 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 300, __pyx_L34_error)
+        __pyx_t_7 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 309, __pyx_L34_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 300, __pyx_L34_error)
+        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L34_error)
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       for (;;) {
@@ -6540,7 +6624,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 300, __pyx_L34_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 309, __pyx_L34_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6550,7 +6634,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 300, __pyx_L34_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 309, __pyx_L34_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6561,13 +6645,13 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             #endif
             ++__pyx_t_7;
           }
-          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L34_error)
+          if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 309, __pyx_L34_error)
         } else {
           __pyx_t_5 = __pyx_t_8(__pyx_t_4);
           if (unlikely(!__pyx_t_5)) {
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
-              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 300, __pyx_L34_error)
+              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 309, __pyx_L34_error)
               PyErr_Clear();
             }
             break;
@@ -6576,9 +6660,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_XDECREF_SET(__pyx_8genexpr3__pyx_v_row, __pyx_t_5);
         __pyx_t_5 = 0;
-        __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr3__pyx_v_row, __pyx_mstate_global->__pyx_n_u_misc); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L34_error)
+        __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr3__pyx_v_row, __pyx_mstate_global->__pyx_n_u_misc); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 309, __pyx_L34_error)
         __Pyx_GOTREF(__pyx_t_5);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_10, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 300, __pyx_L34_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_10, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 309, __pyx_L34_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -6589,7 +6673,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
       goto __pyx_L1_error;
       __pyx_L38_exit_scope:;
     } /* exit inner scope */
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 309, __pyx_L1_error)
     if (!__pyx_t_14) {
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     } else {
@@ -6604,7 +6688,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __Pyx_XDECREF_SET(__pyx_v_misc, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":302
+    /* "tentoku/sqlite_dict_cy.pyx":311
  *             misc = [row['misc'] for row in cursor.fetchall()] or None
  * 
  *             cursor.execute("SELECT dial FROM sense_dial WHERE sense_id = ?", (sense_id,))             # <<<<<<<<<<<<<<
@@ -6613,23 +6697,23 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
 */
     __pyx_t_10 = __pyx_v_cursor;
     __Pyx_INCREF(__pyx_t_10);
-    __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 311, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_v_sense_id);
     __Pyx_GIVEREF(__pyx_v_sense_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 302, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_sense_id) != (0)) __PYX_ERR(0, 311, __pyx_L1_error);
     __pyx_t_6 = 0;
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_10, __pyx_mstate_global->__pyx_kp_u_SELECT_dial_FROM_sense_dial_WHER, __pyx_t_4};
       __pyx_t_3 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_execute, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":303
+    /* "tentoku/sqlite_dict_cy.pyx":312
  * 
  *             cursor.execute("SELECT dial FROM sense_dial WHERE sense_id = ?", (sense_id,))
  *             dial = [row['dial'] for row in cursor.fetchall()] or None             # <<<<<<<<<<<<<<
@@ -6637,7 +6721,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *             senses.append(Sense(
 */
     { /* enter inner scope */
-      __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 303, __pyx_L43_error)
+      __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L43_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_5 = __pyx_v_cursor;
       __Pyx_INCREF(__pyx_t_5);
@@ -6646,7 +6730,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         PyObject *__pyx_callargs[2] = {__pyx_t_5, NULL};
         __pyx_t_10 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_fetchall, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 303, __pyx_L43_error)
+        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 312, __pyx_L43_error)
         __Pyx_GOTREF(__pyx_t_10);
       }
       if (likely(PyList_CheckExact(__pyx_t_10)) || PyTuple_CheckExact(__pyx_t_10)) {
@@ -6654,9 +6738,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __pyx_t_7 = 0;
         __pyx_t_8 = NULL;
       } else {
-        __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 303, __pyx_L43_error)
+        __pyx_t_7 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 312, __pyx_L43_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 303, __pyx_L43_error)
+        __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 312, __pyx_L43_error)
       }
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       for (;;) {
@@ -6665,7 +6749,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_5);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 303, __pyx_L43_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 312, __pyx_L43_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6675,7 +6759,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             {
               Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_5);
               #if !CYTHON_ASSUME_SAFE_SIZE
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 303, __pyx_L43_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 312, __pyx_L43_error)
               #endif
               if (__pyx_t_7 >= __pyx_temp) break;
             }
@@ -6686,13 +6770,13 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
             #endif
             ++__pyx_t_7;
           }
-          if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 303, __pyx_L43_error)
+          if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 312, __pyx_L43_error)
         } else {
           __pyx_t_10 = __pyx_t_8(__pyx_t_5);
           if (unlikely(!__pyx_t_10)) {
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
-              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 303, __pyx_L43_error)
+              if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 312, __pyx_L43_error)
               PyErr_Clear();
             }
             break;
@@ -6701,9 +6785,9 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_XDECREF_SET(__pyx_8genexpr4__pyx_v_row, __pyx_t_10);
         __pyx_t_10 = 0;
-        __pyx_t_10 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr4__pyx_v_row, __pyx_mstate_global->__pyx_n_u_dial); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 303, __pyx_L43_error)
+        __pyx_t_10 = __Pyx_PyObject_Dict_GetItem(__pyx_8genexpr4__pyx_v_row, __pyx_mstate_global->__pyx_n_u_dial); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 312, __pyx_L43_error)
         __Pyx_GOTREF(__pyx_t_10);
-        if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_10))) __PYX_ERR(0, 303, __pyx_L43_error)
+        if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_10))) __PYX_ERR(0, 312, __pyx_L43_error)
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -6714,7 +6798,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
       goto __pyx_L1_error;
       __pyx_L47_exit_scope:;
     } /* exit inner scope */
-    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 303, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 312, __pyx_L1_error)
     if (!__pyx_t_14) {
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else {
@@ -6729,7 +6813,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     __Pyx_XDECREF_SET(__pyx_v_dial, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":305
+    /* "tentoku/sqlite_dict_cy.pyx":314
  *             dial = [row['dial'] for row in cursor.fetchall()] or None
  * 
  *             senses.append(Sense(             # <<<<<<<<<<<<<<
@@ -6737,30 +6821,30 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
  *                 pos_tags=pos_tags,
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_Sense); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 305, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_Sense); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 314, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
 
-    /* "tentoku/sqlite_dict_cy.pyx":306
+    /* "tentoku/sqlite_dict_cy.pyx":315
  * 
  *             senses.append(Sense(
  *                 index=sense_row['sense_index'],             # <<<<<<<<<<<<<<
  *                 pos_tags=pos_tags,
  *                 glosses=glosses,
 */
-    __pyx_t_10 = __Pyx_PyObject_Dict_GetItem(__pyx_v_sense_row, __pyx_mstate_global->__pyx_n_u_sense_index); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 306, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_Dict_GetItem(__pyx_v_sense_row, __pyx_mstate_global->__pyx_n_u_sense_index); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 315, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
 
-    /* "tentoku/sqlite_dict_cy.pyx":309
+    /* "tentoku/sqlite_dict_cy.pyx":318
  *                 pos_tags=pos_tags,
  *                 glosses=glosses,
  *                 info=sense_row['info'],             # <<<<<<<<<<<<<<
  *                 field=fields,
  *                 misc=misc,
 */
-    __pyx_t_15 = __Pyx_PyObject_Dict_GetItem(__pyx_v_sense_row, __pyx_mstate_global->__pyx_n_u_info); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_Dict_GetItem(__pyx_v_sense_row, __pyx_mstate_global->__pyx_n_u_info); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
 
-    /* "tentoku/sqlite_dict_cy.pyx":312
+    /* "tentoku/sqlite_dict_cy.pyx":321
  *                 field=fields,
  *                 misc=misc,
  *                 dial=dial             # <<<<<<<<<<<<<<
@@ -6781,36 +6865,36 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
     #endif
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 7 : 0)] = {__pyx_t_4, NULL};
-      __pyx_t_13 = __Pyx_MakeVectorcallBuilderKwds(7); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 305, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_MakeVectorcallBuilderKwds(7); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 314, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_index, __pyx_t_10, __pyx_t_13, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_pos_tags, __pyx_v_pos_tags, __pyx_t_13, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_glosses, __pyx_v_glosses, __pyx_t_13, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_info, __pyx_t_15, __pyx_t_13, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_field, __pyx_v_fields, __pyx_t_13, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_misc, __pyx_v_misc, __pyx_t_13, __pyx_callargs+1, 5) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dial, __pyx_v_dial, __pyx_t_13, __pyx_callargs+1, 6) < (0)) __PYX_ERR(0, 305, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_index, __pyx_t_10, __pyx_t_13, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_pos_tags, __pyx_v_pos_tags, __pyx_t_13, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_glosses, __pyx_v_glosses, __pyx_t_13, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_info, __pyx_t_15, __pyx_t_13, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_field, __pyx_v_fields, __pyx_t_13, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_misc, __pyx_v_misc, __pyx_t_13, __pyx_callargs+1, 5) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dial, __pyx_v_dial, __pyx_t_13, __pyx_callargs+1, 6) < (0)) __PYX_ERR(0, 314, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_5, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_13);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
 
-    /* "tentoku/sqlite_dict_cy.pyx":305
+    /* "tentoku/sqlite_dict_cy.pyx":314
  *             dial = [row['dial'] for row in cursor.fetchall()] or None
  * 
  *             senses.append(Sense(             # <<<<<<<<<<<<<<
  *                 index=sense_row['sense_index'],
  *                 pos_tags=pos_tags,
 */
-    __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_senses, __pyx_t_3); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 305, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_senses, __pyx_t_3); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 314, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/sqlite_dict_cy.pyx":270
+    /* "tentoku/sqlite_dict_cy.pyx":279
  *         cdef list pos_tags, glosses, fields, misc, dial
  * 
  *         for sense_row in sense_rows:             # <<<<<<<<<<<<<<
@@ -6820,7 +6904,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":315
+  /* "tentoku/sqlite_dict_cy.pyx":324
  *             ))
  * 
  *         return senses             # <<<<<<<<<<<<<<
@@ -6832,7 +6916,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
   __pyx_r = __pyx_v_senses;
   goto __pyx_L0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":264
+  /* "tentoku/sqlite_dict_cy.pyx":273
  *         return entries
  * 
  *     def _build_senses(self, object cursor, list sense_rows):             # <<<<<<<<<<<<<<
@@ -6873,7 +6957,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_8_bui
   return __pyx_r;
 }
 
-/* "tentoku/sqlite_dict_cy.pyx":317
+/* "tentoku/sqlite_dict_cy.pyx":326
  *         return senses
  * 
  *     def __enter__(self):             # <<<<<<<<<<<<<<
@@ -6921,32 +7005,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_self,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 317, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 326, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 317, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 326, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "__enter__", 0) < (0)) __PYX_ERR(0, 317, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "__enter__", 0) < (0)) __PYX_ERR(0, 326, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("__enter__", 1, 1, 1, i); __PYX_ERR(0, 317, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("__enter__", 1, 1, 1, i); __PYX_ERR(0, 326, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 317, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 326, __pyx_L3_error)
     }
     __pyx_v_self = values[0];
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__enter__", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 317, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__enter__", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 326, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6972,7 +7056,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_10__e
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__enter__", 0);
 
-  /* "tentoku/sqlite_dict_cy.pyx":319
+  /* "tentoku/sqlite_dict_cy.pyx":328
  *     def __enter__(self):
  *         """Context manager entry."""
  *         return self             # <<<<<<<<<<<<<<
@@ -6984,7 +7068,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_10__e
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":317
+  /* "tentoku/sqlite_dict_cy.pyx":326
  *         return senses
  * 
  *     def __enter__(self):             # <<<<<<<<<<<<<<
@@ -6999,7 +7083,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_10__e
   return __pyx_r;
 }
 
-/* "tentoku/sqlite_dict_cy.pyx":321
+/* "tentoku/sqlite_dict_cy.pyx":330
  *         return self
  * 
  *     def __exit__(self, exc_type, exc_val, exc_tb):             # <<<<<<<<<<<<<<
@@ -7050,44 +7134,44 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_self,&__pyx_mstate_global->__pyx_n_u_exc_type,&__pyx_mstate_global->__pyx_n_u_exc_val,&__pyx_mstate_global->__pyx_n_u_exc_tb,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 321, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 330, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 321, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 330, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 321, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 330, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 321, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 330, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 321, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 330, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "__exit__", 0) < (0)) __PYX_ERR(0, 321, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "__exit__", 0) < (0)) __PYX_ERR(0, 330, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 4; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("__exit__", 1, 4, 4, i); __PYX_ERR(0, 321, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("__exit__", 1, 4, 4, i); __PYX_ERR(0, 330, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 4)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 321, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 330, __pyx_L3_error)
       values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 321, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 330, __pyx_L3_error)
       values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 321, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 330, __pyx_L3_error)
       values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 321, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 330, __pyx_L3_error)
     }
     __pyx_v_self = values[0];
     __pyx_v_exc_type = values[1];
@@ -7096,7 +7180,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__exit__", 1, 4, 4, __pyx_nargs); __PYX_ERR(0, 321, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__exit__", 1, 4, 4, __pyx_nargs); __PYX_ERR(0, 330, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7128,7 +7212,7 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_12__e
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__exit__", 0);
 
-  /* "tentoku/sqlite_dict_cy.pyx":323
+  /* "tentoku/sqlite_dict_cy.pyx":332
  *     def __exit__(self, exc_type, exc_val, exc_tb):
  *         """Context manager exit."""
  *         self.close()             # <<<<<<<<<<<<<<
@@ -7140,12 +7224,12 @@ static PyObject *__pyx_pf_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_12__e
     PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod((PyObject*)__pyx_mstate_global->__pyx_n_u_close, __pyx_callargs+__pyx_t_3, (1-__pyx_t_3) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 323, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":321
+  /* "tentoku/sqlite_dict_cy.pyx":330
  *         return self
  * 
  *     def __exit__(self, exc_type, exc_val, exc_tb):             # <<<<<<<<<<<<<<
@@ -7800,49 +7884,49 @@ __Pyx_RefNannySetupContext("PyInit_sqlite_dict_cy", 0);
   if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_get_words, __pyx_t_8) < (0)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":264
+  /* "tentoku/sqlite_dict_cy.pyx":273
  *         return entries
  * 
  *     def _build_senses(self, object cursor, list sense_rows):             # <<<<<<<<<<<<<<
  *         """Build senses list from rows (optimized helper)."""
  *         cdef list senses = []
 */
-  __pyx_t_8 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_9_build_senses, 0, __pyx_mstate_global->__pyx_n_u_FastSQLiteDictionary__build_sens, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_sqlite_dict_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[4])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_9_build_senses, 0, __pyx_mstate_global->__pyx_n_u_FastSQLiteDictionary__build_sens, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_sqlite_dict_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[4])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 273, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030E0000
   PyUnstable_Object_EnableDeferredRefcount(__pyx_t_8);
   #endif
-  if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_build_senses, __pyx_t_8) < (0)) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_build_senses, __pyx_t_8) < (0)) __PYX_ERR(0, 273, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":317
+  /* "tentoku/sqlite_dict_cy.pyx":326
  *         return senses
  * 
  *     def __enter__(self):             # <<<<<<<<<<<<<<
  *         """Context manager entry."""
  *         return self
 */
-  __pyx_t_8 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_11__enter__, 0, __pyx_mstate_global->__pyx_n_u_FastSQLiteDictionary___enter, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_sqlite_dict_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[5])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_11__enter__, 0, __pyx_mstate_global->__pyx_n_u_FastSQLiteDictionary___enter, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_sqlite_dict_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[5])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 326, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030E0000
   PyUnstable_Object_EnableDeferredRefcount(__pyx_t_8);
   #endif
-  if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_enter, __pyx_t_8) < (0)) __PYX_ERR(0, 317, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_enter, __pyx_t_8) < (0)) __PYX_ERR(0, 326, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "tentoku/sqlite_dict_cy.pyx":321
+  /* "tentoku/sqlite_dict_cy.pyx":330
  *         return self
  * 
  *     def __exit__(self, exc_type, exc_val, exc_tb):             # <<<<<<<<<<<<<<
  *         """Context manager exit."""
  *         self.close()
 */
-  __pyx_t_8 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_13__exit__, 0, __pyx_mstate_global->__pyx_n_u_FastSQLiteDictionary___exit, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_sqlite_dict_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[6])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 321, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14sqlite_dict_cy_20FastSQLiteDictionary_13__exit__, 0, __pyx_mstate_global->__pyx_n_u_FastSQLiteDictionary___exit, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_sqlite_dict_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[6])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 330, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030E0000
   PyUnstable_Object_EnableDeferredRefcount(__pyx_t_8);
   #endif
-  if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_exit, __pyx_t_8) < (0)) __PYX_ERR(0, 321, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_exit, __pyx_t_8) < (0)) __PYX_ERR(0, 330, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
   /* "tentoku/sqlite_dict_cy.pyx":27
@@ -7974,34 +8058,34 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
 static int __Pyx_InitConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   {
-    const struct { const unsigned int length: 10; } index[] = {{1},{68},{25},{22},{28},{161},{4},{179},{13},{26},{25},{28},{24},{26},{92},{337},{46},{48},{159},{159},{46},{74},{176},{176},{121},{72},{1},{1},{8},{18},{10},{20},{30},{29},{29},{34},{29},{26},{30},{5},{11},{12},{4},{8},{4},{20},{3},{5},{9},{18},{10},{13},{4},{14},{13},{6},{9},{10},{5},{18},{5},{4},{8},{7},{6},{7},{11},{4},{7},{12},{3},{7},{9},{7},{8},{10},{6},{8},{7},{7},{6},{8},{8},{5},{6},{18},{8},{6},{25},{9},{10},{10},{7},{5},{4},{8},{10},{3},{13},{5},{16},{13},{8},{9},{9},{16},{17},{16},{14},{9},{10},{10},{3},{4},{14},{4},{8},{5},{11},{7},{13},{11},{13},{4},{10},{15},{8},{8},{16},{19},{7},{3},{3},{8},{11},{5},{8},{12},{12},{3},{11},{4},{8},{11},{9},{10},{6},{12},{10},{13},{7},{7},{8},{7},{14},{22},{21},{18},{20},{22},{8},{4},{20},{6},{6},{8},{723},{303},{45},{9},{97},{7},{245}};
-    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (2509 bytes) */
-const char* const cstring = "BZh91AY&SY\214h\216\361\000\002)\377\377\377\377\377\377\376\377\177\376\277\377\377\356\277\377\377\366@@@@@@@@@@@@@\000@\000`\t]\364uw\267n\335\344\355\271\353\273T\323k\025\021)#<\003\300\320\246\243A\250\324\364\236\223jd\360\211\351\203LE\017)\345=M4<\247\244i\246\230M\223Q\2406\223\020\031\244\332\236\223\320j4\022\204& \230S\002aS\332OJmG\250\320\032\000\031\000\320\003F\200\006@\000\001\240\032\003U?L\022\247\352\020#C\023FF\206\324a<D4`\001\0321\006\203\004\r4i\210\032hha1\004\210\204\010\006\223T\365?SQ\344\236\247\242\215\352F\200\323\3242\014\000\206\000\214\200\000\000\032i\215\020\0100\000L\000\004\3010\000\000\000\000L\002`!\200\000#\000\000\001$\201\020\322\236\022z\032\217D=\021\351\001\246\200\000\r\000\001\240\000\000\001\2402\000\365\036\247\201\225\370\231\223\022\003lkt\204vW\336>\005\335\370\\C\031\335\211\217\216#\343s1\213_'s\311\1770\tA\304\036(\206\003\000\303\014\302d2rQ\221)\214\320\251\216\002\372w\275\236w\353o\273\376#\367R\322D\373\252\021\312\331\374\377\312\214\232\331\277z\023L\033lm&\312 :EQn\315\"T\034\227\362\330V\264\035J\274\230\254\232@\3306\331n\325\22222\\\244<$\\M%&g#.&T\244\027\020>\261\034kR\224\250\215P\331;Q\001\311l{\020\245\350\252\355|\203\236(\364\032\242[}Y\333\"\245e\335*BFN\030/\023\020\265\303\204r_=pC{\033:\206eW\260U\215\241~dD\352\250 \207\n\000l\366\375\"\347\033b(F\r\"\232\013\216\300-\260\035\335V\267\032\374/\227\225.\363\320\300\275\310\310\276\273\346\037\254\361Jc\021\332\267\253j\2353\246\252;D\217\365\246\314\233\200\304\253S.zx\365\303k\373\205X9\r\311\263\301\362\345\266\364\330\362\026Um\335\346m\2058Yeueu?\274.1G\252\3479\346\031\3417\230\0341\276\374\327K\r\334\013\355\225\256\215\027\225CZ\347\205\346p\365\323n\210\263\354\271W\303\244G\036\177\013\254\355\235`\003\352\321\024\346RY\214\206C\214\221\027\271o\331\275z]\271\315$\024\341A)\317N\375K\260f\000c0\353!\356/\243\026\242d\300\214\"\014\256\3025\236\276\233\336\030O\002\272\360WRJb\332\251\021\210\004(\003\237\033];}YJ\272$\254\324""\242\237\243\370\016~u\315\337\256\216\324\321\276\226Vk\r\326h\321\237\206\233\241\tt\265u:k\323\367\377\340';J}\313\216\245\263\352U9\030T\344\360\345nKh(\370\027\240\331?*#BA\006B\273\272F\375\0325&1\014:p|\030\203\265\270\020\316\250\034\237?\000\341\262P)\224\325P}f\312\272\006d\324W5t\220qR4\020Z\332\347\207\305\005\274m\017\277\301\364\323\030.a\216\216^\222w\035\326\207\327\345!\006\320\232\rG)\001\343\263\340t2\347\2763\3349\035\333Y\341\272\271r\362\240gL\"\364\0148/@\374\020\305\370\365j\374\355\211\004\323\253O<\246F\342\001\013l\343\201\217\036\\\007S\371s\263;ru\327\352\231\301\311d\020\216\222\n$\200jd\335:@\207@{\3668A\216\246C\003\220V@\354\356F/G+s\326\307\036\313\014\220\0317\3736lC\353\\T\014\363\333\313\351f\320U\277X\362W\027\253*\247\034\233s\037\250q\311\305\\\224r\235\374t8\220\343\365!L\237vM\177C\017s\227\362a\025\303\013S\322\247\213\352\\[(~;\207\026\272\372Ef\350\251_\254Cp\243Qs\033^\013\245t\022V\355\031|\207x\323M6\321e\216\027\210\224\036\251\320)V\024I\226si\002\016L*IAJ3y\006o<\314\346\211\302 \370\033\331\235.\332\335\034E\330M\n\315wR\347\234\315\347})@-\364\r\363\327\273[<'$R\236YTw\250\205\202O\034\327\342\030\225\263\251\306J5\017\317TU^\027\n\244\024Y!\347Yv\212\221\014\216PGM1 i\257\022\351\361\224UD\250\013g\315TGez\365\270\230sa\021q\333\027mu\035\310\374C\242e<Ho\005\303\245#\325|\346\236\316\336\222\371\241\305\247\211\221\333\304v7^\230\241\2564\331\211x\255A\301\026\n\211\274\340\033M\274.\254\224\332\032*\333Lm\244<\035\235Wxw\247\314.Io\263\277Q\022A\020E\nC\354VW@\310\342\304*K\025\315\266r2\324F\331\272\260\245\320\353s\2668}\224T\2109\373f\\\347\251\212\27141l\214\356\332G\003P\361B\233\235\237>H\361\351\246\222\033\3258\\A\004\017\203B\2110\372\255!\200\223*\254\223,\262d\023\227 O+s\204\315\262\020\305<\217H\313z\313/\034\370O(UD\273\n\342\340\265\271\261\0044\307{|\222&F 0\241ESb\204\263=\315\231\355\014\327\214\017\241\234\246\014\327\302\230\264];\347+\3336\365I\235\010\330=\234+L\311\336N\264\276\323\003""\210sw.\271\216\367\206\022\263\321\\\037&\030i9\334l\213\304\204\241\035P\362\245\3155HL[k/\260\305&W\256\304.\r\246\036\203!`\310m\232\251-\313YDm\023\351\022\344[\311\203\255\230\253 -(\006\321Ma\000\340@d\275{WM1\254\010\320\245\253\\\n\014\274N\261t\260\231\325T\032E\352BV\355\306\373\025\000zSJDd\224\223\237XhUkT\0054\343\251+\225\205\n\314\232\364\355'R\"ZvK\202\2458.%\261\345\353\232\202\266\340Vm}\321}:\371\322\251\265\243v\032\361V\203\264\003m\256\305>T\366\036\030\334q\217n\220\n\0252#\317'\215\007\327B\215M;\373\271\227e\326\030\330\275e\225\2123e\340\272\324\225\325\031C\242d\240S\352\305\260cQH\033|\034P\006j\266\353\350\221\237\021\334\016\3642\204`\031A\213\002\314lO'\0004\2272\271\021ly\255\262hc\027Tx!\020\320\332M\241}\210\357:V\010\230\205\245\340=\213\032\272\354\303F\204K\031\251\314\212\200C\223Z\024?\206\034\nZ\242\371\232\263\025\3110\n\207M0\025DzX\272*\005\324\353L-c\230\270)\215\024NM1\337\221\2346\250\373\023B\214\242\350\242\031\361\305\303\314\214\303\216q\201\256\302i\030\362\032\303\214\334\206\347\263\320|\357p\2502\220:\273i\360\031\224\255pLs\316\201\234*\213\242\355c\263\031t\021\033\270L\341\213j\241\212X\323\222\234\334lI\321\211\203E\370xt\326!\244_\030am\323\234YneU\024\202\317+=s,\220]Pj\006\213\210\272Ji|\240\226\001\227E\372(\320\232j\"\373\222\341\310\315Ruo\215\372\336\266A\253L4\353CD]\201\267\016\376\345\313\235\315\354\265\266\350\235\232h\332\271\300\353Rs`D\2712\356k\226t`4u\352l\200\245;\242V3A\030{(\rH3\031\341\014\254\246f&\010\266\331\n\235\000\202\204\306}@\222\204\262\327\0104u\344\032\232\322\212\253\002\225D\323\226\220\3226\017\324z\023^/9\267A\264\307]\312\304$C\225\\P\326\203ZQ}\246(\341Z\320\221Z`l\265\372\226\013\006W4g\273\347\013\303\320\273\356\304\352\352\003\307u\316\347\321\212;\327\275\3558N\256\025)x_\237?%-\310\362f\377\006\024\215\027\214PY\006l\305\302\223\204Yd\005\265o\025\2326\207\245k-\303\336\344\211\211\312\304R|\031\243\304\231\255:\261dl$\032L\313\330\334\315\036s\371\246jfG\210`l""\361y\274\014Z\006f\210A\020\001\300_*\266\"(*\341\003\006\004L\363\tg\031\026\023-l\227\300!\350p\220N\004\250\013\275t\242m!n\313\027[!\256\2440\266q$S\265\275\250bI\203)\373\007\352\342!\3661d\300\322\315\362\220\301\304\205/|\372\017\217\014\306N\341\200a&\316\010\2418_\242i\270\335\371\376\376J\201\345S\000\314]\340\237\262\027\006c\367Y\235\0270`@}\301\246\350Cq\275\307T\003\305Pf\206\002|\267\341\306\304\335W\026ZT\2760\370-z\266\364\317_:4\032\t\371\261\2659\245@mM\n\342\301\327\212\326\025\204\321]\277#\203\301\367\234&\224\343\023-\273\347\023~=\022\214\034\240yy|\243\323\231\273\026\255Q\033#\037Ky*\014\310tF\nL\010V\330\205\343\rM\203\205\234JoE\271\024\363uh\236\242I+=\336\316\345$\320\016G~#\r\370\335/\362\237\323\265tLf\035\270U\237\316\330\032\306baS\201\r\246)\350h\334\273\322\246\314\327!\006\223\201o\021,)\010:\255dI\301\246DyD\354\223\n\214\235\202\010J\240\"\034A14\001\301\211T\332\000\212J\025Q\321\334\236\013\010\"\271\0078\004Up\216 \257\005dEx\032\262E\350<M\216(\210\206\200C\216K\377\027rE8P\220\214h\216\361";
-    PyObject *data = __Pyx_DecompressString(cstring, 2509, 2);
+    const struct { const unsigned int length: 10; } index[] = {{1},{68},{25},{22},{28},{161},{4},{179},{13},{26},{25},{28},{24},{26},{92},{220},{237},{46},{48},{159},{159},{46},{74},{176},{176},{121},{72},{1},{1},{8},{18},{10},{20},{30},{29},{29},{34},{29},{26},{30},{5},{11},{12},{4},{8},{4},{20},{3},{5},{9},{18},{10},{13},{4},{14},{13},{6},{9},{10},{5},{18},{5},{4},{8},{7},{6},{7},{11},{4},{7},{12},{3},{7},{9},{7},{8},{10},{6},{8},{7},{7},{6},{8},{8},{5},{6},{18},{8},{6},{25},{9},{10},{10},{7},{5},{4},{8},{10},{3},{13},{5},{16},{13},{8},{9},{9},{16},{17},{16},{14},{9},{10},{10},{3},{4},{14},{4},{8},{5},{11},{7},{13},{11},{13},{4},{10},{15},{8},{8},{16},{19},{7},{3},{3},{8},{11},{5},{8},{12},{12},{3},{11},{4},{8},{11},{9},{10},{6},{12},{10},{13},{7},{7},{8},{7},{14},{22},{21},{18},{20},{22},{8},{4},{20},{6},{6},{8},{755},{303},{45},{9},{97},{7},{245}};
+    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (2515 bytes) */
+const char* const cstring = "BZh91AY&SYs\030\3364\000\002B\377\377\377\377\377\377\376\377\177\376\277\377\377\356\277\377\377\366@@@@@@@@@@@@@\000@\000`\t|\372\2737\271\352]\263[\273\275ff\233L\324\326\266\330\324\236\001\340hD\201\252i\351\244z\233(zh4\364\0314$\364i\352j4\036\223OSM\006\006\223\324\321\223jh\304d\332h&\236\241\221\240\224A14\001\032\004\rM4\2326\246\206\201\240\3204\006\200h\320\000\000\000h\0324\000\"\247\344\3652SH\320\000&\004a0\000F\230\023\023 \3010\023\002`LC\0020&\t\202DSMM\03254\304\321L\320e=M4\365\014\200h\000\003@\000\000\000\000\000\006\231\017Q\006\000\t\200\000\230&\000\000\000\000\t\200L\0040\000\004`\000\000$P\020AO\0257\251?L*l\214\023P\365\032\000\003@z\200\000\000\000\000\003 \000-\336\311\030\315\004\304\200\333\032\315 \343\226\275\203\371]/\351\303\210\031\322\211\216\233\207\323s4\243\257\370D\226\3658\222VAd\212\320\3428\2061\26145\tR\205*f\022\225\326\213\270\261\344\344\371[\375\372\237D\250\346J]4\344\215\217Cg\333\371\330\310\206|\306\255HM\261\203m\215\200\331\260$o\245h\264iH\225\006{tPT\244\rJv\253\232@\3306\331=\331\244\\\\\264\020vDZJ\2075\255\260\236\302t\203\326\304\035P\2159jR\223!7\357\312\324@j[\016\3101\330\233\236G\t6\014w\254\321-\275\315\026\344(R]eHJd\335r\347c\013j8F\254S\303\0054i\211\266!\272\322C&\230\267>}i/\341\200\013y\0106{>q\206&\312\214Lp\330\340|4\033\021\360\005>\371\036\177N\277u\325\337\341\352`9\372\253\213\245c\310\211\320\002D\242\216\331\231,3d<2\300\335\321\252\252:I\305\024\330\307\225\005\226\\\005\007\320|E\303i:\323\254n\212\177\030S[\207\327;n\347\350\336\276xYeud\331\365\337yl?V\265\2561\322\3718\304\344C\0140\2728a\221\032'D\031TG\240\251kr\211\213\026\327_R><#Q@CZ'nKn\t\201\302\001M\343\ne\336`\237-FJR\362\233w%\375'\231}K\216s9n\347V\356\225\220\240\242\204\013\352~R\263\314\263\236\315E\273\306\341\257c8\374\010G\315\373\263Dlx\217\326\215u\265\227\216F!\220\242\016\202D5\206\2452\240\037\242\203\n`,\225O\\i`\340\224\211%\204\322\226g(\303\na\014\330R\314\024|Fb0\304\rY\026\266\217kc\374@A\203\014B\327""\275\026\255\227\3039D\302mO\0066\330\361\376\362\364\231\305\325\233\346\210\016Q\023\207\236\207A\017\316p23\335(\311\222\207C\375E!\033\303\223\343\357WHiH\274\275a\010\230\337\016\330\035\032\340\304J\202\010V\0049\001\010\264\370\000\266\010G\221\311o/D\016\310\006cN-\202\247R2\331\256A\204\322\232M\207\010\203\206\350/:FsA|%\311\033\216g\331\3412\271r\266\210B8E\350\030\\!\325B\277\300\353O\362\266\003\303^\315}\022\230\234\201\006\005\341\216\357*\307\367\275~\206\377m\303\323\256V\371]_\000\215\220\333]\r\301\313\205\316p \370\310\307\2130k*\206\020\021\214C:~F\237?\260\334^\243\006*g\036\007 \376\275k\356q\372\002h#\301\305\352e\244\247T\307\021\264\257M\014\311\250\t\210\203\230\006\240(35\366\032\256\347J!\036\242\022\224,(C\306\203f6\314\024b\014u\031\"\337\352\304\262\020\375\306\206\212\320\010\3672<\237vHf\221\222I1\221\234oI\207\340\"N\2707\260\026\r4\301\266\212+\255\260\224\267\353\216\262&\362;\035'\202\236\300\244\026\202\305x\264\306x\265\260\255\255l\312\222#\177\225[\261u\361\025\312\306BMp\366\323f\312\275\0238\215\331J\001i\2604\3177g\006sa\"\354V\360\337\356_fr\331!\365\036\032-\364\251}\010\371\235~\240\225\2647\n\307#\325\020\362\353\273T\321\014\355PF\311,A\247\006'\247\244\306\322\274\014v\366m(\347\223\376\366\213u[\010T\337\026\372\335;h\177\303\222d\237\030\355Y\371\311\036k\353\014;y9\305\221\221\273\247v\n9\212\354\206\362\305=u\273\016'\301\202$+\001\220\272\303\224G\033\r\351\274\305tR\3726\323\033i\016\347k\242\326n\034\362\251-6\274Y\210\222\010\202,VE\231\\9\241\252L\250\310\262\271\215\262\211\224\310[&\324\024\265\377\347\205\274\321\325\3214A\256\333\"\346\271K*\213\037f\364$\267m!\201\2708P\246\346\351\323\236\034\275\224\322?\031\264Z\304r\003\\\256\252\205\033Z\3200(\326\026\223\\ePXj\221e4X\025\206\311\317\025\274\271*\331\233\016\034\204e9d\023\242=\215PhZ\316\346\000\206\302\030\353\"\211\234`\361\202\241D\344\304\241+\323s49\217\321z0\035C\032\246\014e\357\246\014\203e|\243z\251\177\023L\\2\341n\311\366h'I8%\321`uA""\307\350V\254x\235\327J\321~\300M\254c\266#\303\337\346\024\022\224\366\310\227\352\332\276U4<\261\310\313Z\337\334\230j\033L<VAZ\3106\314\326Kr\326H\214\342{\342Z\226\222`\341f7\010\0361\007,f\350Q\034\244\020\263\276|\334\264\272\025\265\230;\350ZmpNW\306\201m\266\3021\031\324|m\333\231\325\252\000\344\246\224\200\304\214S\303\2505*\262\325\001M\231\246\225F\262\205c\023wf\322SDKN5\301R\234\026\305\255\305\353\242\201\364d=\264F\014\213\271\233\350\21724e\267\035\312\2207\200m\265\246]tt\273n\251\265^\212\230Q\256Z\221\341\360!\325P\243)\247_'\233v[\241\231\205\353\034\230Q\243.\013\255H\301\342\2168\032\321\300\356\371\224\265\215BP\033y\334$\0031S-\222H\315\264:\203\261\014\221\013B\370\0270(\306\304\357p\001\244\265*\242\024\273U9Q\221t+1\332\204C\023i6\222\357\343^\372\271\023\020\262\273\207\260\261\344\344\353\"\266\245\226#\036\264\320\023\342\326\212Kr|\326cc\344\325\3140X\262\205\344mYF\305%\205\350\274\036\246\332ak\016j\340\246dQ9\233!\256&\220\332\243\253MJ1E\325C\364\346\203G\031\341\002'~e5\341V\252\327\210\326\034\007=\034\371BH\224z\246AHd\2409\272e\336fIXA1\311\233\306mQ\025\212\340;X\312\301\021\263\2653v6\302\201J%.\316\355\315t\r8)$\250F\\n\264AA\"\3140\266\351J\014[\230\252(\311\273s\302O\230\354C\3258P\205bV63L\254\232\302\005\374\3330I\2414\324F*\245\265\251\231\244\340\323\032px5\006l\260\323\245\205\361[\214\367r*\266\364U\275\213m\317|\354e\261\265W\003\245\t\320\300\211rd\350a,\364hEwx\361\250\031\217\253\251y\021E\005\220\300\214a\020m\322\233P\326\270.\004\360\313L\223@\243\t\014t\301\"\370\345S\336\310n\347\031MID\352\002\225D\256u\205b\250/\234\267\246\273~I\236\3639\217\n\253HH\207*\230\320\325\346\tF+f,p\026\333\000\217t\213\250\215\211$\222\217\305\014p\347\t\307Rn\354m\234@t\025\370\301x)CR\346[\314\233fO\035\020\216;\371\335Fu\232\231\271,F\212\204E\021\311\302t`n\022`\215\226\200\334[\233m\323Q)j\347A3\000\252b0(\224\330\335<*\275Q\201\262\236\204\031\273.f\357G\366\362\247\356\361\033M\243\342\030?\274_7\300\317U6\342\021\020""\001l\255U\315\220\260\275\262\006F\004\217\t\204\367\337\"\204\335[\005\262\020\374\334D\022\332<\013*\341H\367!nL\027\035!\244\2640\257\001&\001\330\335\366\030h\301\225\035C\323\343!\276cT\310g\342\327\005w\215\nf\351\364\037/L\326\316\321\2200\223\234\010\260\340\347\3074\336w\236\216\307\013\302\005S\000\314qp\321\326\017\301\230\346\254\336u\013\267P\0352\3650#Pwm\212B\002\3517J\351BW\005\007D\355\n\nT\271\234\202\020W-m\311\266\177\211<O\t\367\315\327rz\341\272\271\3430f\236f\004\376\225\t\3031\337-\001\227\276\341N'\014M\366\276\376\t\337\036\211f\016X</\326\031\372\360\376\225d\325\022o\342\347\362\356\253(bG\310\027ju\304[7\221k\007[\276\351r\361\350\"\316+\315h\344\036\202K+\0312\276u\022\270\243\202\310\2227\244\3653\334e\353\202kw\366{\025\2419\2504L\304\302\363\275\0164\373\307\253\355\334\352T\3637\304\"d:\025\3436\022\220G\3541\022\002#\022\014HN\233(\201\222Y\305\006 H\261\310\007@\215MP\234\212o{\225\010\316'\223\336\0303\033#\321\003\301\222\271\010\0331\"\222\005G\260@\366@\024A\253\032\016W@\000\034\010\220\374\242\177\230\273\222)\302\204\203\230\306\361\240";
+    PyObject *data = __Pyx_DecompressString(cstring, 2515, 2);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (2413 bytes) */
-const char* const cstring = "x\332\245W\315S\033\311\0257\033gWxE,@\330`b\273\025\234\202\315\202\312,Z\033o\262\345\222\315\207\261\371\022(\261)'5\325\214Zh\314hF\232\236\001\264\225T\345\310q\216s\234\243\216:\352\310\321G\035u\324\237\300\237\260\277\356\231\021\222\201\rUQI3\335\257_\367{\357\367\276Z?\275r4\275\240\031\007\244@m\272O9#E\313,\223\267\033\005M\265\311\207\215u2c\2274N\312\264Flz\310\010gG\314\242:)k\206c3\376]:\235^\352n\325tF\014\323&E\3231\n?\221\356B\227F\250MV(\330\n\3046\311\276\020~!\031kw\010>+\224\333d7\267\256\331lN,\200\005\312h\246A\255\032\321\312\025\235\225\231aSA!\307\232]\"\257kv\tc\263bke\355\027\271\300\323w\344Yy\241<4\346\202\331\341\214G\\8\025\"H\325a\226\006*\205n\026+8*\306\333\341q\373\237\03000\261\273\304h!-\317\3334\r\266i\332\214\330%\250\033\n\206\210\002\323\265}\000c3\275F\270mAaf\t&\203l/o\317e\0263\241\010q&'\334\331Wu\312\245>E\211\203\255\031\304\256U\030O\223\265\"\251\231\0161X\200R\005|\275\033\354\0223\340\006[\014\31045\000\2564Y\301vxr\032hY\020\242\0351\261{\205\352\234\245\267*\022?\375#T\373\327\366Nvu#KT\252\226\230\302\001\005\371\231\314=\313<}\3724\\\371d:\026\230\225\262Y\020k\357\263\353\341B\271L+\321\216\037\236-f\026~\314\374\370,\\\3435C-Y\246a:\034\253[++!\335fe\354\261MKl\332X\336\330\332\331K\223m\235\t\217C\001\365P\030k\021\315\000`\006\254RM\303`\322\335\0221\033>\247\007T3f\211i\221\212e\036iP\n\260\262\023\215\333\375\221\213\270\n\274\024}v\227\327\227_\347\311\322\332n~m\023\003\226F\340X5E+\314\006c\205\263j\337\216\225\235\255\r\"\230DP\260\276\245\365\345\225<y\273\265\266\t/R\2213\234Xdk\263\347P\030hu'\327\354=\244\306'\215\034^\332xx\365\306\367o\226w\226qj(R\261\331\211\r\356\227dk\347\nj\337V|\300t\230\226\022\3736~I\353Wumc-\337C\0131,hHz\211\016g\006g\212\234\007\332\005\004i\305\313\220\273\2501dv\017{@\270\314\377\245\306\221\270\003\335\344\\*8Ktj\034\314\222\003\021\337\354\022\277\224!\271\031\277\264x\003y[;K\313;\344\325^(\361\013\370\257S\357\002\277Y\304\244fZ\232]\233E\014\027\315\253\025""\224\374\327\250\327\023\004\277\241^ \361\013\365Bm\312\032W{\301\226\363\233c]1y\357n1\375\037\233\257;\2517\036gQ\365\025\251\365\315 \212\222\352\377B)R\340\206n\344\351\310\304\331\213\261Q`'bz\275\252\222\0215\371\272xK\337L\331>\211\375\372\356\242\020R\3076\025\331\"\177\316[\216,\346\202TF\261W\251\2166S0\217\r\335\244\005Y'\203^*ZBT\017\373\n\246X\250P\364JqJO\361\374T\026\2755]\330\017\252\247l\227\370R\202>7\207F\311\320/E[C9N\243\231^\234\216\316\253\353d\037\027\002z\204>U\204\254\242c;\250\362\350\262\351\364KZ((\350L\214Wu\364qEHQ\324Z\272R;Y\3526s\321\350\203>\377\333\264\264\2420\321\036\024\345\272\325\023\315\276vQ3\256_\224\250)\201?\257\346\010\333\321\225\213*J\006\273r\345\200\331\312\261i\025\370\252\250*\357\250Aw\202\310|'\022\"\034\257\303\007Qc\336\206o\024e\273v\202\2378G\331D\n\355\260\342\216y\274+\264{\217\303\226ETQ\321g53\255\232\226\351\300\205\214_\304\211\034EQ\261o\232z`^\344\262>k\025\331\376\203;\300!\253]\\\006T\264fK\325q2\220Sl\213\252l\237\252\207\322V\001F\204H\364r,\016\335\366\025\021]\341K\301\325I\364\007\005\312\250JW#E\\L\214\203\260\355v}\032v\333(g\202\267e\036sv\242*\366\276|\242\362\213\367\021\325\331\tSq\361\224\001\314#\317\027\231\255\226\220\023\262\313\310\007/\"\253.,\227Z)E\307\200:A#\021\036*\260\"ut\273\237\255\353:\014\304\335\005J_4\243\260\321\310\214\025\365!\212.\315\2508\266\344\300=F\321\200n\344\036\304E\231\243\014R\005\211\253\226\024y\r\226\363\250\340\005\023\3638z\007\004qV00\225\222f\341\nd\320\240\007\364\237\003\202aZe\252\213+m0\3579X\314\344\311\301\200_\364-\370\034_.~B\204\305\312\270\350\212N\253@\000\034\037\210\tdY 39d\\\276\242\032_\246'\330\311\201!\\Qf6\225wTE6 E\\\037\035\235)\370\224-3r\263\230\032\264\014r\324\036.\324\017`\354\231G\302\204_p\277\256\230\0254'|\025\233\036\340\244\212\305*\324bb\000\330\243&\243(U\207\352\201\214\336\206\004\373\361U\212T\305e\264\306\231^\214\212\177O\031\016\2062\372\242A\230/\210Y;\324\034\2430tx\t'\242\306\036\000\005\036\224\272\005""\356\250\370\027\301E\354\210\232j\303p\363\320\t_i\031|<\232\365'hD\355\213\307.\261[]\"J\027(\024\326\210\326_n\025\030\316mE\232/~\210\032K\351\361i\360\217\001Y\3450~R\326\245\274\326\355\027\315\341\363?\335\032\214\237fNmw\276\035O\270\203\336\360y,\240\234\270\307\036m\307\307\275\257\274\224\3677\277Z\037j\344\032 \334=\375\305\033\365\226\374\201v\342\276k{\317\375\224?\337\211=\364\362\376\230\177P\317\265c3\255\231\027\315Gg\307\237?\265>\354\265cOZO2\215l\003\013\323\255\351\347\215js\340\374\353[\203wOK.u\253\347\211[w'[\017f\353\353\255\305\267\237S\235\330c\357\310\337\253\323N\354[\250Pm\307G\335y\301\376\320\313\236\217\334\032\034:]\025z\336w9t\302\340\236\253z\303^\n\034C\243\356\214\240\235\337\2715\232l\307'\274{^\255.$\r\245\240),\033\362r\355\304hkt\312\237\367\327\352\271\272\331\334=\033h'g\352x\214]>`\334\373\332\323\374\252X ^UX-\020J$\335u\034\227\274\337\272?\rDb\215\201\326\374\253\263\251\263\\{\374\373\372|{|B\360?\202\244H\340Co\317\247~\265\235\230jM-4\346\033\331v\342A\353\301\367\365\005\230\230x\344\035\3709_o\244\332\311\to\270\235\214\2301\233\020\250\266\223\304\037\360G\375\327~\2655\263\330\034\202\230\344dkr\256\236oL4\247\232\3713\341\253!@#\304\305\361J\374\321{\343g\375\234\024\362\227z\252\376\327\206\332\034\356@\213\367 \177l\014t\005\345\375a\177\006\014\363b\362\001ZP\2614\016j\252Gj\375n\343?gY)t\266\276\324\030l\2166\227\316\006\204\320+\321\356\304\307\334\274\367(\000\246\003\327=\007\317\013\037z\t\251\211q\017!\363\030`\302p*\202\247\332\027j\035`\314\335\224\233qk\376W~\252\223H\371I(V\250O7\306`\306HS\302\277\n\267'\307\275\333\336*\374(\r\377\306\255zC~\256\023\273{Z\375o\266\023\233\204Z1\021*\033\020\212P\251\301\232\341\036\007wFF\005\271\352\375\316\233\307)\031\377\270^l\2545s\227c\340\236\0135\307\334\234\200f\324\313z\335\301\007\177W\204\315\244\267\340Q\257\332\221j=\363'\352\251.4\255\311\355\3266\302\000\273e\210~\327\225\223?\033=\313v\342#\001\327\346g*c\334}\r\205b\376m\177\265\376\014\316}""\322T\317\206o\3144\r\001\177\026\270\336s5\257*\022\363\002\3571wO\350(\326Bc\304C\244T\"\200+\314\263\204\373{\367\037\236\254\0011\354\223\344\260\002\010\210\217\274\234`\216\237\256\270\251`\360\0066/\302\007\"Ln\327\263m\220\226\335\307\37672g\006G\334\244\373wo\332\037n\307\376\020d\372M\007E7+\004\300\231\255\333p^\213<k\350gs\237\377\335\372\370OQ\001\342\247\213\356\002L\211#\302\221P\235\370\003\357\211t\002\344\277s\245\354\240\234-\2422M\371\371:b`\330\035n\215\210t\310\324\253r\346\246\302\027\330\223c\355\370\244\227\001n\261\372\267\215L\303B\302\300\363\206\010[\201\371\222\027\341\371P$\264\014]<D\264$\202\232p\317\325E\326\374\320Ha{\025\261\323\243\001\004\215\264FPs\332\t\024\010\344\320\200X\037\002z\022\261\267n\321{\347[\365\373HML\327\334\334\257\340\207\355D";
-    PyObject *data = __Pyx_DecompressString(cstring, 2413, 1);
+    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (2434 bytes) */
+const char* const cstring = "x\332\245W\315S\033\311\0257\033gWxE,\276l0\261\335\nN\301fAe\026-\306\233l\271d\363al\276\004Jl\312IM5\243\026\0323\232\221\246G\200\266\222\252\0349\316q\216s\234\243\216:r\364QG\035\365'\370O\330_\367\314\350\303\006/\225\250\244\231\356\327\257\373\275\367{_\255\237\236W5=\257\031G$OmzH9#\005\313,\221W[yM\265\311\333\255M2k\0275NJ\264Flz\314\010g'\314\242:)iF\325f\374\273T*\265\322\331\252\351\214\030\246M\nf\325\310\377D:\013\035\032\2416Y\243`\313\023\333$\207BxW2\326n\021|\326(\267\311~vS\263\331\274X\000\013\224\321L\203Z5\242\225\312:+1\303\246\202BN5\273H^\324\354\"\306f\331\326J\332/r\201\247n\311\263rByh\314\005s\2253\036q\341T\210 \225*\2634P)t\263X\276\252b\274\033\036w\370\236\001\003\023\273\213\214\346S\362\274m\323`\333\246\315\210]\204\272\241`\210\3103];\00406\323k\204\333\026\024f\226`2\310\356\352\356|z9\035\212\020gr\302\253\207\252N\271\324\247 q\2605\203\330\2652\343)\262Q 5\263J\014\026\240T\006_\357\006\273\310\014\270\301\026\0032C\r\200+MV\260\035\236\234\001Z\026\204h'L\354^\243:g\251\235\262\304O\177\007\325\376\265\273\227Y\337\312\020\225\252E\246p@A~&\363K\351\307\217\037\207+\357\315\252\005f\245d\346\305\332\233\314f\270P*\321r\264\343\207\245\345\364\342\217\351\037\227\3025^3\324\242e\032f\225cugm-\244\333\254\204=\266i\211M[\253[;{\007)\262\2533\341q(\240\036\013c-\242\031\000\314\200U\252i\030L\272[\"f\303\347\364\210j\306\0341-R\266\314\023\rJ\001Vv\246q\273?r\021W\201\227\242\317\376\352\346\352\213\034Y\331\330\317mlc\300R\010\034\253\246h\371\271`\254pV\351\333\261\266\267\263E\004\223\010\n\326\267\364jgc\033\016\244\"]8\261\310\316v\317y\260\315\352L\372\266\275y\271\272\267\212\305p\247b\2633\033\334\317\310\316\336%\324\276\255\233\033[\033\271\036Z\337\342\377f\337o\330\330\261\363\230\032\3575r\374\231\221\307\227\033\3315\3648%\267\366\231\371)\355\263\255\237\032\332c[^C\261\221\032sfp\246\310y * H\265\236\205\334\005\215\241\242\364\260\007\204\317\371\257\202\362H79\227\212\316\021\235\032Gs\344H\344\025\273\034D""\311\315\370\025P|Q\336\316\336\312\352\036y~\020J\374\004\317\253\324\353\3428\207\\\320LK\263ks\310\235\202y\271\202\222\377\n\365z\274\372\005\365\002\211\237\250\027jS\322\270\332\013\266\234_\037\353\262\311{w\213\351ol\276\352\244\336,\232C\267Q\244\326\327\203(\312\350\377\013\245H\201k\272\221\247\"\023\347\272c#\317\316\304\364jU%#z\301U\361\226\272\236\262}\022\373\365\335G\001\246U\333Tdk\3769gUe\023\021\244\022\232\214Ju\264\267\274yj\350&\315\313\372\034\364p\321\212\242:\334W\250\305B\231\242G\213Sz\212\366\373\222\350\351\251\374aP\265e\233\306\227\022\364\327y4h\206>-\332)\332@\nM\274{::\276\256\223C\\D\350\t\372c\001\262\nU\273\212\356\202\356\236J=\243\371\274\202\216\310xE\307\375A\021R\024\265\226*\327\316V:\227\010q\301\010\356\027_\246\245\024\205\211\266\244(W\255\236i\366\225\213\232q\365\242DM\t\374y9G\330\006/]TQ2\330\245+G\314VNM+\317\327EUyM\r\272\027D\346k\221\020\341x\023>\210.\004\273\360\215\242\354\326\316\360\023\347(\333H\241=V\3303O\367\205vop\330\252\210**\372\273f\246T\3232\253p!\343\3358\221\243(*\016MS\017\314\213\\\326g\255\"\257\035\301\335\343\230\325\272\227\020\025W\002K\325q2\220Sl\213\252\354\220\252\307\322V\001F\204H\364\252Z\034\272\035*\"\272\302\227\202+\233\350\017\n\224Q\225\216F\212\270\020\031Ga;\354\3704\354\200Q\316\004o\313<\345\354LU\354C\371D\345\027\357\023\252\2633\246\342\302+\003\230G\236/0[-\"'d\227\221\017^@Vu-\227Z)\205\252\001u\202F\"<\224g\005Z\325\355~\266\216\3530\020w&(\335mFa\243\221\031+\352C\024]\232Q\256\332\222\003\367'E\003\272\221{\020\027%\2162H\025$\256ZT\344\365[\316\243\202\027L\314\323\350\035\020\304Y\301\300T\212\232\205\253\227A\203\036\320\177\016\010\206i\225\250.\256\322\301\274\347`1\223'\007\003\336\355[\3609\276\\\374\204\010\213\225p\301\026\235V\201\0008>\020\023\310\262@fr\310\270|E5\276D\317\260\223\003C\270\242\304l*\357\306\212l@\212\270\266Vu\246\340S\262\314\310\315bj\320\022\310Q{\350\252\037\300\3303\217\204\t\277\340^_6\313hN\370*6=\302Ie\213\225\251\305\304\000""\260GMFQ*U\252\0072z\033\022\354\307W)P\025\227\340\032gz!*\376=e8\030\312\350\213\006a\276 f\355Ps\214\302\320\341E\234\210\032{\004\024xP\352\026yU\305\277\027.bG\324T\033\206\233\307\325\360\225\222\301\307\243Y\177\202F\324\276x\354\020;\325%\242t\200Ba\215h\375\345V\201\341\334V\244\371\342\207\250\261\224\036\237\006\377T\220UU\306\317J\272\224\327\274\371\2641\374\361O7\006\343\347\351s\333Yh\305\023\316\240;\3741\026P\316\234S\227\266\342\023\356Wn\322\375\233W\361\207\352\331:\010\267\317\177qG\335\025o\240\225\270\353\330\356\023/\351-\264c\367\335\2347\356\035\371\331Vl\2669\373\264\361\340\342\364\303\373\346\333\203V\354Q\363Q\272\236\251ca\2469\363\244^i\014|\374\372\306\340\355\363\242C\235\312\307\370\215\333S\315{s~\246\035{\350\236x\007>\025\253B~\245\025\037qf!{\001L\243\017\233\017\036\327\007Z\361I\367\216[\363\007\332\261o\003\226QgAl\270\357f>\216\334\030\034:_\027v\334u\270\330\327\212\337qTw\330M\202ch4<\353\326\215\321\261\3161b!\tK`\371\220\233m%F\233\243\323\336\202\267\341g}\263\261\1771\320\032\233\365\361\030\377\374\200\t\367kW\363*b\201\270\025\201\212@01\346l\342\270\261\273\315\2733@,V\037h.<\277\230\276\310\266&\276\367\027Z\023\223\202\377\001$E\002\357\273\007\036\365*\255\304tsz\261\276P\317\264\022\367\232\367\276\367\027}\332N<p\217\274\254\247\327\223\255\261Iw\2705\0261c6)Po\215\021o\300\033\365^x\225\346\354rc\010b\306\246\232S\363~\256>\331\230n\344.\204/\207\000\215\020\027\307+\361G\367\245\227\361\262R\310_\374\244\377\327\272\332\030nC\2137 \277\003\276\221\240\2347\354\315\202aAL\336B\013*\226&@M\366H\365o\327\377s\221\221B\347\374\225\372`c\264\261r1 \204^\212v;>\356\344\334\007\0010m\270\356\tx\236z\320KHML\270\010\251\207\000\023\206S\021\\\225\276Pl\003c\356$\235\264S\363\276\362\222\355D\322\033\203by\177\246>\0163F\032\022\376u\270}l\302\275\351\256\303\217\322\360o\234\212;\344e\333\261\333\347\225\377\"\314\246\240VL\204\312\026\204\"Tj\260f\270\307\301\355\221QA\256\270\277s\027pJ\332;\365\013\365\215F\366""\363\030\270\343@\315q'+\240\031u3ng\360\326\333\027a3\345.\272\324\255\264\245ZK\336\244\237\354@\323\234\332m\356\"\014\260[\206\350w\0359\271\213\321\213L;\010\375\346\324\366\007*c\334y\001\205b\336Mo\335_\202s\0375\324\213\341k3\315@\300\237\005\256w\034\315\255\210\304\355\342=\356\034\010\035\305Zh\214x\210\224J\004p\205y\226p~\357\374\303\2255\"\206}\222\034V\010\001\361\211\233\025\314\361\3635'\031\014^\302\346e\370@\204\311M?\323\002i\325y\350}#sfp\304\031s\376\356\316x\303\255\330\037\202Jp\335A\301\311\010\001pf\363&\234\327$Ku\375b\376\303\277\233\357\376)*@\374|\331Y\204)qD8\022\252\035\277\347>\222N\200\374\327N%*.\266\263\214\3125\355\345|\304\300\2603\334\034\021\351\220\366+r\346$\303\027\330\307\306[\361)7\r\334b\376\267\365t\335B\302\300\363\206\010[\201\371\212\033\341y_$\264\014]<D\264$\202\232p\307\321E\326\374POb{\005\261\323\243\001\004\2154GPsZ\t\024\010\344\320\200X\037\002z\022\261WN\301}\355Y\376]\244&\246\033N\366W\311\r\020\271";
+    PyObject *data = __Pyx_DecompressString(cstring, 2434, 1);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #else /* compression: none (5032 bytes) */
-const char* const bytes = ":Building database from JMdict XML (this may take several minutes)...Database file not found: Database not found at Failed to build database at \n    Fast SQLite-based dictionary implementation with Cython optimizations.\n\n    This version uses optimized SQL queries and reduces Python object overhead.\n    NoneNote that Cython is deliberately stricter than PEP-484 and rejects subclasses of builtin types. If you need to pass subclasses then set the 'annotation_typing' directive to False.Optional[str]PRAGMA cache_size = -64000PRAGMA journal_mode = WALPRAGMA mmap_size = 268435456PRAGMA synchronous = OFFPRAGMA temp_store = MEMORY. Please check your internet connection and try again, or provide an existing database file.\n            SELECT DISTINCT e.entry_id, e.ent_seq\n            FROM entries e\n            LEFT JOIN readings r ON e.entry_id = r.entry_id\n            LEFT JOIN kanji k ON e.entry_id = k.entry_id\n            WHERE r.reading_text = ? OR r.reading_text = ?\n               OR k.kanji_text = ? OR k.kanji_text = ?\n            LIMIT ?\n        SELECT dial FROM sense_dial WHERE sense_id = ?SELECT field FROM sense_field WHERE sense_id = ?\n                SELECT gloss_text, lang, g_type\n                FROM glosses\n                WHERE sense_id = ?\n                ORDER BY gloss_id\n            \n                SELECT kanji_text, priority, info\n                FROM kanji\n                WHERE entry_id = ?\n                ORDER BY kanji_id\n            SELECT misc FROM sense_misc WHERE sense_id = ?\n                SELECT pos FROM sense_pos WHERE sense_id = ?\n            \n                SELECT reading_text, no_kanji, priority, info\n                FROM readings\n                WHERE entry_id = ?\n                ORDER BY reading_id\n            \n                SELECT s.sense_id, s.sense_index, s.info\n                FROM senses s\n                WHERE s.entry_id = ?\n                ORDER BY s.sense_index\n            \nSet auto_build=True t""o automatically download and build the database, or provide the path to an existing jmdict.db file.This is a one-time operation. The database will be saved for future use..?add_notesqlite_dict_cy.pyxDictionaryFastSQLiteDictionaryFastSQLiteDictionary.__enter__FastSQLiteDictionary.__exit__FastSQLiteDictionary.__init__FastSQLiteDictionary._build_sensesFastSQLiteDictionary._connectFastSQLiteDictionary.closeFastSQLiteDictionary.get_wordsGlossKanaReadingKanjiReadingListOptionalPath__Pyx_PyDict_NextRefRowSenseWordEntryasyncio.coroutinesauto_buildauto_downloadboolbuild_database_build_senses_cachecache_keycache_sizeclearcline_in_tracebackcloseconn_connectconnectcursordb_pathdb_path_objdial__doc__download_direngent_seq__enter__entriesentry_identry_rowsexc_tbexc_typeexc_valexecuteexists__exit__fetchallfieldfieldsfind_database_path__func__g_typeget_default_database_pathget_wordsgettempdirgloss_textglossesindexinfo__init__input_textint_is_coroutineitemskana_match_foundkana_readingskana_rowkana_rowskana_textkana_to_hiraganakanji_match_foundkanji_normalizedkanji_readingskanji_rowkanji_rowskanji_textkeykeyskeys_to_removelang__main__matchmatch_rangematchesmatching_textmax_results__metaclass__misc__module____mro_entries____name__no_kanjinormalized_inputnormalized_matchingpathlibpoppospos_tags__prepare__printpriority__qualname__reading_textrowrow_factoryselfsense_idsense_indexsense_rowsense_rowssenses__set_name__setdefaultshow_progresssqlite3successtempfiletentokutentoku._typestentoku.build_databasetentoku.database_pathtentoku.dictionarytentoku.normalize_cytentoku.sqlite_dict_cy__test__texttext_for_match_rangetypingvaluesxml_path\320\0049\270\021\360\"\000\t\014\2104\210t\2201\330\014\020\220\t\230\021\360\010\000\t\014\2104\210x\220w\230a\330\014\030\230\002\230!\230<\240q\250\r\260Q\260a\330\014\017\210z\230\023\230D\240\001\330\020\027\220t\2307\240!\2401\340\010\035\230T\240\025\240g\250Q\330\010(\320(9\270\036\300w\310j\320XY\330\010$\320$4\260A\260Q\330\010'\320'7\260q\270\001""\360\006\000\t\017\210h\220a\220q\360\020\000\017\033\320\032,\250L\3208J\310!\340\010\037\230v\240Y\250a\340\010\013\2104\210q\330\014\023\2201\360\006\000\t\035\230A\360\022\000\t\r\210G\2201\330\014\027\220s\230!\2301\330\014\026\220c\230\021\230!\360\006\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\031\230\026\230y\250\001\360\006\000\r!\240\001\330\014\020\220\r\230Q\330\020\023\320\023#\2401\240I\250Q\250o\270S\300\001\330\024(\250\001\330\024\025\360\006\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\030\230\006\230i\240q\360\006\000\r \230q\330\014\017\210t\2201\330\020\024\220L\240\001\330\024\027\320\027'\240q\250\010\260\001\3201B\300#\300Q\330\030+\2501\330\030\031\360\006\000\r\036\230Q\330\014\020\220\r\230Q\330\020\035\230Y\240a\240q\330\020#\320#3\2601\260A\330\020\032\320\032+\2503\250a\340\020\036\230g\240Q\240l\260!\330\024\031\230\021\330\024\035\230Y\240a\240q\330\024\031\230\031\240!\2401\330\024 \240\001\240\023\240C\240q\320(8\270\r\300Q\330\024\033\320\033-\250T\260\031\270#\270T\300\021\360\010\000\r\035\230A\330\014\020\220\014\230A\330\020\034\230H\240A\240Q\330\020\032\320\032*\250!\250;\260c\270\021\340\020\035\230W\240A\240[\260\001\330\024\031\230\021\330\024\035\230T\240\021\240(\250!\2501\330\024\035\230X\240Q\240a\330\024\031\230\030\240\021\240!\330\024 \240\001\240\023\240C\240q\250\017\260}\300A\330\024\033\320\033,\250D\260\t\270\023\270D\300\001\360\010\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\031\230\026\230y\250\001\340\014\025\220T\230\036\240q\250\010\260\001\340\014\023\2207\230!\2309\240A\330\020\031\230\021\330\020\030\230\001\330\020\037\230q\330\020\036\230a\330\020\027\220q\360\010\000\t\014\2104\210x\220w\230a\340\014\017\210s\220!\2204\220y\240\002\240!\340\020!\240\024\240Q\240d\250'\260\025\260c\270\022\2701\330\020\024\220G\2301\330\024\030\230\004\230G\2401\240A\330\014\020\220\007\220q\230\r\240Q\340\010\017\210q\200A\340\010\033\2301\360\010\000\t\r\210M\230\021\330\014\027\220y\240\001""\240\021\360\006\000\r\023\220(\230!\2301\340\022\023\330\014\027\220q\230\003\2301\230G\2404\240w\250f\260I\270Q\360\006\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\026\220a\330\020\025\220Q\330\024\031\230\023\230A\230Q\330\024\031\230\023\230A\230X\240S\250\001\330\024\033\2303\230a\230q\340\020\024\220G\2306\240\031\250!\360\010\000\r\023\220(\230!\320\033P\320PQ\330\014\025\220Q\220c\230\021\230)\2404\240w\250f\260I\270T\300\023\300A\340\014\022\220(\230!\320\033N\310a\330\014\023\2201\220C\220q\230\010\240\004\240G\2506\260\031\270$\270c\300\021\340\014\022\220(\230!\320\033N\310a\330\014\023\2201\220C\220q\230\010\240\004\240G\2506\260\031\270$\270c\300\021\340\014\022\220'\230\021\230%\230q\330\020\026\220i\230q\240\001\330\020\031\230\021\330\020\030\230\001\330\020\025\220Y\230a\230q\330\020\026\220a\330\020\025\220Q\330\020\025\220Q\360\006\000\t\020\210q\200A\340\010\013\2104\210q\330\014\020\220\005\220V\2301\330\014\020\220\010\230\001\330\010\013\2104\210x\220w\230a\330\014\020\220\007\220v\230Q\200A\340\010\014\210F\220!\200A\340\010\014\210H\220G\2308\2401\240C\240q\250\004\250A\330\010\014\210E\220\037\240\007\240q\360\006\000\t\022\220\024\220U\230'\240\021\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210f\220A\200A\340\010\017\210q\320\004\027\220y\320 6\260l\300-\310|\320[\\\360\022\000\t\014\2108\2203\220a\330\014\032\320\0323\2601\340\014\032\230$\230a\230q\340\010\014\210K\220q\360\006\000\t\014\2104\210t\2208\2307\240#\240T\250\021\330\014\021\220\021\320\022*\250!\2504\250q\330\014\021\220\021\220!\330\014\021\220\021\220!\360\006\000\024\025\330\014\033\2304\230q\240\010\250\013\2604\260r\270\021\340\014\026\220n\240A\330\020\023\2201\220D\230\001\330\020\031\230\021\330\020\035\230Q\330\020\036\230a\330\020\036\230a\360\006\000\r\020\210t\2201\330\020\026\220l\240!\330\0242\260!\2604\260q\360\n\000\t\014\2104\210t\2208\2307\240!""\330\014\022\320\022#\2401\330\020+\2501\250D\260\001\360\n\000\t\r\210H\220A\330\010\014\210J\220f\230K\240r\250\027\260\001\330\010\014\210I\220Q";
+    #else /* compression: none (5184 bytes) */
+const char* const bytes = ":Building database from JMdict XML (this may take several minutes)...Database file not found: Database not found at Failed to build database at \n    Fast SQLite-based dictionary implementation with Cython optimizations.\n\n    This version uses optimized SQL queries and reduces Python object overhead.\n    NoneNote that Cython is deliberately stricter than PEP-484 and rejects subclasses of builtin types. If you need to pass subclasses then set the 'annotation_typing' directive to False.Optional[str]PRAGMA cache_size = -64000PRAGMA journal_mode = WALPRAGMA mmap_size = 268435456PRAGMA synchronous = OFFPRAGMA temp_store = MEMORY. Please check your internet connection and try again, or provide an existing database file.\n            SELECT DISTINCT e.entry_id, e.ent_seq\n            FROM entries e\n            JOIN readings r ON e.entry_id = r.entry_id\n            WHERE r.reading_text = ? OR r.reading_text = ?\n            LIMIT ?\n        \n                SELECT DISTINCT e.entry_id, e.ent_seq\n                FROM entries e\n                JOIN kanji k ON e.entry_id = k.entry_id\n                WHERE k.kanji_text = ? OR k.kanji_text = ?\n                LIMIT ?\n            SELECT dial FROM sense_dial WHERE sense_id = ?SELECT field FROM sense_field WHERE sense_id = ?\n                SELECT gloss_text, lang, g_type\n                FROM glosses\n                WHERE sense_id = ?\n                ORDER BY gloss_id\n            \n                SELECT kanji_text, priority, info\n                FROM kanji\n                WHERE entry_id = ?\n                ORDER BY kanji_id\n            SELECT misc FROM sense_misc WHERE sense_id = ?\n                SELECT pos FROM sense_pos WHERE sense_id = ?\n            \n                SELECT reading_text, no_kanji, priority, info\n                FROM readings\n                WHERE entry_id = ?\n                ORDER BY reading_id\n            \n                SELECT s.sense_id, s.sense_index, s.info\n                FROM"" senses s\n                WHERE s.entry_id = ?\n                ORDER BY s.sense_index\n            \nSet auto_build=True to automatically download and build the database, or provide the path to an existing jmdict.db file.This is a one-time operation. The database will be saved for future use..?add_notesqlite_dict_cy.pyxDictionaryFastSQLiteDictionaryFastSQLiteDictionary.__enter__FastSQLiteDictionary.__exit__FastSQLiteDictionary.__init__FastSQLiteDictionary._build_sensesFastSQLiteDictionary._connectFastSQLiteDictionary.closeFastSQLiteDictionary.get_wordsGlossKanaReadingKanjiReadingListOptionalPath__Pyx_PyDict_NextRefRowSenseWordEntryasyncio.coroutinesauto_buildauto_downloadboolbuild_database_build_senses_cachecache_keycache_sizeclearcline_in_tracebackcloseconn_connectconnectcursordb_pathdb_path_objdial__doc__download_direngent_seq__enter__entriesentry_identry_rowsexc_tbexc_typeexc_valexecuteexists__exit__fetchallfieldfieldsfind_database_path__func__g_typeget_default_database_pathget_wordsgettempdirgloss_textglossesindexinfo__init__input_textint_is_coroutineitemskana_match_foundkana_readingskana_rowkana_rowskana_textkana_to_hiraganakanji_match_foundkanji_normalizedkanji_readingskanji_rowkanji_rowskanji_textkeykeyskeys_to_removelang__main__matchmatch_rangematchesmatching_textmax_results__metaclass__misc__module____mro_entries____name__no_kanjinormalized_inputnormalized_matchingpathlibpoppospos_tags__prepare__printpriority__qualname__reading_textrowrow_factoryselfsense_idsense_indexsense_rowsense_rowssenses__set_name__setdefaultshow_progresssqlite3successtempfiletentokutentoku._typestentoku.build_databasetentoku.database_pathtentoku.dictionarytentoku.normalize_cytentoku.sqlite_dict_cy__test__texttext_for_match_rangetypingvaluesxml_path\320\0049\270\021\360\"\000\t\014\2104\210t\2201\330\014\020\220\t\230\021\360\010\000\t\014\2104\210x\220w\230a\330\014\030\230\002\230!\230<\240q\250\r\260Q\260a\330\014\017\210z\230\023\230D\240\001\330\020\027\220t\2307\240!\2401\340""\010\035\230T\240\025\240g\250Q\330\010(\320(9\270\036\300w\310j\320XY\330\010$\320$4\260A\260Q\330\010'\320'7\260q\270\001\360\006\000\t\017\210h\220a\220q\360\014\000\017\033\320\032,\250A\340\010\037\230v\240Y\250a\360\006\000\t\014\2104\210q\330\014\022\220(\230!\2301\360\014\000\023\037\320\0360\260\001\330\014\031\230\026\230y\250\001\340\010\013\2104\210q\330\014\023\2201\360\006\000\t\035\230A\360\022\000\t\r\210G\2201\330\014\027\220s\230!\2301\330\014\026\220c\230\021\230!\360\006\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\031\230\026\230y\250\001\360\006\000\r!\240\001\330\014\020\220\r\230Q\330\020\023\320\023#\2401\240I\250Q\250o\270S\300\001\330\024(\250\001\330\024\025\360\006\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\030\230\006\230i\240q\360\006\000\r \230q\330\014\017\210t\2201\330\020\024\220L\240\001\330\024\027\320\027'\240q\250\010\260\001\3201B\300#\300Q\330\030+\2501\330\030\031\360\006\000\r\036\230Q\330\014\020\220\r\230Q\330\020\035\230Y\240a\240q\330\020#\320#3\2601\260A\330\020\032\320\032+\2503\250a\340\020\036\230g\240Q\240l\260!\330\024\031\230\021\330\024\035\230Y\240a\240q\330\024\031\230\031\240!\2401\330\024 \240\001\240\023\240C\240q\320(8\270\r\300Q\330\024\033\320\033-\250T\260\031\270#\270T\300\021\360\010\000\r\035\230A\330\014\020\220\014\230A\330\020\034\230H\240A\240Q\330\020\032\320\032*\250!\250;\260c\270\021\340\020\035\230W\240A\240[\260\001\330\024\031\230\021\330\024\035\230T\240\021\240(\250!\2501\330\024\035\230X\240Q\240a\330\024\031\230\030\240\021\240!\330\024 \240\001\240\023\240C\240q\250\017\260}\300A\330\024\033\320\033,\250D\260\t\270\023\270D\300\001\360\010\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\031\230\026\230y\250\001\340\014\025\220T\230\036\240q\250\010\260\001\340\014\023\2207\230!\2309\240A\330\020\031\230\021\330\020\030\230\001\330\020\037\230q\330\020\036\230a\330\020\027\220q\360\010\000\t\014\2104\210x\220w\230a\340\014\017\210s\220!\2204\220y\240\002\240!\340\020!""\240\024\240Q\240d\250'\260\025\260c\270\022\2701\330\020\024\220G\2301\330\024\030\230\004\230G\2401\240A\330\014\020\220\007\220q\230\r\240Q\340\010\017\210q\200A\340\010\033\2301\360\010\000\t\r\210M\230\021\330\014\027\220y\240\001\240\021\360\006\000\r\023\220(\230!\2301\340\022\023\330\014\027\220q\230\003\2301\230G\2404\240w\250f\260I\270Q\360\006\000\r\023\220(\230!\2301\360\n\000\023\024\330\014\026\220a\330\020\025\220Q\330\024\031\230\023\230A\230Q\330\024\031\230\023\230A\230X\240S\250\001\330\024\033\2303\230a\230q\340\020\024\220G\2306\240\031\250!\360\010\000\r\023\220(\230!\320\033P\320PQ\330\014\025\220Q\220c\230\021\230)\2404\240w\250f\260I\270T\300\023\300A\340\014\022\220(\230!\320\033N\310a\330\014\023\2201\220C\220q\230\010\240\004\240G\2506\260\031\270$\270c\300\021\340\014\022\220(\230!\320\033N\310a\330\014\023\2201\220C\220q\230\010\240\004\240G\2506\260\031\270$\270c\300\021\340\014\022\220'\230\021\230%\230q\330\020\026\220i\230q\240\001\330\020\031\230\021\330\020\030\230\001\330\020\025\220Y\230a\230q\330\020\026\220a\330\020\025\220Q\330\020\025\220Q\360\006\000\t\020\210q\200A\340\010\013\2104\210q\330\014\020\220\005\220V\2301\330\014\020\220\010\230\001\330\010\013\2104\210x\220w\230a\330\014\020\220\007\220v\230Q\200A\340\010\014\210F\220!\200A\340\010\014\210H\220G\2308\2401\240C\240q\250\004\250A\330\010\014\210E\220\037\240\007\240q\360\006\000\t\022\220\024\220U\230'\240\021\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210h\220a\220q\330\010\016\210f\220A\200A\340\010\017\210q\320\004\027\220y\320 6\260l\300-\310|\320[\\\360\022\000\t\014\2108\2203\220a\330\014\032\320\0323\2601\340\014\032\230$\230a\230q\340\010\014\210K\220q\360\006\000\t\014\2104\210t\2208\2307\240#\240T\250\021\330\014\021\220\021\320\022*\250!\2504\250q\330\014\021\220\021\220!\330\014\021\220\021\220!\360\006\000\024\025\330\014\033\2304\230q\240\010\250\013\2604\260r\270\021\340""\014\026\220n\240A\330\020\023\2201\220D\230\001\330\020\031\230\021\330\020\035\230Q\330\020\036\230a\330\020\036\230a\360\006\000\r\020\210t\2201\330\020\026\220l\240!\330\0242\260!\2604\260q\360\n\000\t\014\2104\210t\2208\2307\240!\330\014\022\320\022#\2401\330\020+\2501\250D\260\001\360\n\000\t\r\210H\220A\330\010\014\210J\220f\230K\240r\250\027\260\001\330\010\014\210I\220Q";
     PyObject *data = NULL;
     CYTHON_UNUSED_VAR(__Pyx_DecompressString);
     #endif
     PyObject **stringtab = __pyx_mstate->__pyx_string_tab;
     Py_ssize_t pos = 0;
-    for (int i = 0; i < 166; i++) {
+    for (int i = 0; i < 167; i++) {
       Py_ssize_t bytes_length = index[i].length;
       PyObject *string = PyUnicode_DecodeUTF8(bytes + pos, bytes_length, NULL);
-      if (likely(string) && i >= 30) PyUnicode_InternInPlace(&string);
+      if (likely(string) && i >= 31) PyUnicode_InternInPlace(&string);
       if (unlikely(!string)) {
         Py_XDECREF(data);
         __PYX_ERR(0, 1, __pyx_L1_error)
@@ -8009,7 +8093,7 @@ const char* const bytes = ":Building database from JMdict XML (this may take sev
       stringtab[i] = string;
       pos += bytes_length;
     }
-    for (int i = 166; i < 173; i++) {
+    for (int i = 167; i < 174; i++) {
       Py_ssize_t bytes_length = index[i].length;
       PyObject *string = PyBytes_FromStringAndSize(bytes + pos, bytes_length);
       stringtab[i] = string;
@@ -8020,14 +8104,14 @@ const char* const bytes = ":Building database from JMdict XML (this may take sev
       }
     }
     Py_XDECREF(data);
-    for (Py_ssize_t i = 0; i < 173; i++) {
+    for (Py_ssize_t i = 0; i < 174; i++) {
       if (unlikely(PyObject_Hash(stringtab[i]) == -1)) {
         __PYX_ERR(0, 1, __pyx_L1_error)
       }
     }
     #if CYTHON_IMMORTAL_CONSTANTS
     {
-      PyObject **table = stringtab + 166;
+      PyObject **table = stringtab + 167;
       for (Py_ssize_t i=0; i<7; ++i) {
         #if CYTHON_COMPILING_IN_CPYTHON_FREETHREADING
         #if PY_VERSION_HEX < 0x030E0000
@@ -8121,17 +8205,17 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
     __pyx_mstate_global->__pyx_codeobj_tab[3] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_sqlite_dict_cy_pyx, __pyx_mstate->__pyx_n_u_get_words, __pyx_mstate->__pyx_kp_b_iso88591_9_4t1_4xwa_q_Qa_z_D_t7_1_T_gQ_9, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[3])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 16, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 264};
+    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 16, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 273};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_self, __pyx_mstate->__pyx_n_u_cursor, __pyx_mstate->__pyx_n_u_sense_rows, __pyx_mstate->__pyx_n_u_senses, __pyx_mstate->__pyx_n_u_sense_row, __pyx_mstate->__pyx_n_u_sense_id, __pyx_mstate->__pyx_n_u_pos_tags, __pyx_mstate->__pyx_n_u_glosses, __pyx_mstate->__pyx_n_u_fields, __pyx_mstate->__pyx_n_u_misc, __pyx_mstate->__pyx_n_u_dial, __pyx_mstate->__pyx_n_u_row, __pyx_mstate->__pyx_n_u_row, __pyx_mstate->__pyx_n_u_row, __pyx_mstate->__pyx_n_u_row, __pyx_mstate->__pyx_n_u_row};
     __pyx_mstate_global->__pyx_codeobj_tab[4] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_sqlite_dict_cy_pyx, __pyx_mstate->__pyx_n_u_build_senses, __pyx_mstate->__pyx_kp_b_iso88591_A_1_M_y_1_q_1G4wfIQ_1_a_Q_AQ_AXS, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[4])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 317};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 326};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_self};
     __pyx_mstate_global->__pyx_codeobj_tab[5] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_sqlite_dict_cy_pyx, __pyx_mstate->__pyx_n_u_enter, __pyx_mstate->__pyx_kp_b_iso88591_A_q, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[5])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 4, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 321};
+    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 4, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 330};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_self, __pyx_mstate->__pyx_n_u_exc_type, __pyx_mstate->__pyx_n_u_exc_val, __pyx_mstate->__pyx_n_u_exc_tb};
     __pyx_mstate_global->__pyx_codeobj_tab[6] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_sqlite_dict_cy_pyx, __pyx_mstate->__pyx_n_u_exit, __pyx_mstate->__pyx_kp_b_iso88591_A_F, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[6])) goto bad;
   }

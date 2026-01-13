@@ -2849,7 +2849,7 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #define __pyx_n_u_word_results __pyx_string_tab[106]
 #define __pyx_n_u_word_search __pyx_string_tab[107]
 #define __pyx_n_u_word_search_locals_genexpr __pyx_string_tab[108]
-#define __pyx_kp_b_iso88591_1_iq_Rs_00EWJVW_z_1IWL_VW_Q_1_1 __pyx_string_tab[109]
+#define __pyx_kp_b_iso88591_1_iq_1_00EWJVW_z_1IWL_VW_Q_1_1 __pyx_string_tab[109]
 #define __pyx_kp_b_iso88591_Q_q_S_O1A_Q_A_Qa_1_gQl_1_1A_wc __pyx_string_tab[110]
 #define __pyx_kp_b_iso88591__3 __pyx_string_tab[111]
 #define __pyx_kp_b_iso88591_t1_q_s_1_1_Cxxq_Cxxq_G3e3gS_S_q __pyx_string_tab[112]
@@ -4429,7 +4429,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
  *             include_variants = False
  *             break             # <<<<<<<<<<<<<<
  * 
- *         # Break if too many results
+ *         # Don't break early - continue trying shorter matches to find all possible results
 */
       goto __pyx_L12_break;
 
@@ -4449,36 +4449,36 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
     goto __pyx_L14_for_end;
     __pyx_L14_for_end:;
 
-    /* "tentoku/word_search_cy.pyx":143
- * 
- *         # Break if too many results
- *         if len(results) >= max_results * 10:             # <<<<<<<<<<<<<<
+    /* "tentoku/word_search_cy.pyx":144
+ *         # Don't break early - continue trying shorter matches to find all possible results
+ *         # Only break if we have collected way too many results
+ *         if len(results) >= max_results * 5:             # <<<<<<<<<<<<<<
  *             break
  * 
 */
-    __pyx_t_11 = __Pyx_PyList_GET_SIZE(__pyx_v_results); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 143, __pyx_L1_error)
-    __pyx_t_15 = (__pyx_t_11 >= (__pyx_v_max_results * 10));
+    __pyx_t_11 = __Pyx_PyList_GET_SIZE(__pyx_v_results); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_15 = (__pyx_t_11 >= (__pyx_v_max_results * 5));
     if (__pyx_t_15) {
 
-      /* "tentoku/word_search_cy.pyx":144
- *         # Break if too many results
- *         if len(results) >= max_results * 10:
+      /* "tentoku/word_search_cy.pyx":145
+ *         # Only break if we have collected way too many results
+ *         if len(results) >= max_results * 5:
  *             break             # <<<<<<<<<<<<<<
  * 
  *         # Shorten input
 */
       goto __pyx_L7_break;
 
-      /* "tentoku/word_search_cy.pyx":143
- * 
- *         # Break if too many results
- *         if len(results) >= max_results * 10:             # <<<<<<<<<<<<<<
+      /* "tentoku/word_search_cy.pyx":144
+ *         # Don't break early - continue trying shorter matches to find all possible results
+ *         # Only break if we have collected way too many results
+ *         if len(results) >= max_results * 5:             # <<<<<<<<<<<<<<
  *             break
  * 
 */
     }
 
-    /* "tentoku/word_search_cy.pyx":147
+    /* "tentoku/word_search_cy.pyx":148
  * 
  *         # Shorten input
  *         length_to_shorten = 2 if ends_in_yoon(current_input) else 1             # <<<<<<<<<<<<<<
@@ -4486,7 +4486,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
  * 
 */
     __pyx_t_6 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ends_in_yoon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ends_in_yoon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -4505,10 +4505,10 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
       __pyx_t_1 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_3, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
-    __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_15) {
       __pyx_t_16 = 2;
@@ -4517,7 +4517,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
     }
     __pyx_v_length_to_shorten = __pyx_t_16;
 
-    /* "tentoku/word_search_cy.pyx":148
+    /* "tentoku/word_search_cy.pyx":149
  *         # Shorten input
  *         length_to_shorten = 2 if ends_in_yoon(current_input) else 1
  *         current_input = current_input[:len(current_input) - length_to_shorten]             # <<<<<<<<<<<<<<
@@ -4526,21 +4526,21 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
 */
     if (unlikely(__pyx_v_current_input == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 148, __pyx_L1_error)
+      __PYX_ERR(0, 149, __pyx_L1_error)
     }
     if (unlikely(__pyx_v_current_input == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 148, __pyx_L1_error)
+      __PYX_ERR(0, 149, __pyx_L1_error)
     }
-    __pyx_t_11 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_current_input); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 148, __pyx_L1_error)
-    __pyx_t_1 = __Pyx_PyUnicode_Substring(__pyx_v_current_input, 0, (__pyx_t_11 - __pyx_v_length_to_shorten)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_current_input); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 149, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Substring(__pyx_v_current_input, 0, (__pyx_t_11 - __pyx_v_length_to_shorten)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF_SET(__pyx_v_current_input, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
   }
   __pyx_L7_break:;
 
-  /* "tentoku/word_search_cy.pyx":150
+  /* "tentoku/word_search_cy.pyx":151
  *         current_input = current_input[:len(current_input) - length_to_shorten]
  * 
  *     if not results:             # <<<<<<<<<<<<<<
@@ -4549,14 +4549,14 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
 */
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_results);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 150, __pyx_L1_error)
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 151, __pyx_L1_error)
     __pyx_t_15 = (__pyx_temp != 0);
   }
 
   __pyx_t_2 = (!__pyx_t_15);
   if (__pyx_t_2) {
 
-    /* "tentoku/word_search_cy.pyx":151
+    /* "tentoku/word_search_cy.pyx":152
  * 
  *     if not results:
  *         return None             # <<<<<<<<<<<<<<
@@ -4567,7 +4567,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "tentoku/word_search_cy.pyx":150
+    /* "tentoku/word_search_cy.pyx":151
  *         current_input = current_input[:len(current_input) - length_to_shorten]
  * 
  *     if not results:             # <<<<<<<<<<<<<<
@@ -4576,7 +4576,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
 */
   }
 
-  /* "tentoku/word_search_cy.pyx":154
+  /* "tentoku/word_search_cy.pyx":155
  * 
  *     # Sort all results
  *     results = sort_word_results(results)             # <<<<<<<<<<<<<<
@@ -4584,7 +4584,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
  *     # Limit to max_results
 */
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_sort_word_results); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 154, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_sort_word_results); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -4603,14 +4603,14 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
     __pyx_t_1 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_6, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 154, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_DECREF_SET(__pyx_v_results, ((PyObject*)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "tentoku/word_search_cy.pyx":157
+  /* "tentoku/word_search_cy.pyx":158
  * 
  *     # Limit to max_results
  *     results = results[:max_results]             # <<<<<<<<<<<<<<
@@ -4619,14 +4619,14 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
 */
   if (unlikely(__pyx_v_results == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 157, __pyx_L1_error)
+    __PYX_ERR(0, 158, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_results, 0, __pyx_v_max_results); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_results, 0, __pyx_v_max_results); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF_SET(__pyx_v_results, ((PyObject*)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "tentoku/word_search_cy.pyx":159
+  /* "tentoku/word_search_cy.pyx":160
  *     results = results[:max_results]
  * 
  *     return WordSearchResult(             # <<<<<<<<<<<<<<
@@ -4635,28 +4635,28 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
 */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_6 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_WordSearchResult); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_WordSearchResult); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "tentoku/word_search_cy.pyx":161
+  /* "tentoku/word_search_cy.pyx":162
  *     return WordSearchResult(
  *         data=results,
  *         match_len=longest_match,             # <<<<<<<<<<<<<<
  *         more=len(results) >= max_results
  *     )
 */
-  __pyx_t_14 = __Pyx_PyLong_From_int(__pyx_v_longest_match); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyLong_From_int(__pyx_v_longest_match); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
 
-  /* "tentoku/word_search_cy.pyx":162
+  /* "tentoku/word_search_cy.pyx":163
  *         data=results,
  *         match_len=longest_match,
  *         more=len(results) >= max_results             # <<<<<<<<<<<<<<
  *     )
  * 
 */
-  __pyx_t_11 = __Pyx_PyList_GET_SIZE(__pyx_v_results); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 162, __pyx_L1_error)
-  __pyx_t_13 = __Pyx_PyBool_FromLong((__pyx_t_11 >= __pyx_v_max_results)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyList_GET_SIZE(__pyx_v_results); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyBool_FromLong((__pyx_t_11 >= __pyx_v_max_results)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -4672,18 +4672,18 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
   #endif
   {
     PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_6, NULL};
-    __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_data, __pyx_v_results, __pyx_t_4, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 159, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_len, __pyx_t_14, __pyx_t_4, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 159, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_more, __pyx_t_13, __pyx_t_4, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 159, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_data, __pyx_v_results, __pyx_t_4, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_len, __pyx_t_14, __pyx_t_4, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_more, __pyx_t_13, __pyx_t_4, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 160, __pyx_L1_error)
     __pyx_t_1 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_3, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_r = __pyx_t_1;
@@ -4724,7 +4724,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_2word_search(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "tentoku/word_search_cy.pyx":166
+/* "tentoku/word_search_cy.pyx":167
  * 
  * 
  * def lookup_candidates(             # <<<<<<<<<<<<<<
@@ -4777,40 +4777,40 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_input_text,&__pyx_mstate_global->__pyx_n_u_dictionary,&__pyx_mstate_global->__pyx_n_u_existing_entries,&__pyx_mstate_global->__pyx_n_u_max_results,&__pyx_mstate_global->__pyx_n_u_input_length,&__pyx_mstate_global->__pyx_n_u_original_search_text,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 166, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 167, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "lookup_candidates", 0) < (0)) __PYX_ERR(0, 166, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "lookup_candidates", 0) < (0)) __PYX_ERR(0, 167, __pyx_L3_error)
 
-      /* "tentoku/word_search_cy.pyx":172
+      /* "tentoku/word_search_cy.pyx":173
  *     int max_results,
  *     int input_length,
  *     object original_search_text=None             # <<<<<<<<<<<<<<
@@ -4819,25 +4819,25 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 */
       if (!values[5]) values[5] = __Pyx_NewRef(((PyObject *)Py_None));
       for (Py_ssize_t i = __pyx_nargs; i < 5; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("lookup_candidates", 0, 5, 6, i); __PYX_ERR(0, 166, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("lookup_candidates", 0, 5, 6, i); __PYX_ERR(0, 167, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 167, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 167, __pyx_L3_error)
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 167, __pyx_L3_error)
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 167, __pyx_L3_error)
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 167, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 167, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -4846,13 +4846,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_input_text = ((PyObject*)values[0]);
     __pyx_v_dictionary = values[1];
     __pyx_v_existing_entries = ((PyObject*)values[2]);
-    __pyx_v_max_results = __Pyx_PyLong_As_int(values[3]); if (unlikely((__pyx_v_max_results == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L3_error)
-    __pyx_v_input_length = __Pyx_PyLong_As_int(values[4]); if (unlikely((__pyx_v_input_length == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L3_error)
+    __pyx_v_max_results = __Pyx_PyLong_As_int(values[3]); if (unlikely((__pyx_v_max_results == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 171, __pyx_L3_error)
+    __pyx_v_input_length = __Pyx_PyLong_As_int(values[4]); if (unlikely((__pyx_v_input_length == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 172, __pyx_L3_error)
     __pyx_v_original_search_text = values[5];
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("lookup_candidates", 0, 5, 6, __pyx_nargs); __PYX_ERR(0, 166, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("lookup_candidates", 0, 5, 6, __pyx_nargs); __PYX_ERR(0, 167, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4863,11 +4863,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_input_text), (&PyUnicode_Type), 1, "input_text", 1))) __PYX_ERR(0, 167, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_existing_entries), (&PySet_Type), 1, "existing_entries", 1))) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_input_text), (&PyUnicode_Type), 1, "input_text", 1))) __PYX_ERR(0, 168, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_existing_entries), (&PySet_Type), 1, "existing_entries", 1))) __PYX_ERR(0, 170, __pyx_L1_error)
   __pyx_r = __pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(__pyx_self, __pyx_v_input_text, __pyx_v_dictionary, __pyx_v_existing_entries, __pyx_v_max_results, __pyx_v_input_length, __pyx_v_original_search_text);
 
-  /* "tentoku/word_search_cy.pyx":166
+  /* "tentoku/word_search_cy.pyx":167
  * 
  * 
  * def lookup_candidates(             # <<<<<<<<<<<<<<
@@ -4912,35 +4912,32 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
   size_t __pyx_t_4;
   int __pyx_t_5;
   Py_ssize_t __pyx_t_6;
-  long __pyx_t_7;
-  long __pyx_t_8;
-  long __pyx_t_9;
-  int __pyx_t_10;
-  PyObject *__pyx_t_11 = NULL;
+  int __pyx_t_7;
+  PyObject *__pyx_t_8 = NULL;
+  PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_10 = NULL;
+  Py_ssize_t __pyx_t_11;
   PyObject *__pyx_t_12 = NULL;
   PyObject *__pyx_t_13 = NULL;
-  Py_ssize_t __pyx_t_14;
-  PyObject *__pyx_t_15 = NULL;
-  PyObject *__pyx_t_16 = NULL;
-  int __pyx_t_17;
+  int __pyx_t_14;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lookup_candidates", 0);
 
-  /* "tentoku/word_search_cy.pyx":188
+  /* "tentoku/word_search_cy.pyx":189
  *         List of WordResult objects
  *     """
  *     cdef list candidate_results = []             # <<<<<<<<<<<<<<
  *     cdef list candidates
  *     cdef int candidate_index
 */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_candidate_results = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tentoku/word_search_cy.pyx":199
+  /* "tentoku/word_search_cy.pyx":200
  * 
  *     # Deinflect the input
  *     candidates = deinflect(input_text)             # <<<<<<<<<<<<<<
@@ -4948,7 +4945,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *     for candidate_index, candidate in enumerate(candidates):
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_deinflect); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_deinflect); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -4967,19 +4964,19 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
     __pyx_t_1 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_3, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 199, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_v_candidates = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tentoku/word_search_cy.pyx":201
+  /* "tentoku/word_search_cy.pyx":202
  *     candidates = deinflect(input_text)
  * 
  *     for candidate_index, candidate in enumerate(candidates):             # <<<<<<<<<<<<<<
  *         # Look up in dictionary
- *         lookup_max = max(max_results * 3, 20)
+ *         # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
 */
   __pyx_t_5 = 0;
   __pyx_t_1 = __pyx_v_candidates; __Pyx_INCREF(__pyx_t_1);
@@ -4988,48 +4985,40 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
       #if !CYTHON_ASSUME_SAFE_SIZE
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 201, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 202, __pyx_L1_error)
       #endif
       if (__pyx_t_6 >= __pyx_temp) break;
     }
     __pyx_t_3 = __Pyx_PyList_GetItemRefFast(__pyx_t_1, __pyx_t_6, __Pyx_ReferenceSharing_OwnStrongReference);
     ++__pyx_t_6;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_XDECREF_SET(__pyx_v_candidate, __pyx_t_3);
     __pyx_t_3 = 0;
     __pyx_v_candidate_index = __pyx_t_5;
     __pyx_t_5 = (__pyx_t_5 + 1);
 
-    /* "tentoku/word_search_cy.pyx":203
- *     for candidate_index, candidate in enumerate(candidates):
+    /* "tentoku/word_search_cy.pyx":205
  *         # Look up in dictionary
- *         lookup_max = max(max_results * 3, 20)             # <<<<<<<<<<<<<<
+ *         # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
+ *         lookup_max = max_results * 2             # <<<<<<<<<<<<<<
  *         matching_text = original_search_text if original_search_text is not None else input_text
  *         word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=matching_text)
 */
-    __pyx_t_7 = 20;
-    __pyx_t_8 = (__pyx_v_max_results * 3);
-    __pyx_t_10 = (__pyx_t_7 > __pyx_t_8);
-    if (__pyx_t_10) {
-      __pyx_t_9 = __pyx_t_7;
-    } else {
-      __pyx_t_9 = __pyx_t_8;
-    }
-    __pyx_v_lookup_max = __pyx_t_9;
+    __pyx_v_lookup_max = (__pyx_v_max_results * 2);
 
-    /* "tentoku/word_search_cy.pyx":204
- *         # Look up in dictionary
- *         lookup_max = max(max_results * 3, 20)
+    /* "tentoku/word_search_cy.pyx":206
+ *         # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
+ *         lookup_max = max_results * 2
  *         matching_text = original_search_text if original_search_text is not None else input_text             # <<<<<<<<<<<<<<
  *         word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=matching_text)
  * 
 */
-    __pyx_t_10 = (__pyx_v_original_search_text != Py_None);
-    if (__pyx_t_10) {
+    __pyx_t_7 = (__pyx_v_original_search_text != Py_None);
+    if (__pyx_t_7) {
       __pyx_t_2 = __pyx_v_original_search_text;
       __Pyx_INCREF(__pyx_t_2);
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_2))) __PYX_ERR(0, 204, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_2))) __PYX_ERR(0, 206, __pyx_L1_error)
       __pyx_t_3 = __pyx_t_2;
       __pyx_t_2 = 0;
     } else {
@@ -5039,8 +5028,8 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
     __Pyx_XDECREF_SET(__pyx_v_matching_text, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/word_search_cy.pyx":205
- *         lookup_max = max(max_results * 3, 20)
+    /* "tentoku/word_search_cy.pyx":207
+ *         lookup_max = max_results * 2
  *         matching_text = original_search_text if original_search_text is not None else input_text
  *         word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=matching_text)             # <<<<<<<<<<<<<<
  * 
@@ -5048,29 +5037,29 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
     __pyx_t_2 = __pyx_v_dictionary;
     __Pyx_INCREF(__pyx_t_2);
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_word); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 205, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_12 = __Pyx_PyLong_From_int(__pyx_v_lookup_max); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 205, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_word); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_9 = __Pyx_PyLong_From_int(__pyx_v_lookup_max); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_4 = 0;
     {
-      PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_2, __pyx_t_11, __pyx_t_12};
-      __pyx_t_13 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 205, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_13);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_matching_text, __pyx_v_matching_text, __pyx_t_13, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 205, __pyx_L1_error)
-      __pyx_t_3 = __Pyx_Object_VectorcallMethod_CallFromBuilder((PyObject*)__pyx_mstate_global->__pyx_n_u_get_words, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_13);
+      PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_2, __pyx_t_8, __pyx_t_9};
+      __pyx_t_10 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_matching_text, __pyx_v_matching_text, __pyx_t_10, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_Object_VectorcallMethod_CallFromBuilder((PyObject*)__pyx_mstate_global->__pyx_n_u_get_words, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_10);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 205, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 207, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
-    if (!(likely(PyList_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_3))) __PYX_ERR(0, 205, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_3))) __PYX_ERR(0, 207, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_word_entries, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/word_search_cy.pyx":208
+    /* "tentoku/word_search_cy.pyx":210
  * 
  *         # Filter by word type if this is a deinflection
  *         is_deinflection = candidate_index != 0             # <<<<<<<<<<<<<<
@@ -5079,7 +5068,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
     __pyx_v_is_deinflection = (__pyx_v_candidate_index != 0);
 
-    /* "tentoku/word_search_cy.pyx":209
+    /* "tentoku/word_search_cy.pyx":211
  *         # Filter by word type if this is a deinflection
  *         is_deinflection = candidate_index != 0
  *         if is_deinflection:             # <<<<<<<<<<<<<<
@@ -5088,7 +5077,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
     if (__pyx_v_is_deinflection) {
 
-      /* "tentoku/word_search_cy.pyx":210
+      /* "tentoku/word_search_cy.pyx":212
  *         is_deinflection = candidate_index != 0
  *         if is_deinflection:
  *             word_entries = [             # <<<<<<<<<<<<<<
@@ -5096,10 +5085,10 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *                 if entry_matches_type(entry, candidate.type)
 */
       { /* enter inner scope */
-        __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 210, __pyx_L8_error)
+        __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 212, __pyx_L8_error)
         __Pyx_GOTREF(__pyx_t_3);
 
-        /* "tentoku/word_search_cy.pyx":211
+        /* "tentoku/word_search_cy.pyx":213
  *         if is_deinflection:
  *             word_entries = [
  *                 entry for entry in word_entries             # <<<<<<<<<<<<<<
@@ -5108,72 +5097,72 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
         if (unlikely(__pyx_v_word_entries == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          __PYX_ERR(0, 211, __pyx_L8_error)
+          __PYX_ERR(0, 213, __pyx_L8_error)
         }
-        __pyx_t_13 = __pyx_v_word_entries; __Pyx_INCREF(__pyx_t_13);
-        __pyx_t_14 = 0;
+        __pyx_t_10 = __pyx_v_word_entries; __Pyx_INCREF(__pyx_t_10);
+        __pyx_t_11 = 0;
         for (;;) {
           {
-            Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_13);
+            Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_10);
             #if !CYTHON_ASSUME_SAFE_SIZE
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 211, __pyx_L8_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 213, __pyx_L8_error)
             #endif
-            if (__pyx_t_14 >= __pyx_temp) break;
+            if (__pyx_t_11 >= __pyx_temp) break;
           }
-          __pyx_t_12 = __Pyx_PyList_GetItemRefFast(__pyx_t_13, __pyx_t_14, __Pyx_ReferenceSharing_OwnStrongReference);
-          ++__pyx_t_14;
-          if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 211, __pyx_L8_error)
-          __Pyx_GOTREF(__pyx_t_12);
-          __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_entry, __pyx_t_12);
-          __pyx_t_12 = 0;
+          __pyx_t_9 = __Pyx_PyList_GetItemRefFast(__pyx_t_10, __pyx_t_11, __Pyx_ReferenceSharing_OwnStrongReference);
+          ++__pyx_t_11;
+          if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 213, __pyx_L8_error)
+          __Pyx_GOTREF(__pyx_t_9);
+          __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_entry, __pyx_t_9);
+          __pyx_t_9 = 0;
 
-          /* "tentoku/word_search_cy.pyx":212
+          /* "tentoku/word_search_cy.pyx":214
  *             word_entries = [
  *                 entry for entry in word_entries
  *                 if entry_matches_type(entry, candidate.type)             # <<<<<<<<<<<<<<
  *             ]
  * 
 */
-          __pyx_t_11 = NULL;
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_entry_matches_type); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 212, __pyx_L8_error)
+          __pyx_t_8 = NULL;
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_entry_matches_type); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_type); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 212, __pyx_L8_error)
-          __Pyx_GOTREF(__pyx_t_15);
+          __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_type); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 214, __pyx_L8_error)
+          __Pyx_GOTREF(__pyx_t_12);
           __pyx_t_4 = 1;
           #if CYTHON_UNPACK_METHODS
           if (unlikely(PyMethod_Check(__pyx_t_2))) {
-            __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-            assert(__pyx_t_11);
+            __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_2);
+            assert(__pyx_t_8);
             PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_2);
-            __Pyx_INCREF(__pyx_t_11);
+            __Pyx_INCREF(__pyx_t_8);
             __Pyx_INCREF(__pyx__function);
             __Pyx_DECREF_SET(__pyx_t_2, __pyx__function);
             __pyx_t_4 = 0;
           }
           #endif
           {
-            PyObject *__pyx_callargs[3] = {__pyx_t_11, __pyx_8genexpr1__pyx_v_entry, __pyx_t_15};
-            __pyx_t_12 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_2, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
-            __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-            __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+            PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_8genexpr1__pyx_v_entry, __pyx_t_12};
+            __pyx_t_9 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_2, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+            __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+            __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-            if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 212, __pyx_L8_error)
-            __Pyx_GOTREF(__pyx_t_12);
+            if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 214, __pyx_L8_error)
+            __Pyx_GOTREF(__pyx_t_9);
           }
-          __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_12); if (unlikely((__pyx_t_10 < 0))) __PYX_ERR(0, 212, __pyx_L8_error)
-          __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          if (__pyx_t_10) {
+          __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 214, __pyx_L8_error)
+          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+          if (__pyx_t_7) {
 
-            /* "tentoku/word_search_cy.pyx":211
+            /* "tentoku/word_search_cy.pyx":213
  *         if is_deinflection:
  *             word_entries = [
  *                 entry for entry in word_entries             # <<<<<<<<<<<<<<
  *                 if entry_matches_type(entry, candidate.type)
  *             ]
 */
-            if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_8genexpr1__pyx_v_entry))) __PYX_ERR(0, 210, __pyx_L8_error)
+            if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_8genexpr1__pyx_v_entry))) __PYX_ERR(0, 212, __pyx_L8_error)
 
-            /* "tentoku/word_search_cy.pyx":212
+            /* "tentoku/word_search_cy.pyx":214
  *             word_entries = [
  *                 entry for entry in word_entries
  *                 if entry_matches_type(entry, candidate.type)             # <<<<<<<<<<<<<<
@@ -5182,7 +5171,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
           }
 
-          /* "tentoku/word_search_cy.pyx":211
+          /* "tentoku/word_search_cy.pyx":213
  *         if is_deinflection:
  *             word_entries = [
  *                 entry for entry in word_entries             # <<<<<<<<<<<<<<
@@ -5190,7 +5179,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *             ]
 */
         }
-        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_XDECREF(__pyx_8genexpr1__pyx_v_entry); __pyx_8genexpr1__pyx_v_entry = 0;
         goto __pyx_L13_exit_scope;
         __pyx_L8_error:;
@@ -5201,7 +5190,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
       __Pyx_DECREF_SET(__pyx_v_word_entries, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "tentoku/word_search_cy.pyx":209
+      /* "tentoku/word_search_cy.pyx":211
  *         # Filter by word type if this is a deinflection
  *         is_deinflection = candidate_index != 0
  *         if is_deinflection:             # <<<<<<<<<<<<<<
@@ -5210,7 +5199,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
     }
 
-    /* "tentoku/word_search_cy.pyx":216
+    /* "tentoku/word_search_cy.pyx":218
  * 
  *         # Drop redundant results
  *         word_entries = [             # <<<<<<<<<<<<<<
@@ -5218,10 +5207,10 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *             if entry.entry_id not in existing_entries
 */
     { /* enter inner scope */
-      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L16_error)
+      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L16_error)
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "tentoku/word_search_cy.pyx":217
+      /* "tentoku/word_search_cy.pyx":219
  *         # Drop redundant results
  *         word_entries = [
  *             entry for entry in word_entries             # <<<<<<<<<<<<<<
@@ -5230,52 +5219,52 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
       if (unlikely(__pyx_v_word_entries == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-        __PYX_ERR(0, 217, __pyx_L16_error)
+        __PYX_ERR(0, 219, __pyx_L16_error)
       }
-      __pyx_t_13 = __pyx_v_word_entries; __Pyx_INCREF(__pyx_t_13);
-      __pyx_t_14 = 0;
+      __pyx_t_10 = __pyx_v_word_entries; __Pyx_INCREF(__pyx_t_10);
+      __pyx_t_11 = 0;
       for (;;) {
         {
-          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_13);
+          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_10);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 217, __pyx_L16_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 219, __pyx_L16_error)
           #endif
-          if (__pyx_t_14 >= __pyx_temp) break;
+          if (__pyx_t_11 >= __pyx_temp) break;
         }
-        __pyx_t_12 = __Pyx_PyList_GetItemRefFast(__pyx_t_13, __pyx_t_14, __Pyx_ReferenceSharing_OwnStrongReference);
-        ++__pyx_t_14;
-        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 217, __pyx_L16_error)
-        __Pyx_GOTREF(__pyx_t_12);
-        __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_entry, __pyx_t_12);
-        __pyx_t_12 = 0;
+        __pyx_t_9 = __Pyx_PyList_GetItemRefFast(__pyx_t_10, __pyx_t_11, __Pyx_ReferenceSharing_OwnStrongReference);
+        ++__pyx_t_11;
+        if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 219, __pyx_L16_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __Pyx_XDECREF_SET(__pyx_8genexpr2__pyx_v_entry, __pyx_t_9);
+        __pyx_t_9 = 0;
 
-        /* "tentoku/word_search_cy.pyx":218
+        /* "tentoku/word_search_cy.pyx":220
  *         word_entries = [
  *             entry for entry in word_entries
  *             if entry.entry_id not in existing_entries             # <<<<<<<<<<<<<<
  *         ]
  * 
 */
-        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_8genexpr2__pyx_v_entry, __pyx_mstate_global->__pyx_n_u_entry_id); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 218, __pyx_L16_error)
-        __Pyx_GOTREF(__pyx_t_12);
+        __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_8genexpr2__pyx_v_entry, __pyx_mstate_global->__pyx_n_u_entry_id); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 220, __pyx_L16_error)
+        __Pyx_GOTREF(__pyx_t_9);
         if (unlikely(__pyx_v_existing_entries == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-          __PYX_ERR(0, 218, __pyx_L16_error)
+          __PYX_ERR(0, 220, __pyx_L16_error)
         }
-        __pyx_t_10 = (__Pyx_PySet_ContainsTF(__pyx_t_12, __pyx_v_existing_entries, Py_NE)); if (unlikely((__pyx_t_10 < 0))) __PYX_ERR(0, 218, __pyx_L16_error)
-        __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        if (__pyx_t_10) {
+        __pyx_t_7 = (__Pyx_PySet_ContainsTF(__pyx_t_9, __pyx_v_existing_entries, Py_NE)); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 220, __pyx_L16_error)
+        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+        if (__pyx_t_7) {
 
-          /* "tentoku/word_search_cy.pyx":217
+          /* "tentoku/word_search_cy.pyx":219
  *         # Drop redundant results
  *         word_entries = [
  *             entry for entry in word_entries             # <<<<<<<<<<<<<<
  *             if entry.entry_id not in existing_entries
  *         ]
 */
-          if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_8genexpr2__pyx_v_entry))) __PYX_ERR(0, 216, __pyx_L16_error)
+          if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_8genexpr2__pyx_v_entry))) __PYX_ERR(0, 218, __pyx_L16_error)
 
-          /* "tentoku/word_search_cy.pyx":218
+          /* "tentoku/word_search_cy.pyx":220
  *         word_entries = [
  *             entry for entry in word_entries
  *             if entry.entry_id not in existing_entries             # <<<<<<<<<<<<<<
@@ -5284,7 +5273,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
         }
 
-        /* "tentoku/word_search_cy.pyx":217
+        /* "tentoku/word_search_cy.pyx":219
  *         # Drop redundant results
  *         word_entries = [
  *             entry for entry in word_entries             # <<<<<<<<<<<<<<
@@ -5292,7 +5281,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *         ]
 */
       }
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_XDECREF(__pyx_8genexpr2__pyx_v_entry); __pyx_8genexpr2__pyx_v_entry = 0;
       goto __pyx_L21_exit_scope;
       __pyx_L16_error:;
@@ -5303,7 +5292,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
     __Pyx_DECREF_SET(__pyx_v_word_entries, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tentoku/word_search_cy.pyx":222
+    /* "tentoku/word_search_cy.pyx":224
  * 
  *         # Convert to WordResult
  *         for entry in word_entries:             # <<<<<<<<<<<<<<
@@ -5311,103 +5300,103 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *                 entry=entry,
 */
     __pyx_t_3 = __pyx_v_word_entries; __Pyx_INCREF(__pyx_t_3);
-    __pyx_t_14 = 0;
+    __pyx_t_11 = 0;
     for (;;) {
       {
         Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
         #if !CYTHON_ASSUME_SAFE_SIZE
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 222, __pyx_L1_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 224, __pyx_L1_error)
         #endif
-        if (__pyx_t_14 >= __pyx_temp) break;
+        if (__pyx_t_11 >= __pyx_temp) break;
       }
-      __pyx_t_13 = __Pyx_PyList_GetItemRefFast(__pyx_t_3, __pyx_t_14, __Pyx_ReferenceSharing_OwnStrongReference);
-      ++__pyx_t_14;
-      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 222, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_13);
-      __Pyx_XDECREF_SET(__pyx_v_entry, __pyx_t_13);
-      __pyx_t_13 = 0;
+      __pyx_t_10 = __Pyx_PyList_GetItemRefFast(__pyx_t_3, __pyx_t_11, __Pyx_ReferenceSharing_OwnStrongReference);
+      ++__pyx_t_11;
+      if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 224, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_XDECREF_SET(__pyx_v_entry, __pyx_t_10);
+      __pyx_t_10 = 0;
 
-      /* "tentoku/word_search_cy.pyx":223
+      /* "tentoku/word_search_cy.pyx":225
  *         # Convert to WordResult
  *         for entry in word_entries:
  *             candidate_results.append(WordResult(             # <<<<<<<<<<<<<<
  *                 entry=entry,
  *                 match_len=input_length,
 */
-      __pyx_t_12 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_WordResult); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 223, __pyx_L1_error)
+      __pyx_t_9 = NULL;
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_WordResult); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 225, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
 
-      /* "tentoku/word_search_cy.pyx":225
+      /* "tentoku/word_search_cy.pyx":227
  *             candidate_results.append(WordResult(
  *                 entry=entry,
  *                 match_len=input_length,             # <<<<<<<<<<<<<<
  *                 reason_chains=candidate.reason_chains if candidate.reason_chains else None
  *             ))
 */
-      __pyx_t_15 = __Pyx_PyLong_From_int(__pyx_v_input_length); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 225, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      __pyx_t_12 = __Pyx_PyLong_From_int(__pyx_v_input_length); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 227, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_12);
 
-      /* "tentoku/word_search_cy.pyx":226
+      /* "tentoku/word_search_cy.pyx":228
  *                 entry=entry,
  *                 match_len=input_length,
  *                 reason_chains=candidate.reason_chains if candidate.reason_chains else None             # <<<<<<<<<<<<<<
  *             ))
  * 
 */
-      __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_reason_chains); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 226, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_16);
-      __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_16); if (unlikely((__pyx_t_10 < 0))) __PYX_ERR(0, 226, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-      if (__pyx_t_10) {
-        __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_reason_chains); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 226, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_16);
-        __pyx_t_11 = __pyx_t_16;
-        __pyx_t_16 = 0;
+      __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_reason_chains); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 228, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 228, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      if (__pyx_t_7) {
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_candidate, __pyx_mstate_global->__pyx_n_u_reason_chains); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 228, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_13);
+        __pyx_t_8 = __pyx_t_13;
+        __pyx_t_13 = 0;
       } else {
         __Pyx_INCREF(Py_None);
-        __pyx_t_11 = Py_None;
+        __pyx_t_8 = Py_None;
       }
       __pyx_t_4 = 1;
       #if CYTHON_UNPACK_METHODS
       if (unlikely(PyMethod_Check(__pyx_t_2))) {
-        __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_2);
-        assert(__pyx_t_12);
+        __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_2);
+        assert(__pyx_t_9);
         PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_12);
+        __Pyx_INCREF(__pyx_t_9);
         __Pyx_INCREF(__pyx__function);
         __Pyx_DECREF_SET(__pyx_t_2, __pyx__function);
         __pyx_t_4 = 0;
       }
       #endif
       {
-        PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_12, NULL};
-        __pyx_t_16 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 223, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_16);
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_entry, __pyx_v_entry, __pyx_t_16, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 223, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_len, __pyx_t_15, __pyx_t_16, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 223, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_reason_chains, __pyx_t_11, __pyx_t_16, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 223, __pyx_L1_error)
-        __pyx_t_13 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_2, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_16);
-        __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-        __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 223, __pyx_L1_error)
+        PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_9, NULL};
+        __pyx_t_13 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 225, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_entry, __pyx_v_entry, __pyx_t_13, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 225, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_match_len, __pyx_t_12, __pyx_t_13, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 225, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_reason_chains, __pyx_t_8, __pyx_t_13, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 225, __pyx_L1_error)
+        __pyx_t_10 = __Pyx_Object_Vectorcall_CallFromBuilder((PyObject*)__pyx_t_2, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_13);
+        __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+        __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+        __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 225, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
       }
 
-      /* "tentoku/word_search_cy.pyx":223
+      /* "tentoku/word_search_cy.pyx":225
  *         # Convert to WordResult
  *         for entry in word_entries:
  *             candidate_results.append(WordResult(             # <<<<<<<<<<<<<<
  *                 entry=entry,
  *                 match_len=input_length,
 */
-      __pyx_t_17 = __Pyx_PyList_Append(__pyx_v_candidate_results, __pyx_t_13); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 223, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_candidate_results, __pyx_t_10); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 225, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-      /* "tentoku/word_search_cy.pyx":222
+      /* "tentoku/word_search_cy.pyx":224
  * 
  *         # Convert to WordResult
  *         for entry in word_entries:             # <<<<<<<<<<<<<<
@@ -5417,17 +5406,17 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tentoku/word_search_cy.pyx":201
+    /* "tentoku/word_search_cy.pyx":202
  *     candidates = deinflect(input_text)
  * 
  *     for candidate_index, candidate in enumerate(candidates):             # <<<<<<<<<<<<<<
  *         # Look up in dictionary
- *         lookup_max = max(max_results * 3, 20)
+ *         # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
 */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tentoku/word_search_cy.pyx":230
+  /* "tentoku/word_search_cy.pyx":232
  * 
  *     # Sort results
  *     if candidate_results:             # <<<<<<<<<<<<<<
@@ -5436,13 +5425,13 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_candidate_results);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 230, __pyx_L1_error)
-    __pyx_t_10 = (__pyx_temp != 0);
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_7 = (__pyx_temp != 0);
   }
 
-  if (__pyx_t_10) {
+  if (__pyx_t_7) {
 
-    /* "tentoku/word_search_cy.pyx":231
+    /* "tentoku/word_search_cy.pyx":233
  *     # Sort results
  *     if candidate_results:
  *         candidate_results = sort_word_results(candidate_results)             # <<<<<<<<<<<<<<
@@ -5450,33 +5439,33 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
  *     return candidate_results[:max_results]
 */
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_mstate_global->__pyx_n_u_sort_word_results); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 231, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_sort_word_results); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 233, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
     __pyx_t_4 = 1;
     #if CYTHON_UNPACK_METHODS
-    if (unlikely(PyMethod_Check(__pyx_t_13))) {
-      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_13);
+    if (unlikely(PyMethod_Check(__pyx_t_10))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_10);
       assert(__pyx_t_3);
-      PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_13);
+      PyObject* __pyx__function = PyMethod_GET_FUNCTION(__pyx_t_10);
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(__pyx__function);
-      __Pyx_DECREF_SET(__pyx_t_13, __pyx__function);
+      __Pyx_DECREF_SET(__pyx_t_10, __pyx__function);
       __pyx_t_4 = 0;
     }
     #endif
     {
       PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_candidate_results};
-      __pyx_t_1 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_13, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
+      __pyx_t_1 = __Pyx_PyObject_FastCall((PyObject*)__pyx_t_10, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
-    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 231, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 233, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_candidate_results, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "tentoku/word_search_cy.pyx":230
+    /* "tentoku/word_search_cy.pyx":232
  * 
  *     # Sort results
  *     if candidate_results:             # <<<<<<<<<<<<<<
@@ -5485,7 +5474,7 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
 */
   }
 
-  /* "tentoku/word_search_cy.pyx":233
+  /* "tentoku/word_search_cy.pyx":235
  *         candidate_results = sort_word_results(candidate_results)
  * 
  *     return candidate_results[:max_results]             # <<<<<<<<<<<<<<
@@ -5493,15 +5482,15 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_candidate_results == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 233, __pyx_L1_error)
+    __PYX_ERR(0, 235, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_candidate_results, 0, __pyx_v_max_results); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyList_GetSlice(__pyx_v_candidate_results, 0, __pyx_v_max_results); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tentoku/word_search_cy.pyx":166
+  /* "tentoku/word_search_cy.pyx":167
  * 
  * 
  * def lookup_candidates(             # <<<<<<<<<<<<<<
@@ -5514,11 +5503,11 @@ static PyObject *__pyx_pf_7tentoku_14word_search_cy_4lookup_candidates(CYTHON_UN
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_XDECREF(__pyx_t_15);
-  __Pyx_XDECREF(__pyx_t_16);
   __Pyx_AddTraceback("tentoku.word_search_cy.lookup_candidates", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -6395,20 +6384,20 @@ __Pyx_RefNannySetupContext("PyInit_word_search_cy", 0);
   if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_word_search, __pyx_t_2) < (0)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tentoku/word_search_cy.pyx":166
+  /* "tentoku/word_search_cy.pyx":167
  * 
  * 
  * def lookup_candidates(             # <<<<<<<<<<<<<<
  *     str input_text,
  *     object dictionary,
 */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14word_search_cy_5lookup_candidates, 0, __pyx_mstate_global->__pyx_n_u_lookup_candidates, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_word_search_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[4])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7tentoku_14word_search_cy_5lookup_candidates, 0, __pyx_mstate_global->__pyx_n_u_lookup_candidates, NULL, __pyx_mstate_global->__pyx_n_u_tentoku_word_search_cy, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[4])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030E0000
   PyUnstable_Object_EnableDeferredRefcount(__pyx_t_2);
   #endif
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_mstate_global->__pyx_tuple[0]);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_lookup_candidates, __pyx_t_2) < (0)) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_lookup_candidates, __pyx_t_2) < (0)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "tentoku/word_search_cy.pyx":1
@@ -6460,7 +6449,7 @@ __Pyx_RefNannySetupContext("PyInit_word_search_cy", 0);
 
 static int __Pyx_InitCachedBuiltins(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
-  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 202, __pyx_L1_error)
 
   /* Cached unbound methods */
   __pyx_mstate->__pyx_umethod_PyDict_Type_items.type = (PyObject*)&PyDict_Type;
@@ -6482,14 +6471,14 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "tentoku/word_search_cy.pyx":166
+  /* "tentoku/word_search_cy.pyx":167
  * 
  * 
  * def lookup_candidates(             # <<<<<<<<<<<<<<
  *     str input_text,
  *     object dictionary,
 */
-  __pyx_mstate_global->__pyx_tuple[0] = PyTuple_Pack(1, Py_None); if (unlikely(!__pyx_mstate_global->__pyx_tuple[0])) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_mstate_global->__pyx_tuple[0] = PyTuple_Pack(1, Py_None); if (unlikely(!__pyx_mstate_global->__pyx_tuple[0])) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[0]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[0]);
   #if CYTHON_IMMORTAL_CONSTANTS
@@ -6522,25 +6511,25 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
 static int __Pyx_InitConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   {
-    const struct { const unsigned int length: 9; } index[] = {{1},{16},{179},{24},{1},{8},{7},{6},{2},{9},{18},{10},{4},{8},{20},{6},{3},{9},{10},{16},{25},{18},{4},{9},{15},{17},{10},{18},{5},{13},{20},{4},{9},{10},{7},{12},{5},{8},{18},{9},{16},{12},{11},{8},{7},{9},{4},{16},{8},{12},{13},{10},{3},{13},{15},{14},{5},{22},{17},{13},{17},{10},{8},{9},{13},{11},{13},{10},{4},{8},{4},{15},{10},{20},{3},{11},{12},{13},{7},{4},{4},{12},{10},{17},{14},{20},{18},{20},{18},{24},{21},{22},{15},{8},{4},{5},{6},{4},{6},{6},{5},{6},{7},{10},{4},{12},{12},{11},{28},{233},{415},{2},{120},{33}};
-    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (1431 bytes) */
-const char* const cstring = "BZh91AY&SY\274\233\244\312\000\000\260\177\377\377\377\377\377\376\277l\365\277\377\371\276\277\377\377\373\300@@@@@@@@@@@@\000@\000P\004\3179\216\316\325\232\323n\343\271p\340\324\321\t<MMO\325?S42\215\225?E4h\362\233SM=OF\206\247\242h\321\3514di\246\322\r6\246\201\372\223\321\224m1Oj\203DF\232e3S\031)\351\245<\232\231\033P\006\203@4\000\000\000\000\000\032\031\000\017H\r4L\204\320\212z\231O'\242\237\251\243B4\032\031\031\006\t\246\000FM\0004\032h\320\007\250f\223\023\"\014\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\224\324C@M5=)\372\223\324l\243!\240\000h\003@\000\000\000\000\000\000\000\004B3\013Hm Yo\240&\010\306\377+\354\005w\373\323\200\216G\303\177\001X\327%1\304\000 \301G\030\234\303p6\210u\353\3214\t\2230\231$L\235\006\207\355N2\220V\262%\224\tD\204\030\210\302\014\361\017yV\026\204\337\352dh\313_\024\3546Y\0314\207\311\276@\244\026\245b\343\230M\253\224\210b#\000\260\032\031\361V#!\250\315\024\2407\266\314\2566\224\261\213\245\205)\030cm\017[\377\016\366\327/k\235\371\367\271S~\374\251\372\211xd6\357\243\035E?\213\266\353a\274\300\342Q!1\002g\004'\035\324\343T\250\247;\364\225\032\232Z\274\232\023:\002\275\347\035y\342\033\344\371\030F\256M\212nL\3129\201\334@:gH\202C{qL\334\335\216\336D\245\220\275=5\230H\345\220O\"EfTY\345\005\tXw^\242\256\352\252\206\201\313\254\217\022\027a\224j\\~O\024t\302\371!6\002\016\246F#\317d\331\302\220\245\004\r\312\342a^\026\026\211\265\372h\027Uw\336RK\360r\342\370\241\037\316\230m\n\233dl\372o\270\3775N\352\036\272\255D\360\034\346\351\331\347\023\263E=\200\356kQ*(hr\302d\251\002m\006\035\353$_Ub\212-9 \304\310@3\265\233\276\265Qy\324J8\211g\375b\362&\337\315 \346\316\301\347\374\221\264\231\267H\306\322\302\370\021J\022\263\302k*\231\\\340\214\251\006WZ1\251C7\0361\230z\367V\031\370+r\260@\344\303\005Ap\003\002\022{\201:lq\230\210~#\206\222\272\204\t\250Q\001\221%1&\034%\205\301X\262\026\316\366\334M\307\310\325)\004#\216\342\r-y\246y\245\277B\236v\226F\310\212QR\307\344\020<\025\330\213#xc+\332/7\312""\353\345\212\244Z\346\230\310\3269\263\213\200\203@\250\004\206\372\267V#6\265\206L)\032\244b\371P\\\203<WL\316\365\244V\354q\206\033n\024\231f\037\224\010\303Gu\317b'e>\333G1\231\212\235cc`\255\"\304\316g9\3119B\356\356\003\035\245:H\231\031\025\364\350\2565s-\\2j.\261*\341H8(\243\340`\006\3029j\211_q\233\020\314\rs\\P|&\251\223ZD\033HI&<\342\304V\274\006\t\320\r\253j^\356,\202\244#0\244\360\302\333\244 H\214\323J\267\034\326T[) \222\241V[\222\311=\227\234\314\231P2\3470g U\030\240,\002\251EU\036:\na\001\240\224\007&c94\242\201\022l\252\263)\211\202f\277\203\000\371\230Ah\230\302\005t\2110\344\334\0202\002wTV\t\326m\213\\m\277AQ`\305]i\220\212\272\324\035K\203Mr\236X\243\340\251\007\002b\255\004\201F\316A\037)\222\023\300\022\214c\0215=\271b\004\207\232B\314\n\245\000\326#F\270Tw%\014e\277\007\262\215\n\302Y\316\301\202dc\034\244\013\353<\212\035\304\352\243%\333\307\310\033_\026\014E\341\303\025\271\024\004g},\241r\301\307C0c\274\260e\252i#B\351\250\254\306\222\204yRRBC\304\306\302$FZ\220jl\022\024v:\365D\363\327>M \341<\222\203MQc\004n\231\343@\332\034`)/\222S\224\351\300 \374\362\003#\204\305\216\213\361\021TewX\306\014\250\n\310D\016\363\250\024\266\027\254v]\224\255x\023*b9\333r`\320\222!\2261\013)\321\302HJ\t\263M~\326hH\230\372d\335E\2275ex\261f\340\253\246w\321\340\355d\035w\t#\254\204||A\333 \275U\271\rn\314\343\217\306O\277\207\244\021\216)p\370\312\224\\\243\026\211\305\317\315\254;]\320\223\351\211\232\007\370b\317\346t\205\374\313fAi[\023\206\021s\217\224\235\275\320\217\235\021\211'\257k\026\237\234\036\250\342f\326\372\262\361\263\177hpg_n\264\316ia\211\262E\252\"\306\335a\325\203\2634E\016\"\347\353\315jI\232\354E\263\243<\207\034{\302\274)\214p\305\025\rZ\035\377\3244\254B\322\263\232\334\336\r\331\333\263\263\254 \317y\373\333\032\365\360]\221\005\330e\305\034\353\237S\226\277/\nZ\304C\235y\n\023C2\223\006l\254\262\001IcF\207wR\257\017\310\215\273\244iS/\212B\353\253cJ\271\022\264N\003\360\260\377\305\334\221N\024$/&\3512\200";
-    PyObject *data = __Pyx_DecompressString(cstring, 1431, 2);
+    const struct { const unsigned int length: 9; } index[] = {{1},{16},{179},{24},{1},{8},{7},{6},{2},{9},{18},{10},{4},{8},{20},{6},{3},{9},{10},{16},{25},{18},{4},{9},{15},{17},{10},{18},{5},{13},{20},{4},{9},{10},{7},{12},{5},{8},{18},{9},{16},{12},{11},{8},{7},{9},{4},{16},{8},{12},{13},{10},{3},{13},{15},{14},{5},{22},{17},{13},{17},{10},{8},{9},{13},{11},{13},{10},{4},{8},{4},{15},{10},{20},{3},{11},{12},{13},{7},{4},{4},{12},{10},{17},{14},{20},{18},{20},{18},{24},{21},{22},{15},{8},{4},{5},{6},{4},{6},{6},{5},{6},{7},{10},{4},{12},{12},{11},{28},{231},{415},{2},{120},{33}};
+    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (1415 bytes) */
+const char* const cstring = "BZh91AY&SY\345\252\216\307\000\000\260\177\377\377\377\377\377\376\277l\365\277\377\371\276\277\377\377\373\300@@@@@@@@@@@@\000@\000P\004\3179\26794\332\323k\023\\85OJdL\0204=OS\322a4\000z#@\r\r44\006\201\243A\2402h\036SLC\324\304\336\2504Di\243\324\320\002\247\351\2516\236\251\246i\000\032\000=@\000\001\240\000\000\000\003M4\310\rOD\320M\010\247\251\3510\322z\2152\000\000\000\000\000\000\000\000\000\032\030\200\0100\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002SQ\rLMM3)\351OM4\214#\324h\r\032\000\000\000\003F\200\000\000\000\0324\007\r\235\270\264M\020W\260Z$\010\211\004?\233\313\005O\356\253&*\314\325H\332\362\t\255\203\200\010;'C\026\013\325\203c\216\304\304\210 J\231\204\311\245N\203CQL\314\244\025,\213\026\000\260$ \300F\020g\210{\312/4%\377Y\221\243)|S0\331Dd\262/\356c\202\020VS\202\324\227\204VwH\212\221\013\005\253\020\370\254\031T\\3\027\241)\003E\313}F\217{Mk\214m\262\332ai\327\351\316\315\342f\362}\271\3348\266{\345\357\017\374\274hW%F\255~\234\246\3650\233\340\252'HBD\300\203\363=l\333;9\257\314\025\233\210\332:\223\242\251H7\206\253\330\020\010\322YI\210q\025\323>\375\352\234_L\367<tn\211\021\032=90\341\344l,W3\347\317\337\315DJ6\235\353\227\207;\"\275\2036\317\346\205\373Xt!\204R\024s/~\264t\353\307\364\327W\341\215\360\222\007\334\024t\304\370\177q\023\261\n\003\030\241\236\327\242,\002\322\306iW\315BfM\360(!\370\312\327\243\371-\177<@\270Q\332\004e\354Z\367\333\030\343\301\247\214\262w\334\344\032\243F\214#E\204\267!\230\316a\362@\260b\242$\241\002+\003\006i\275\311\264HI\005\"\367\013K\304\001\215(\271\350\344\221H\320\240\361\343\321{\322e\305\205\201E\273\253\331\246\037&b\261\2043\347\023\000\036h\r%\205\330T\305d\200\214\250\006S \316c\006fvP\313<\331l\021~\212\355fMg\006\032\331[k\002\244$\367\002t\2711\230\010i\307\r]\252\004\t\247Q\001rK1&\034%y\301Z\322\027IRF\270\352\201\030\305\020}\370\324kJ\215r:\034\211\331Q\334Z\211\002\250U-\032@\300\322\206\366!/M\223>\214\214\343z(\336\221D\304\211p\tV\207E\302 \030m\n \0363'T\341""\013\330(.Y(c\021k]p\251\303\"\023\3041\255%\t\325m\260Q\240\301\t\224^\372@\214/\327[\330\211\331\017\246\221\314e\340\263\234\331,\026\222-\246s9\316I\310\023MP\026\346\241\276\347\\W#bI\030c^I\260Wb\246\002Q\202\020lA&\260\300\t[\360\322\3634F\275\341\226\022T\224\253\252\267S\023\256\"\t@Y-\374Ey]P\021\010\310\014\332b\326\314(\3412\034\252%\033,\246;\210\017\"\364]5\340\031\276ID$\022P\"?FU\321\313h\304\275Q\301S \300\305\340\243\224\270\025\001\020\271\021G\2239f\020\032\t@rf4\023X\024\010\223dQ\227f&\t[\026\252\207\312\302\rS\214(Y@\203\016\246\344\201\220\022KIZ$i\243\331\206\231\023\224\366\213\354\261p\021Yd\206\234\343c\337\317\300l\3647y\235\250\315\356\266!C9\351\325[Fh\025\2632T\346\335\325\031\221\032R\022 M\322\003\001\030rB9\230\227\030]\256\306\242\014(\241\371\007N`K\314-\272@\256q\270\201\230Fh.U\224\327\002\344\332\241H\2540R\2259\000r\263_\272\227`m\302\252\024\345P*M\327\334\260LD\023\210\276\201\314\371=\356$4\"4\356t\030\245 \303lHQ\333v%\004\323Z\232\355\220p\236I9\231Am\2027J\361\240\247- \221\365BU*\271\200\306\253l\301\251h\241\260\333\277\0235)\261r&\230\273\214V\304A\340\226qBW\202\331r\255\241\255\311\\+x\344H\334\020,\210e\013\305\264c\302JZ\211\034\351\251f\204\211\217\265\332\347\267[Z-`\301\256\252\215\023\302\217\027r\341\331p\2224\220\217\237\220;\2509\320q9\t\373\357\314=l\372z\277\001 `\267TrX\364\020\257\230aG\333\256\266\3468F\nJE7ex\214 \313\351\3504-\031\341\360\254(\370P%jRi\337\220+\242\376\246\251in\203h\t\266\335\323f8R\305\276S;\243\247\031\225#0\240v\255\320\232\264\211Z\177\265p\325\007^\271|\341\252\362\345\007\227\347\223\233\202C\305\325A\035t\205\206\016|\r\\\014\265\330\207!\207\215\337\274\342\226\023\340\225\301&8\205\022\004\032\234\233:\365i\332B\326^\354\356\214\344\311\3074\305\237\200\2101\311{\344\222A\022\347\203\025EG\200\204\251\222\301\231\220\243A\2700\320Z\2452\376\313\305U%*\224\340C\337H\306\"\033+?\342\356H\247\n\022\034\265Q\330\340";
+    PyObject *data = __Pyx_DecompressString(cstring, 1415, 2);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (1335 bytes) */
-const char* const cstring = "x\332uT\317o\023G\024\266\251\rKqHL\002$$\201u\001E\375\201\205\005R\177\010\201\034H[(\005\034KD\264\240\321dwl\017\254w\354\235\331\304\246*\315\321\3079\316q\217{\364\321\307\0349\356\321G\377\t\376\023x\263\353\330\246j#g\366\275\267o\276\367\276\357=\273\370\224r\361\347\036\363\354]\302}G\274y\306\0041E\003\013\363aW4\230kRn\332\304\241\373\304\303\2028]\223\013\217Z\202x:\3115_\354\274\270u\367\207\273&vm\323#o\211%\270\311\375}\313\301\234\023n\262\232\271\357SGP\327\024\335\026\341E\363q\315\3542\337t\t\261M\301\314\026\344\315_\020\r\342\232\234\010m\230[\330u\231\300\2022\027\301u\352\326\267L\233zP\204\036\020}\373g\354pRL:7k\036k\232\207\300\004\356c\317j\024\037`\333F\000@l\312\361\276C\210\253\317\272Eyb\331:\031%\311\310\352\026[\335\316#\240\006\325\260\327\325\272<o\305\216\203\320\213n\007\376\365[\364\214t\304.\251\355\022\314\231[%Bk\267\343\n\257;\023Q[\325\030\366\277\375\"B\324\245\002!\314\273\256EY\321b\036\363A$\302\367\031s,\020\223\332\240\366\324\200t\233tf\256\027\303\360i\200[\016\\\206,$<l\221}l\275\263\034\306\211\345{\036q\005\274h\371\3423\0079\304\255\213\006\\\3066\241n\315\001Q\355)y\204lf!D\\\233k\320.c.\321\024\343\003Q;y6\261\260\032\204\353\321\200\266~3\336\020\322\001\341`RH\347P\302I\247\005]\"\253\001\0305\346\203\031_C\250\346\273P\242N\\\310\360\352D =\r\336\300\007\320\216\345\3706A\007\330\243\330\025\374D\255\371\306\347m\2368\002\006C5?\216\246z\202=\245\007\324\300e\256\323E6\255S\301\251 M\376\256\353\373o\251\300\024\t\2068\340\306N\002\234\204\230'\210\3530\267N\270H\232w\030{\347\267\320L\376I\240\211;\010\016PlB\022`bC\353\241\333\323\t\223\331A\n\0218^{\004\177Mf\373\016\321O\017N\0277\365\t7\\\3465\261C\337\223\204\375\324\265\231\007\034\364nN\366W\303\267X\013\241\226GZX\203 \324\366\261\223@y\361\266\302\024\2409>\351\200\023\247\006\337\004\033\001\204\230\224\004\313&5\254_\003\355x$'\r\203\010\002X\026\343qO\275\251\272\360\005\232\306\246{t\022\231\261\230e\351\002Z\227YD\003\243\251^\263x\274\007""\032\221\317\005?\377\356\236D\365\246\202\213@\016\030V,\212hx\354\020\006\351\222C] \371\035\361[zn\007\330\361\223\203OvmVJ\343\3075&{</\305\\\3559\263x\317a\026\374 \335/N\226\372(=\316\245\262\247\307f*{=(\214/\245\262\027\344\232*\250\322(cD\306\232\332\014h\330\356\247G\306\252J\253\215`7\340aah\254F\253\267\243\333;\307{\037\237D/\367\206\306e\371>\270\022\226\302\307\375\275\301\323\217\347!6>\235:\273\036]\371&\274\036V\206\306\271^i\230[W\245\341\322%i\253\257\0030\226\243\345\233A%\250\207\257\372xl\244\316\256\312\3660wA\336\220T\201\261\330\363\345\023U\017*\372\325B\357\261\254\014s\233j/(\007\177\204m\215\202\207KWTa\270tU\321h\353\307\301Z\264\375RW5RY\343\250=46\242\215[a%\304\243\314\271\350\334\206\332V\030\210\236\006\242\303Lv\274\221\312^U\225a\3462\224\314\000\257a\246\020\3445u\343\350\203\254\202o\254D+7\202\347\375R\277<2.\312\312(\263\"\313\243\314\227\275\302\010\250\334Wy\250\234[\210_I\254\231\3464\277K\262\256*\312\t\013ai\224\273\030]\374\026\004)k*\207\322Ry\335\357V\220\017\000\342\232\372;,\207\325~:*=:~x\334\376\270\030\355\275\212^\275\216^\277\211\336\264\243\366\207q*\365O\272|\n\036\345S\333\247F\206\246k\344z\277i\211\326\243\365\357\000v)\377\257\017\264\261\260\324\023\022\244\315\217r\240\215\016\344\345\031\371W\020\233\246j\007\213a[\233+\362\373x\302'Y\233\n\332\274\246e_H\310\334\351\341^W}\241\356\005^\230\237D7\325N\260\021V\242\342\366\261^\000\265\220\354B\370`\360\325\000\2649s$@\003c\261\247+d\027\243\363\200\027\304\222/\366\352rW\266\343I\350\0250\026z\260\021\027dA[U\231\206u\273\256*A!J\255\251\374\370\274\236\302\t\024\354`\317\220imsY\000j\361\"A\377\017eGu\202\366\274\231\313\313e\371\213\272\243Hp\007\266\252\332\317\366\253\2033\203\377y\221\036\345\226%\3548\340E\231\315h\363\247\301\315\301\301qE\253\374\253,\353\307\3570\262\304\373\004\244=U\265";
-    PyObject *data = __Pyx_DecompressString(cstring, 1335, 1);
+    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (1340 bytes) */
+const char* const cstring = "x\332uT\317o\023G\024\266\251\rKqH\234\204\220\220\004\326\005\024\365\007\026\026H\375!\004r m\241\024p\"\021\321\202F\223\335\261=\260\336\261wf\023/Ui\216>\316q\216{\334\243\217>\346\310q\217>\372O\360\237\300\233\265c\233\252\215\234\331\367\336\276\371\336\373\276\367\354\342S\312\305\237\373\314\263w\t\367\035\361\346\031\023\304\024u,\314\207\201\2503\327\244\334\264\211C\017\210\207\005q\002\223\013\217Z\202x:\3115_\354\274\270u\367\207\273&vm\323#o\211%\270\311\375\003\313\301\234\023n\262\252y\340SGP\327\024A\223\360\242\371\270j\006\3147]BlS0\263\ty\263\027D\235\270&'B\033\346\026v]&\260\240\314Ep\235\272\265-\323\246\036\024\241\207D\337\376\031;\234\024G\235\233U\2175\314#`\002\367\261g\325\213\017\260m#\000 6\345\370\300!\304\325g\315\242|d\331:\031\215\222\221\025\024\233A\373\021P\203j\330\013\264.\317\233\211\343 \364\"h\303\277~\213\236\221\266\330%\325]\2029s\367\210\320\332\355\270\302\013\246\"jk/\201\375o\277\210\020u\251@\010\363\300\265(+Z\314c>\210D\370\001c\216\005bR\033\324\236\030\220n\223\366\324\365\022\030>\tp\313\201\313\220\205\204\207-r\200\255w\226\3038\261|\317#\256\200\027M_|\346 \207\2705Q\207\313\330&\324\255: \252=!\217\220\315,\204\210ks\r\0320\346\022M19\020\265G\317\006\026V\235p=\032\320\326o$\033B\332 \034L\n\351\034J8i7\241Kd\325\001\243\312|0\223k\010U}\027J\324\210\013\031^\215\010\244\247\301\353\370\020\332\261\034\337&\350\020{\024\273\202\237\2525\333\370\254\315G\216\200\301P\315\217\243\211\236`O\350\0015p\231\353\004\310\2465*8\025\244\301\337\005\276\377\226\nL\221`\210\003n\342\214\200G!\346\t\342:\314\255\021.F\315;\214\275\363\233h*\3778\320\300m\004\007(6&\t0\211\241\365\320\355\351\204\361\354 \205\010\234\254=\202\277\006\263}\207\350\247\007\247\213\033\372\204\033.\363\032\330\241\357\311\210\375\304\265\231\007\034\364n\216\367W\3037Y\023\241\246G\232X\203 \324\362\2613\202\362\222m\205)@s|\334\001'N\025\276\t6\002\0101.\t\226M\252X\277\006\332\311HN\033\006\021\004\260,&\343\236x\023u\341\0134\211M""\366\35042e1\315\322\005\264.\323\210\006F\023\275\246\361d\0174\"\237\t~\376\335=\215\352M\005\027\201\0340\254D\024Q\367\330\021\014\322%G\272\300\350w\304o\352\271\035b\307\037\035|\274k\323R\032?\2511\336\343Y)fj\317\230\305{\016\263\340\007\351~q\274\324\307\351a.\225=;4S\331\353aa\270\222\312.\3125UP\245A\306\210\2155\265\031\322\250\325M\017\317\246\316\257\310\327\341bX\352\033\253\361\352\355\370\366\316\311\376\307'\361\313\375\276qY\276\017\257D\245\350qw\277\367\364\343E\210\351\364\365\370\3127\321\365\250\3227.tJ\375\334\272*\365\027V\244\255\276\006\210\205\245x\351fX\tk\321\253.\036\032\251\363\253\262\325\317-\312\033\222*0\346;\276|\242jaE\277\232\353<\226\225~nS\355\207\345\360\217\250\245Qp\177\341\212*\364\027\256*\032o\375\330[\213\267_\352\252F*k\034\267\372\306F\274q+\252Dx\220\271\020_\330P\333\n\037k\006\331\263\375Lv\270\221\312^U\225~\3462\224\314\254\252t?S\010\363\232\270q\374A\356\201o,\307\3137\302\347\335R\267<0.\311\312 \263,\313\203\314\227\235\302\000\250\334Wy\250\234\233K^I\254\231\3464\277\025YS\025\345D\205\2504\310]\212/}\013\202\2245\225#i\251\274\356w+\314\207\000qM\375\035\225\243\275n:.=:yx\322\3728\037\357\277\212_\275\216_\277\211\337\264\342\326\207a*\365O\272|\006\036\3453\333g\006\206\246k\344:\277i\211\326\343\365\357\000v!\377\257\017\2641\267\320\021\022\244\315\017r\240\215\016\344\3459\371W\230\230\246j\205\363QK\233\313\362\373d\276\247Y\233\n\332\274\246e\237\323r\347:w:\270\023\250/\324\275\320\213\362:\n\0247\325N\270\021U\342\342\366I\001\026@\315\205\273!\007\256\017z_\365@\233s\307\00240\346;\272Bv>\276\010xa\"\371|\247&we+\231\204^\001c\256\003\033\261(\013\332\332\223iX\266\353\252\022\026\342\324\232\312\017/\352)\234B\301\006v\014\231\3266\227\005\240\226,\022\364\377P\266U;l\315\232\271\274\\\222\277\250;\212\204w`\253\366\272\331\356^\357\\\357\177^\244\007\271%\t\033\016xqf3\336\374\251w\263wxR\321*\377*\313\372\361;\214l\344}\002|#T ";
+    PyObject *data = __Pyx_DecompressString(cstring, 1340, 1);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #else /* compression: none (2175 bytes) */
-const char* const bytes = ".List[WordResult]Note that Cython is deliberately stricter than PEP-484 and rejects subclasses of builtin types. If you need to pass subclasses then set the 'annotation_typing' directive to False.Result from word search.?add_notedisableenablegcisenabledword_search_cy.pyxDictionaryListOptional__Pyx_PyDict_NextRefReasonSetWordEntryWordResultWordSearchResultWordSearchResult.__init__asyncio.coroutinesboolcandidatecandidate_indexcandidate_resultscandidatescline_in_tracebackclosecurrent_inputcurrent_input_lengthdatadeinflectdictionary__doc__ends_in_yoonentryentry_identry_matches_typeenumerateexisting_entriesexpand_choonfound_match__func__genexprget_wordshaveinclude_variants__init__input_lengthinput_lengthsinput_textint_is_coroutineis_deinflectionis_only_digitsitemskyuujitai_to_shinjitailength_to_shortenlongest_matchlookup_candidateslookup_max__main__match_lenmatching_textmax_results__metaclass____module__more__name__nextnormalize_inputnormalizedoriginal_search_textpop__prepare____qualname__reason_chainsresultsselfsend__set_name__setdefaultsort_word_resultstentoku._typestentoku.deinflect_cytentoku.dictionarytentoku.normalize_cytentoku.sorting_cytentoku.type_matching_cytentoku.variations_cytentoku.word_search_cytentoku.yoon_cy__test__textthrowto_newtypetypingupdatevaluevaluesvariantvariationswordword_entriesword_resultsword_searchword_search.<locals>.genexpr\200\001\360\014\000\005\006\360 \000\005#\240!\360\026\000\005\022\220\031\230!\2301\340\004\010\320\010\031\230\035\240i\250q\260\001\340\010\030\230\001\230\034\240R\240s\250!\330\010\030\320\0300\3200E\300W\310J\320VW\330\010\027\220z\240\032\2501\250I\260W\270L\310\016\320VW\360\006\000\t\033\320\032*\250#\250Q\330\010\013\2101\330\014\033\2301\330\020\026\220d\230)\2401\330\020\023\320\023%\240Q\240g\250Y\260a\360\010\000\t\030\220q\330\014\022\220$\220i\230q\330\014\017\210u\220J\230g\240Q\360\010\000\t\r\210I\220Q\330\014\035\230W\240A\240Z\250q\330\020\026\220a\330\020\032\230!\330\020\036\230i\320'9\270\031""\320BV\320VW\360\010\000\005\010\200q\330\010\034\320\034-\250Q\250a\340\004\013\320\013\034\230B\230a\200\001\360\006\000\005\006\330\004\005\360\034\000\005\036\230Q\330\004\027\220q\330\004\030\230\001\330\004!\240\021\360\026\000\005\010\200~\220S\230\001\330\010\024\320\024$\240O\2601\260A\340\010\025\220Q\340\004\024\220A\340\004\n\210!\340\010\013\210>\230\021\230!\330\014\r\340\010\025\220Q\220a\360\006\000\t\014\2101\330\014\026\220g\230Q\230l\250!\2501\340\014\025\320\025+\2501\250A\330\014\017\210w\220c\230\021\330\020\032\230'\240\021\240!\340\010\037\230}\250A\250S\260\001\3201D\300C\300q\310\017\320WY\320Y\\\320\\]\320]q\320q~\360\000\000\177\001A\002\360\000\000A\002B\002\340\010\026\220a\330\010\014\210K\220q\330\014\033\320\033,\250A\330\020\021\330\020\021\330\020\021\330\020\021\330\020\021\330\020\021\360\006\000\r\020\210t\2201\330\020\021\340\014\032\230!\360\006\000\r\021\220\007\220{\240!\360\006\000\r \230q\240\017\250q\360\006\000\r\024\2207\230!\2301\340\014\032\230!\360\006\000\r\035\230A\330\014\037\230q\330\014\r\360\006\000\t\014\2103\210a\210y\230\003\230<\240r\250\021\330\014\r\360\006\000\t\035\230E\240\034\250Q\320.B\300!\330\010\030\230\r\240R\240s\250!\250?\270\"\270A\340\004\007\200t\2101\330\010\017\210q\360\006\000\005\017\320\016\037\230q\240\001\360\006\000\005\017\210g\220R\220q\340\004\013\320\013\033\2301\330\010\r\210Q\330\010\022\220!\330\010\r\210S\220\001\220\031\230#\230Q\240!\320\000\031\230\021\360\016\000\005\010\200t\2101\330\010\017\210q\340\004\010\210\010\220\001\330\010\017\210s\220!\2201\330\010\013\2101\330\r\024\220C\220x\230x\240q\330\r\024\220C\220x\230x\240q\330\014\021\220\023\220G\2303\230e\2403\240g\250S\260\005\260S\270\007\270q\330\014\021\220\023\220G\2303\230e\2403\240g\250S\260\005\260S\270\001\340\014\023\2201\340\004\013\2101\320\004\035\320\035:\270%\270v\300Q\330\010\014\210H\220A\330\010\014\210M\230\021\330\010\014\210H\220A";
+    #else /* compression: none (2173 bytes) */
+const char* const bytes = ".List[WordResult]Note that Cython is deliberately stricter than PEP-484 and rejects subclasses of builtin types. If you need to pass subclasses then set the 'annotation_typing' directive to False.Result from word search.?add_notedisableenablegcisenabledword_search_cy.pyxDictionaryListOptional__Pyx_PyDict_NextRefReasonSetWordEntryWordResultWordSearchResultWordSearchResult.__init__asyncio.coroutinesboolcandidatecandidate_indexcandidate_resultscandidatescline_in_tracebackclosecurrent_inputcurrent_input_lengthdatadeinflectdictionary__doc__ends_in_yoonentryentry_identry_matches_typeenumerateexisting_entriesexpand_choonfound_match__func__genexprget_wordshaveinclude_variants__init__input_lengthinput_lengthsinput_textint_is_coroutineis_deinflectionis_only_digitsitemskyuujitai_to_shinjitailength_to_shortenlongest_matchlookup_candidateslookup_max__main__match_lenmatching_textmax_results__metaclass____module__more__name__nextnormalize_inputnormalizedoriginal_search_textpop__prepare____qualname__reason_chainsresultsselfsend__set_name__setdefaultsort_word_resultstentoku._typestentoku.deinflect_cytentoku.dictionarytentoku.normalize_cytentoku.sorting_cytentoku.type_matching_cytentoku.variations_cytentoku.word_search_cytentoku.yoon_cy__test__textthrowto_newtypetypingupdatevaluevaluesvariantvariationswordword_entriesword_resultsword_searchword_search.<locals>.genexpr\200\001\360\014\000\005\006\360 \000\005#\240!\360\026\000\005\022\220\031\230!\2301\340\004\010\320\010\031\230\035\240i\250q\260\001\360\006\000\t\026\220\\\240\022\2401\330\010\030\320\0300\3200E\300W\310J\320VW\330\010\027\220z\240\032\2501\250I\260W\270L\310\016\320VW\360\006\000\t\033\320\032*\250#\250Q\330\010\013\2101\330\014\033\2301\330\020\026\220d\230)\2401\330\020\023\320\023%\240Q\240g\250Y\260a\360\010\000\t\030\220q\330\014\022\220$\220i\230q\330\014\017\210u\220J\230g\240Q\360\010\000\t\r\210I\220Q\330\014\035\230W\240A\240Z\250q\330\020\026\220a\330\020\032\230!\330\020\036\230i\320'9\270\031\320BV""\320VW\360\010\000\005\010\200q\330\010\034\320\034-\250Q\250a\340\004\013\320\013\034\230B\230a\200\001\360\006\000\005\006\330\004\005\360\034\000\005\036\230Q\330\004\027\220q\330\004\030\230\001\330\004!\240\021\360\026\000\005\010\200~\220S\230\001\330\010\024\320\024$\240O\2601\260A\340\010\025\220Q\340\004\024\220A\340\004\n\210!\340\010\013\210>\230\021\230!\330\014\r\340\010\025\220Q\220a\360\006\000\t\014\2101\330\014\026\220g\230Q\230l\250!\2501\340\014\025\320\025+\2501\250A\330\014\017\210w\220c\230\021\330\020\032\230'\240\021\240!\340\010\037\230}\250A\250S\260\001\3201D\300C\300q\310\017\320WY\320Y\\\320\\]\320]q\320q~\360\000\000\177\001A\002\360\000\000A\002B\002\340\010\026\220a\330\010\014\210K\220q\330\014\033\320\033,\250A\330\020\021\330\020\021\330\020\021\330\020\021\330\020\021\330\020\021\360\006\000\r\020\210t\2201\330\020\021\340\014\032\230!\360\006\000\r\021\220\007\220{\240!\360\006\000\r \230q\240\017\250q\360\006\000\r\024\2207\230!\2301\340\014\032\230!\360\006\000\r\035\230A\330\014\037\230q\330\014\r\360\010\000\t\014\2103\210a\210y\230\003\230<\240r\250\021\330\014\r\360\006\000\t\035\230E\240\034\250Q\320.B\300!\330\010\030\230\r\240R\240s\250!\250?\270\"\270A\340\004\007\200t\2101\330\010\017\210q\360\006\000\005\017\320\016\037\230q\240\001\360\006\000\005\017\210g\220R\220q\340\004\013\320\013\033\2301\330\010\r\210Q\330\010\022\220!\330\010\r\210S\220\001\220\031\230#\230Q\240!\320\000\031\230\021\360\016\000\005\010\200t\2101\330\010\017\210q\340\004\010\210\010\220\001\330\010\017\210s\220!\2201\330\010\013\2101\330\r\024\220C\220x\230x\240q\330\r\024\220C\220x\230x\240q\330\014\021\220\023\220G\2303\230e\2403\240g\250S\260\005\260S\270\007\270q\330\014\021\220\023\220G\2303\230e\2403\240g\250S\260\005\260S\270\001\340\014\023\2201\340\004\013\2101\320\004\035\320\035:\270%\270v\300Q\330\010\014\210H\220A\330\010\014\210M\230\021\330\010\014\210H\220A";
     PyObject *data = NULL;
     CYTHON_UNUSED_VAR(__Pyx_DecompressString);
     #endif
@@ -6641,9 +6630,9 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
     __pyx_mstate_global->__pyx_codeobj_tab[3] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_word_search_cy_pyx, __pyx_mstate->__pyx_n_u_word_search, __pyx_mstate->__pyx_kp_b_iso88591_Q_q_S_O1A_Q_A_Qa_1_gQl_1_1A_wc, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[3])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {6, 0, 0, 17, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 166};
+    const __Pyx_PyCode_New_function_description descr = {6, 0, 0, 17, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 167};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_input_text, __pyx_mstate->__pyx_n_u_dictionary, __pyx_mstate->__pyx_n_u_existing_entries, __pyx_mstate->__pyx_n_u_max_results, __pyx_mstate->__pyx_n_u_input_length, __pyx_mstate->__pyx_n_u_original_search_text, __pyx_mstate->__pyx_n_u_candidate_results, __pyx_mstate->__pyx_n_u_candidates, __pyx_mstate->__pyx_n_u_candidate_index, __pyx_mstate->__pyx_n_u_candidate, __pyx_mstate->__pyx_n_u_lookup_max, __pyx_mstate->__pyx_n_u_matching_text, __pyx_mstate->__pyx_n_u_word_entries, __pyx_mstate->__pyx_n_u_is_deinflection, __pyx_mstate->__pyx_n_u_entry, __pyx_mstate->__pyx_n_u_entry, __pyx_mstate->__pyx_n_u_entry};
-    __pyx_mstate_global->__pyx_codeobj_tab[4] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_word_search_cy_pyx, __pyx_mstate->__pyx_n_u_lookup_candidates, __pyx_mstate->__pyx_kp_b_iso88591_1_iq_Rs_00EWJVW_z_1IWL_VW_Q_1_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[4])) goto bad;
+    __pyx_mstate_global->__pyx_codeobj_tab[4] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_word_search_cy_pyx, __pyx_mstate->__pyx_n_u_lookup_candidates, __pyx_mstate->__pyx_kp_b_iso88591_1_iq_1_00EWJVW_z_1IWL_VW_Q_1_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[4])) goto bad;
   }
   Py_DECREF(tuple_dedup_map);
   return 0;
