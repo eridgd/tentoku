@@ -69,8 +69,11 @@ setup(
         compiler_directives=compiler_directives,
         annotate=True,  # Generate HTML annotation files
     ),
-    install_requires=[
+    setup_requires=[
         'Cython>=0.29.0',
+    ],
+    install_requires=[
+        # Cython is not required at runtime, only at build time
     ],
     extras_require={
         'dev': [
