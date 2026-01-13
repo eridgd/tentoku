@@ -51,7 +51,7 @@ cpdef bint is_only_digits(str text):
     return True
 
 
-cpdef object word_search(
+def word_search(
     str input_text,
     object dictionary,
     int max_results=7,
@@ -163,7 +163,7 @@ cpdef object word_search(
     )
 
 
-cpdef list lookup_candidates(
+def lookup_candidates(
     str input_text,
     object dictionary,
     set existing_entries,

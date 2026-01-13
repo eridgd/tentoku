@@ -111,8 +111,18 @@ cpdef list deinflect(str word):
 
                 # Check for duplicate reasons
                 rule_reasons_set = set(rule['reasons'])
-                flat_reasons = [r for chain in this_candidate.reason_chains for r in chain]
-                if any(r in rule_reasons_set for r in flat_reasons):
+                flat_reasons = []
+                for chain in this_candidate.reason_chains:
+                    for r in chain:
+                        flat_reasons.append(r)
+
+                has_duplicate = False
+                for r in flat_reasons:
+                    if r in rule_reasons_set:
+                        has_duplicate = True
+                        break
+
+                if has_duplicate:
                     continue
 
                 # Check if we already have this candidate
@@ -127,7 +137,9 @@ cpdef list deinflect(str word):
                 new_index = len(result)
                 result_index[new_word] = new_index
 
-                reason_chains = [chain.copy() for chain in this_candidate.reason_chains]
+                reason_chains = []
+                for chain in this_candidate.reason_chains:
+                    reason_chains.append(chain.copy())
 
                 if rule['reasons']:
                     if reason_chains:
@@ -163,6 +175,9 @@ cpdef list deinflect(str word):
         i += 1
 
     # Filter out intermediate forms
-    result = [r for r in result if r.type & WordType.All]
+    filtered_result = []
+    for r in result:
+        if r.type & WordType.All:
+            filtered_result.append(r)
 
-    return result
+    return filtered_result

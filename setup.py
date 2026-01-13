@@ -27,21 +27,21 @@ compiler_directives = {
 
 # Performance-critical modules to compile with Cython
 cython_modules = [
-    'tentoku/deinflect_cy.pyx',
-    'tentoku/word_search_cy.pyx',
-    'tentoku/normalize_cy.pyx',
-    'tentoku/sorting_cy.pyx',
-    'tentoku/type_matching_cy.pyx',
-    'tentoku/variations_cy.pyx',
-    'tentoku/yoon_cy.pyx',
+    'deinflect_cy.pyx',
+    'word_search_cy.pyx',
+    'normalize_cy.pyx',
+    'sorting_cy.pyx',
+    'type_matching_cy.pyx',
+    'variations_cy.pyx',
+    'yoon_cy.pyx',
 ]
 
 # Create Extension objects
 extensions = []
 for module in cython_modules:
-    # Extract module name from path
-    # e.g., 'tentoku/deinflect_cy.pyx' -> 'tentoku.deinflect_cy'
-    module_name = module.replace('/', '.').replace('.pyx', '')
+    # Extract module name from filename
+    # e.g., 'deinflect_cy.pyx' -> 'tentoku.deinflect_cy'
+    module_name = 'tentoku.' + module.replace('.pyx', '')
 
     extensions.append(
         Extension(

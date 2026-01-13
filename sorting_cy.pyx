@@ -89,7 +89,10 @@ cpdef double get_priority_sum(list priorities):
     if not priorities:
         return 0.0
 
-    scores = sorted([get_priority_score(p) for p in priorities], reverse=True)
+    scores = []
+    for p in priorities:
+        scores.append(get_priority_score(p))
+    scores = sorted(scores, reverse=True)
 
     if not scores:
         return 0.0
@@ -102,7 +105,7 @@ cpdef double get_priority_sum(list priorities):
     return result
 
 
-cpdef int get_priority(WordEntry entry):
+cpdef int get_priority(object entry):
     """
     Get priority score for an entry based on matched readings.
     """
@@ -114,21 +117,25 @@ cpdef int get_priority(WordEntry entry):
     # Scores from kanji readings (only those that matched)
     for kanji in entry.kanji_readings:
         if kanji.match_range and kanji.priority:
-            priorities = [p.strip() for p in kanji.priority.split(',')]
+            priorities = []
+            for p in kanji.priority.split(','):
+                priorities.append(p.strip())
             if priorities:
                 scores.append(int(get_priority_sum(priorities)))
 
     # Scores from kana readings (only those that matched)
     for kana in entry.kana_readings:
         if kana.match_range and kana.priority:
-            priorities = [p.strip() for p in kana.priority.split(',')]
+            priorities = []
+            for p in kana.priority.split(','):
+                priorities.append(p.strip())
             if priorities:
                 scores.append(int(get_priority_sum(priorities)))
 
     return max(scores)
 
 
-cpdef int get_kana_headword_type(WordEntry entry):
+cpdef int get_kana_headword_type(object entry):
     """
     Determine the headword match type.
 
@@ -155,9 +162,11 @@ cpdef int get_kana_headword_type(WordEntry entry):
     # Check if reading is marked as obscure
     if matching_kana.info:
         info_parts = matching_kana.info.split(',')
-        is_reading_obscure = any(
-            part.strip() in ['ok', 'rk', 'sk', 'ik'] for part in info_parts
-        )
+        is_reading_obscure = False
+        for part in info_parts:
+            if part.strip() in ['ok', 'rk', 'sk', 'ik']:
+                is_reading_obscure = True
+                break
 
     if is_reading_obscure:
         return 2
@@ -168,28 +177,49 @@ cpdef int get_kana_headword_type(WordEntry entry):
 
     # Check if all kanji headwords are marked as obscure
     if entry.kanji_readings:
-        all_kanji_obscure = all(
-            kanji.info and any(
-                part.strip() in ['rK', 'sK', 'iK']
-                for part in kanji.info.split(',')
-            )
-            for kanji in entry.kanji_readings
-        )
+        all_kanji_obscure = True
+        for kanji in entry.kanji_readings:
+            if not kanji.info:
+                all_kanji_obscure = False
+                break
+            has_obscure_tag = False
+            for part in kanji.info.split(','):
+                if part.strip() in ['rK', 'sK', 'iK']:
+                    has_obscure_tag = True
+                    break
+            if not has_obscure_tag:
+                all_kanji_obscure = False
+                break
 
         if all_kanji_obscure:
             return 1
 
     # Check if most English senses have 'uk' misc field
-    matched_en_senses = [
-        sense for sense in entry.senses
-        if not sense.glosses or any(g.lang in (None, 'eng', 'en') for g in sense.glosses)
-    ]
+    matched_en_senses = []
+    for sense in entry.senses:
+        if not sense.glosses:
+            matched_en_senses.append(sense)
+        else:
+            has_en_gloss = False
+            for g in sense.glosses:
+                if g.lang in (None, 'eng', 'en'):
+                    has_en_gloss = True
+                    break
+            if has_en_gloss:
+                matched_en_senses.append(sense)
 
     if matched_en_senses:
-        uk_en_sense_count = sum(
-            1 for sense in matched_en_senses
-            if sense.misc and any('uk' in m for m in sense.misc)
-        )
+        uk_en_sense_count = 0
+        for sense in matched_en_senses:
+            if sense.misc:
+                has_uk = False
+                for m in sense.misc:
+                    if 'uk' in m:
+                        has_uk = True
+                        break
+                if has_uk:
+                    uk_en_sense_count += 1
+
         if uk_en_sense_count >= len(matched_en_senses) / 2:
             return 1
 
@@ -200,7 +230,7 @@ cpdef int get_kana_headword_type(WordEntry entry):
     return 2
 
 
-cpdef list sort_word_results(list results):
+def sort_word_results(list results):
     """
     Sort word results by deinflection steps, match type, and priority.
     """

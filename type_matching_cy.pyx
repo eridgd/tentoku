@@ -11,7 +11,7 @@ Word type matching for deinflection validation - Cython optimized version.
 from tentoku._types import WordEntry, WordType
 
 
-cpdef bint entry_matches_type(WordEntry entry, int word_type):
+cpdef bint entry_matches_type(object entry, int word_type):
     """
     Tests if a given entry matches the type of a generated deinflection.
 
