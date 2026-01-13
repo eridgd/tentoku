@@ -5,7 +5,7 @@
 # cython: cdivision=True
 # cython: initializedcheck=False
 """
-Core deinflection logic - Cython optimized version.
+Core deinflection logic - Cython optimized version with C++ unordered_map.
 """
 
 from typing import List, Dict
@@ -13,10 +13,17 @@ from tentoku._types import CandidateWord, WordType, Reason
 from tentoku.deinflect_rules import get_deinflect_rule_groups
 from tentoku.normalize_cy import kana_to_hiragana
 
+# Import C++ unordered_map for faster lookups
+from libcpp.unordered_map cimport unordered_map
+from libcpp.string cimport string
+from libcpp.pair cimport pair
+
 
 cpdef list deinflect(str word):
     """
     Returns an array of possible de-inflected versions of a word.
+
+    Optimized with C++ unordered_map for faster string lookups.
 
     Args:
         word: The word to deinflect
@@ -25,7 +32,8 @@ cpdef list deinflect(str word):
         List of CandidateWord objects
     """
     cdef list result = []
-    cdef dict result_index = {}
+    # Use C++ unordered_map instead of Python dict for faster lookups
+    cdef unordered_map[string, int] result_index
     cdef list rule_groups = get_deinflect_rule_groups()
     cdef int i = 0
     cdef object this_candidate
@@ -38,6 +46,10 @@ cpdef list deinflect(str word):
     cdef object existing_candidate
     cdef int new_index
     cdef bint inapplicable_form
+    cdef bytes word_bytes, new_word_bytes
+    cdef string word_str, new_word_str
+    cdef unordered_map[string, int].iterator it
+    cdef pair[unordered_map[string, int].iterator, bint] insert_result
 
     # Start with the original word
     original = CandidateWord(
@@ -46,7 +58,10 @@ cpdef list deinflect(str word):
         reason_chains=[]
     )
     result.append(original)
-    result_index[word] = 0
+    # Convert string to C++ string and insert into map
+    word_bytes = word.encode('utf-8')
+    word_str = word_bytes
+    result_index[word_str] = 0
 
     while i < len(result):
         this_candidate = result[i]
@@ -87,8 +102,12 @@ cpdef list deinflect(str word):
                     reason_chains=this_candidate.reason_chains + reason
                 )
                 result.append(new_candidate)
-                if new_word not in result_index:
-                    result_index[new_word] = len(result) - 1
+                # Use C++ map find() method for faster lookup
+                new_word_bytes = new_word.encode('utf-8')
+                new_word_str = new_word_bytes
+                it = result_index.find(new_word_str)
+                if it == result_index.end():
+                    result_index[new_word_str] = len(result) - 1
 
         # Try to apply deinflection rules
         for rule_group in rule_groups:
@@ -125,9 +144,14 @@ cpdef list deinflect(str word):
                 if has_duplicate:
                     continue
 
-                # Check if we already have this candidate
-                if new_word in result_index:
-                    existing_candidate = result[result_index[new_word]]
+                # Check if we already have this candidate using C++ map
+                new_word_bytes = new_word.encode('utf-8')
+                new_word_str = new_word_bytes
+                it = result_index.find(new_word_str)
+                if it != result_index.end():
+                    # Found existing candidate
+                    existing_index = result_index[new_word_str]
+                    existing_candidate = result[existing_index]
                     if existing_candidate.type == rule['toType']:
                         if rule['reasons']:
                             existing_candidate.reason_chains.insert(0, rule['reasons'].copy())
@@ -135,7 +159,7 @@ cpdef list deinflect(str word):
 
                 # Create new candidate
                 new_index = len(result)
-                result_index[new_word] = new_index
+                result_index[new_word_str] = new_index
 
                 reason_chains = []
                 for chain in this_candidate.reason_chains:

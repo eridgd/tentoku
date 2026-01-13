@@ -43,13 +43,24 @@ for module in cython_modules:
     # e.g., 'deinflect_cy.pyx' -> 'tentoku.deinflect_cy'
     module_name = 'tentoku.' + module.replace('.pyx', '')
 
-    extensions.append(
-        Extension(
-            module_name,
-            [module],
-            extra_compile_args=['-O3'],  # Maximum optimization
+    # deinflect_cy needs C++ for std::unordered_map
+    if module == 'deinflect_cy.pyx':
+        extensions.append(
+            Extension(
+                module_name,
+                [module],
+                language='c++',  # Enable C++ compilation
+                extra_compile_args=['-O3', '-std=c++11'],  # Maximum optimization with C++11
+            )
         )
-    )
+    else:
+        extensions.append(
+            Extension(
+                module_name,
+                [module],
+                extra_compile_args=['-O3'],  # Maximum optimization
+            )
+        )
 
 # Read long description from README
 with open('README.md', 'r', encoding='utf-8') as f:
