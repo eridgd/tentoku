@@ -34,6 +34,7 @@ cython_modules = [
     'type_matching_cy.pyx',
     'variations_cy.pyx',
     'yoon_cy.pyx',
+    'parallel_tokenize.pyx',  # Parallel processing module
 ]
 
 # Create Extension objects
@@ -51,6 +52,15 @@ for module in cython_modules:
                 [module],
                 language='c++',  # Enable C++ compilation
                 extra_compile_args=['-O3', '-std=c++11'],  # Maximum optimization with C++11
+            )
+        )
+    # parallel_tokenize uses Python multiprocessing, no special flags needed
+    elif module == 'parallel_tokenize.pyx':
+        extensions.append(
+            Extension(
+                module_name,
+                [module],
+                extra_compile_args=['-O3'],
             )
         )
     else:
