@@ -20,6 +20,12 @@ wheels/
 .installed.cfg
 *.egg
 
+# Cython build artifacts
+*.c
+*.cpp
+*.html
+*.pyd
+
 # Testing
 .pytest_cache/
 .coverage
