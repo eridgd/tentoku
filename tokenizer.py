@@ -45,8 +45,8 @@ def tokenize(
     # Create default dictionary if not provided
     if dictionary is None:
         if _default_dictionary is None:
-            from .sqlite_dict import SQLiteDictionary
-            _default_dictionary = SQLiteDictionary()
+            from .sqlite_dict_optimized import OptimizedSQLiteDictionary
+            _default_dictionary = OptimizedSQLiteDictionary()
         dictionary = _default_dictionary
     
     tokens: List[Token] = []
