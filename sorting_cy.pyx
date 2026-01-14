@@ -232,7 +232,9 @@ cpdef int get_kana_headword_type(object entry):
 
 def sort_word_results(list results):
     """
-    Sort word results by deinflection steps, match type, and priority.
+    Sort word results by match length, deinflection steps, match type, and priority.
+    
+    Fixed: Added match_len as first criterion to prioritize longer matches for tokenization.
     """
     cdef dict sort_meta = {}
     cdef int reasons, match_type, priority
@@ -258,12 +260,14 @@ def sort_word_results(list results):
         }
 
     # Sort results
+    # Fixed: Include match_len as first criterion (longer matches = better for tokenization)
     def sort_key(result: WordResult) -> tuple:
         meta = sort_meta[result.entry.entry_id]
         return (
-            meta['reasons'],
-            meta['type'],
-            -meta['priority']
+            -result.match_len,    # Longer matches = better (negate for ascending sort)
+            meta['reasons'],      # Fewer deinflection steps = better
+            meta['type'],         # Type 1 (primary) before type 2 (reading)
+            -meta['priority']     # Higher priority = better (negate for ascending)
         )
 
     return sorted(results, key=sort_key)
