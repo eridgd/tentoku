@@ -24,7 +24,7 @@ except ImportError:
 ZWNJ = 0x200C  # Zero-width non-joiner
 
 
-def half_to_full_width_num(text: str) -> str:
+def _half_to_full_width_num_py(text: str) -> str:
     """
     Convert half-width numbers to full-width numbers.
     
@@ -46,7 +46,7 @@ def half_to_full_width_num(text: str) -> str:
     return ''.join(result)
 
 
-def to_normalized(text: str) -> Tuple[str, List[int]]:
+def _to_normalized_py(text: str) -> Tuple[str, List[int]]:
     """
     Normalize text and return input length mapping.
     
@@ -98,7 +98,7 @@ def to_normalized(text: str) -> Tuple[str, List[int]]:
     return normalized, input_lengths
 
 
-def do_strip_zwnj(normalized: str, input_lengths: List[int]) -> Tuple[str, List[int]]:
+def _do_strip_zwnj_py(normalized: str, input_lengths: List[int]) -> Tuple[str, List[int]]:
     """
     Strip zero-width non-joiners (ZWNJ) from text.
     
@@ -127,6 +127,17 @@ def do_strip_zwnj(normalized: str, input_lengths: List[int]) -> Tuple[str, List[
         new_lengths.append(last)
     
     return ''.join(result), new_lengths
+
+
+# Use Cython versions if available, otherwise use Python fallback
+if _CYTHON_AVAILABLE:
+    half_to_full_width_num = _half_to_full_width_num_cy
+    to_normalized = _to_normalized_cy
+    do_strip_zwnj = _do_strip_zwnj_cy
+else:
+    half_to_full_width_num = _half_to_full_width_num_py
+    to_normalized = _to_normalized_py
+    do_strip_zwnj = _do_strip_zwnj_py
 
 
 def _normalize_input_py(
