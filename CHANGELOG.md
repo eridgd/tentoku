@@ -1,5 +1,57 @@
 # Changelog
 
+## [0.2.0] - 2026-01-14
+
+### Added
+- **Cython optimizations** for performance-critical modules, providing significant speedups:
+  - `deinflect_cy.pyx`: Cython-optimized deinflection with C++ `std::unordered_map` for faster lookups (1.2-1.4x speedup)
+  - `normalize_cy.pyx`: Optimized text normalization (4-7x speedup for long texts)
+  - `word_search_cy.pyx`: Fast word search and candidate lookup
+  - `sorting_cy.pyx`: Optimized result sorting
+  - `type_matching_cy.pyx`: Fast type matching for dictionary entries
+  - `variations_cy.pyx`: Optimized text variation handling (1.6-1.9x speedup)
+  - `yoon_cy.pyx`: Fast yoon character detection
+  - `sqlite_dict_cy.pyx`: Fast SQLite dictionary with caching optimizations
+  - `parallel_tokenize.pyx`: Parallel tokenization support for batch processing
+- **Parallel processing** support via `parallel_tokenize` module:
+  - `parallel_tokenize_batch()`: Tokenize multiple texts in parallel using multiprocessing
+  - `parallel_normalize_batch()`: Normalize multiple texts in parallel
+  - `parallel_deinflect_batch()`: Deinflect multiple words in parallel
+- **Cython verification utilities**:
+  - `verify_cython.py`: Module to verify Cython optimizations are active
+  - `is_using_cython()`: Check if Cython optimizations are enabled
+  - `verify_cython_status()`: Detailed verification report
+- **Comprehensive benchmark suite** for Cython performance:
+  - `benchmark_cython.py`: Compare Python vs Cython implementations
+  - `benchmark_cpp_map.py`: Benchmark C++ unordered_map optimization
+  - `benchmark_sqlite.py`: SQLite dictionary performance tests
+  - `benchmark_optimization.py`: Overall optimization benchmarks
+- **Build system** updated for Cython compilation:
+  - Updated `setup.py` with Cython build configuration
+  - Compiler directives for maximum performance (bounds checking disabled, type inference enabled)
+  - C++ compilation support for `deinflect_cy` module
+  - HTML annotation file generation for performance analysis
+
+### Changed
+- **Performance improvements**:
+  - Normalization: 4-7x faster for long texts (up to 7.58x speedup observed)
+  - Deinflection: 1.2-1.4x faster with C++ unordered_map optimization
+  - Text variations: 1.6-1.9x faster
+  - Overall tokenization significantly faster, especially for long texts
+- **Dictionary optimizations**:
+  - `SQLiteDictionary` now defaults to `OptimizedSQLiteDictionary` with caching
+  - Fast SQLite dictionary with negative and positive lookup caching
+  - Length-based lookup skipping for words >15 characters
+- **Build artifacts**:
+  - Updated `.gitignore` to exclude Cython-generated files (`.c`, `.cpp`, `.html`, `.pyd`)
+  - Removed generated Cython files from version control
+
+### Technical Details
+- All Cython modules compiled with `-O3` optimization
+- C++11 support for `deinflect_cy` module using `std::unordered_map`
+- Type inference and automatic optimization enabled via Cython compiler directives
+- Backward compatible: Python fallback versions remain available if Cython extensions aren't built
+
 ## [0.1.8] - 2026-01-09
 
 ### Fixed

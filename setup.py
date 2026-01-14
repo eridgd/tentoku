@@ -79,7 +79,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='tentoku',
-    version='0.1.8',
+    version='0.2.0',
     description='Japanese text tokenization with deinflection support (Cython-optimized)',
     long_description=long_description,
     long_description_content_type='text/markdown',
