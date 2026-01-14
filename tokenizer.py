@@ -70,12 +70,13 @@ def tokenize(
             remaining_lengths = None
         
         # Get multiple results to ensure we find the best match with deinflection_reasons
-        # Results are sorted by priority, deinflection steps, etc., so first result is best
-        # But we also want to ensure we get a match that covers as much text as possible
+        # Fixed: Increased max_results from 5 to 12 to prevent short high-priority words
+        # (like particles 'よ' or 'に') from crowding out longer matches (like "ようにする")
+        # even with match_len prioritized in sorting
         search_result = word_search(
             remaining_text,
             dictionary,
-            max_results=5,  # Get multiple results to find best match
+            max_results=12,  # Increased to ensure longer matches survive sorting
             input_lengths=remaining_lengths
         )
         

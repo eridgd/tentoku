@@ -253,14 +253,16 @@ def get_kana_headword_type(entry: WordEntry) -> int:
 
 def _sort_word_results_py(results: List[WordResult]) -> List[WordResult]:
     """
-    Sort word results by deinflection steps, match type, and priority.
+    Sort word results by match length, deinflection steps, match type, and priority.
     
     Sorting criteria (in order):
-    1. Number of deinflection steps (fewer = better)
-    2. Match type: kanji/kana primary headword (1) vs reading (2)
-    3. Priority score (higher = better)
+    1. Match length (longer = better) - Fixed: Prioritize longer matches for tokenization
+    2. Number of deinflection steps (fewer = better)
+    3. Match type: kanji/kana primary headword (1) vs reading (2)
+    4. Priority score (higher = better)
     
-    This matches 10ten Reader's sortWordResults function exactly.
+    Fixed: Added match_len as first criterion to ensure longer matches (like "ようにする")
+    are preferred over shorter high-priority matches (like "よ") for tokenization.
     Uses matchRange to determine which reading matched, not matching_text.
     
     Args:
@@ -294,6 +296,7 @@ def _sort_word_results_py(results: List[WordResult]) -> List[WordResult]:
     def sort_key(result: WordResult) -> tuple:
         meta = sort_meta[result.entry.entry_id]
         return (
+            -result.match_len,    # Longer matches = better (negate for ascending sort)
             meta['reasons'],      # Fewer deinflection steps = better
             meta['type'],         # Type 1 (primary) before type 2 (reading)
             -meta['priority']     # Higher priority = better (negate for ascending)

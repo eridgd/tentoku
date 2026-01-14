@@ -45,6 +45,18 @@ def _entry_matches_type_py(entry: WordEntry, word_type: int) -> bool:
     # Check each POS tag against the word type
     has_matching_sense = lambda test: any(test(pos) for pos in all_pos_tags)
     
+    # Fixed: Allow 'Expressions' to match verb types
+    # JMDict often tags phrases (e.g. ようにする) as 'exp' or 'expressions' without explicit verb tags,
+    # causing valid deinflections to be rejected. If the deinflection expects a verb/adjective type
+    # and this is an expression, allow it (we assume expressions can conjugate like verbs
+    # if the deinflector generated a path).
+    if has_matching_sense(lambda pos: pos == 'exp' or 'expression' in pos.lower()):
+        # If the deinflection expects a verb/adjective type (any type except NounVS), allow it
+        # Check if word_type has any verb/adjective bits set (all types except NounVS)
+        verb_adj_types = WordType.IchidanVerb | WordType.GodanVerb | WordType.IAdj | WordType.KuruVerb | WordType.SuruVerb | WordType.SpecialSuruVerb
+        if word_type & verb_adj_types:
+            return True
+    
     if word_type & WordType.IchidanVerb:
         if has_matching_sense(lambda pos: pos.startswith('v1') or 'Ichidan verb' in pos or pos == 'v1'):
             return True
