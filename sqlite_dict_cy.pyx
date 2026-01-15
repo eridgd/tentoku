@@ -88,13 +88,14 @@ class FastSQLiteDictionary(Dictionary):
         self.conn = sqlite3.connect(str(self.db_path))
         self.conn.row_factory = sqlite3.Row
 
-        # SQLite performance optimizations
+        # SQLite performance optimizations (increased cache size)
         cursor = self.conn.cursor()
         cursor.execute("PRAGMA synchronous = OFF")  # Faster but less safe (read-only anyway)
         cursor.execute("PRAGMA journal_mode = WAL")  # Write-Ahead Logging for better concurrency
         cursor.execute("PRAGMA temp_store = MEMORY")  # Use memory for temp tables
         cursor.execute("PRAGMA mmap_size = 268435456")  # 256MB memory-mapped I/O
-        cursor.execute("PRAGMA cache_size = -64000")  # 64MB cache
+        cursor.execute("PRAGMA cache_size = -128000")  # 128MB cache (doubled)
+        cursor.execute("PRAGMA optimize")  # Optimize query planner
         cursor.close()
 
     def close(self):
@@ -162,94 +163,231 @@ class FastSQLiteDictionary(Dictionary):
         if not entry_rows:
             return []
 
-        # Build entries list
-        cdef list entries = []
-        cdef object row, entry_id, ent_seq
+        # OPTIMIZED: Batch fetch ALL entry data instead of per-entry queries
+        # This reduces hundreds of queries to just a few batch queries
+        cdef list entry_ids = [row['entry_id'] for row in entry_rows]
+        cdef str placeholders
         cdef list kanji_rows, kana_rows, sense_rows
+        cdef dict kanji_by_entry, kana_by_entry, senses_by_entry
+        cdef dict sense_pos_map, sense_glosses_map, sense_fields_map, sense_misc_map, sense_dial_map
+        cdef object row, entry_id, ent_seq
         cdef list kanji_readings, kana_readings, senses
         cdef bint kanji_match_found, kana_match_found
         cdef object kanji_row, kana_row, sense_row
         cdef str kanji_text, kanji_normalized, kana_text
         cdef bint matches
-
+        cdef list sense_ids
+        
+        # Batch fetch all kanji readings for all entries at once
+        placeholders = ','.join('?' * len(entry_ids))
+        cursor.execute(f"""
+            SELECT kanji_id, entry_id, kanji_text, priority, info
+            FROM kanji
+            WHERE entry_id IN ({placeholders})
+            ORDER BY entry_id, kanji_id
+        """, entry_ids)
+        kanji_rows = cursor.fetchall()
+        
+        # Batch fetch all kana readings for all entries at once
+        cursor.execute(f"""
+            SELECT reading_id, entry_id, reading_text, no_kanji, priority, info
+            FROM readings
+            WHERE entry_id IN ({placeholders})
+            ORDER BY entry_id, reading_id
+        """, entry_ids)
+        kana_rows = cursor.fetchall()
+        
+        # Batch fetch all senses for all entries at once
+        cursor.execute(f"""
+            SELECT sense_id, entry_id, sense_index, info
+            FROM senses
+            WHERE entry_id IN ({placeholders})
+            ORDER BY entry_id, sense_index
+        """, entry_ids)
+        sense_rows = cursor.fetchall()
+        
+        # Get all sense_ids for batch fetching sense data
+        sense_ids = [row['sense_id'] for row in sense_rows]
+        
+        # Batch fetch all sense data if we have senses
+        sense_pos_map = {}
+        sense_glosses_map = {}
+        sense_fields_map = {}
+        sense_misc_map = {}
+        sense_dial_map = {}
+        
+        if sense_ids:
+            placeholders_sense = ','.join('?' * len(sense_ids))
+            
+            # Batch fetch all POS tags
+            cursor.execute(f"""
+                SELECT sense_id, pos
+                FROM sense_pos
+                WHERE sense_id IN ({placeholders_sense})
+                ORDER BY sense_id
+            """, sense_ids)
+            for row in cursor.fetchall():
+                sense_id = row['sense_id']
+                if sense_id not in sense_pos_map:
+                    sense_pos_map[sense_id] = []
+                sense_pos_map[sense_id].append(row['pos'])
+            
+            # Batch fetch all glosses
+            cursor.execute(f"""
+                SELECT sense_id, gloss_text, lang, g_type, gloss_id
+                FROM glosses
+                WHERE sense_id IN ({placeholders_sense})
+                ORDER BY sense_id, gloss_id
+            """, sense_ids)
+            for row in cursor.fetchall():
+                sense_id = row['sense_id']
+                if sense_id not in sense_glosses_map:
+                    sense_glosses_map[sense_id] = []
+                sense_glosses_map[sense_id].append(Gloss(
+                    text=row['gloss_text'],
+                    lang=row['lang'] or 'eng',
+                    g_type=row['g_type']
+                ))
+            
+            # Batch fetch all sense fields
+            cursor.execute(f"""
+                SELECT sense_id, field
+                FROM sense_field
+                WHERE sense_id IN ({placeholders_sense})
+            """, sense_ids)
+            for row in cursor.fetchall():
+                sense_id = row['sense_id']
+                if sense_id not in sense_fields_map:
+                    sense_fields_map[sense_id] = []
+                sense_fields_map[sense_id].append(row['field'])
+            
+            # Batch fetch all sense misc
+            cursor.execute(f"""
+                SELECT sense_id, misc
+                FROM sense_misc
+                WHERE sense_id IN ({placeholders_sense})
+            """, sense_ids)
+            for row in cursor.fetchall():
+                sense_id = row['sense_id']
+                if sense_id not in sense_misc_map:
+                    sense_misc_map[sense_id] = []
+                sense_misc_map[sense_id].append(row['misc'])
+            
+            # Batch fetch all sense dial
+            cursor.execute(f"""
+                SELECT sense_id, dial
+                FROM sense_dial
+                WHERE sense_id IN ({placeholders_sense})
+            """, sense_ids)
+            for row in cursor.fetchall():
+                sense_id = row['sense_id']
+                if sense_id not in sense_dial_map:
+                    sense_dial_map[sense_id] = []
+                sense_dial_map[sense_id].append(row['dial'])
+        
+        # Group data by entry_id
+        kanji_by_entry = {}
+        for kanji_row in kanji_rows:
+            entry_id = kanji_row['entry_id']
+            if entry_id not in kanji_by_entry:
+                kanji_by_entry[entry_id] = []
+            kanji_by_entry[entry_id].append(kanji_row)
+        
+        kana_by_entry = {}
+        for kana_row in kana_rows:
+            entry_id = kana_row['entry_id']
+            if entry_id not in kana_by_entry:
+                kana_by_entry[entry_id] = []
+            kana_by_entry[entry_id].append(kana_row)
+        
+        senses_by_entry = {}
+        for sense_row in sense_rows:
+            entry_id = sense_row['entry_id']
+            if entry_id not in senses_by_entry:
+                senses_by_entry[entry_id] = []
+            senses_by_entry[entry_id].append(sense_row)
+        
+        # Build entries from batched data
+        cdef list entries = []
         for row in entry_rows:
             entry_id = row['entry_id']
             ent_seq = row['ent_seq']
-
-            # Get kanji readings
-            cursor.execute("""
-                SELECT kanji_text, priority, info
-                FROM kanji
-                WHERE entry_id = ?
-                ORDER BY kanji_id
-            """, (entry_id,))
-            kanji_rows = cursor.fetchall()
-
-            # Determine if we matched on kanji or kana
-            kanji_match_found = False
-            for kanji_row in kanji_rows:
-                if kana_to_hiragana(kanji_row['kanji_text']) == normalized_matching:
-                    kanji_match_found = True
-                    break
-
-            # Get kana readings
-            cursor.execute("""
-                SELECT reading_text, no_kanji, priority, info
-                FROM readings
-                WHERE entry_id = ?
-                ORDER BY reading_id
-            """, (entry_id,))
-            kana_rows = cursor.fetchall()
-
-            # Check if any kana matches
-            kana_match_found = False
-            if not kanji_match_found:
-                for kana_row in kana_rows:
-                    if kana_to_hiragana(kana_row['reading_text']) == normalized_matching:
-                        kana_match_found = True
-                        break
-
-            # Build kanji readings with matchRange
+            
+            # Build kanji readings
             kanji_readings = []
-            for kanji_row in kanji_rows:
-                kanji_text = kanji_row['kanji_text']
-                kanji_normalized = kana_to_hiragana(kanji_text)
-                matches = kanji_normalized == normalized_matching
-
-                kanji_readings.append(KanjiReading(
-                    text=kanji_text,
-                    priority=kanji_row['priority'],
-                    info=kanji_row['info'],
-                    match_range=(0, len(kanji_text)) if matches else None,
-                    match=(kanji_match_found and matches) or not kanji_match_found
-                ))
-
-            # Build kana readings with matchRange
+            kanji_match_found = False
+            if entry_id in kanji_by_entry:
+                for kanji_row in kanji_by_entry[entry_id]:
+                    kanji_text = kanji_row['kanji_text']
+                    kanji_normalized = kana_to_hiragana(kanji_text)
+                    matches = kanji_normalized == normalized_matching
+                    if matches:
+                        kanji_match_found = True
+                    
+                    kanji_readings.append(KanjiReading(
+                        text=kanji_text,
+                        priority=kanji_row['priority'],
+                        info=kanji_row['info'],
+                        match_range=(0, len(kanji_text)) if matches else None,
+                        match=(kanji_match_found and matches) or not kanji_match_found
+                    ))
+            
+            # Build kana readings
             kana_readings = []
-            for kana_row in kana_rows:
-                kana_text = kana_row['reading_text']
-                matches = kana_to_hiragana(kana_text) == normalized_matching
-
-                kana_readings.append(KanaReading(
-                    text=kana_text,
-                    no_kanji=bool(kana_row['no_kanji']),
-                    priority=kana_row['priority'],
-                    info=kana_row['info'],
-                    match_range=(0, len(kana_text)) if matches else None,
-                    match=(kana_match_found and matches) or not kana_match_found
-                ))
-
-            # Get senses with POS tags
-            cursor.execute("""
-                SELECT s.sense_id, s.sense_index, s.info
-                FROM senses s
-                WHERE s.entry_id = ?
-                ORDER BY s.sense_index
-            """, (entry_id,))
-            sense_rows = cursor.fetchall()
-
-            senses = self._build_senses(cursor, sense_rows)
-
+            kana_match_found = False
+            if entry_id in kana_by_entry:
+                if not kanji_match_found:
+                    for kana_row in kana_by_entry[entry_id]:
+                        kana_text = kana_row['reading_text']
+                        matches = kana_to_hiragana(kana_text) == normalized_matching
+                        if matches:
+                            kana_match_found = True
+                        
+                        kana_readings.append(KanaReading(
+                            text=kana_text,
+                            no_kanji=bool(kana_row['no_kanji']),
+                            priority=kana_row['priority'],
+                            info=kana_row['info'],
+                            match_range=(0, len(kana_text)) if matches else None,
+                            match=(kana_match_found and matches) or not kana_match_found
+                        ))
+                else:
+                    # Still build kana readings even if kanji matched
+                    for kana_row in kana_by_entry[entry_id]:
+                        kana_text = kana_row['reading_text']
+                        matches = kana_to_hiragana(kana_text) == normalized_matching
+                        
+                        kana_readings.append(KanaReading(
+                            text=kana_text,
+                            no_kanji=bool(kana_row['no_kanji']),
+                            priority=kana_row['priority'],
+                            info=kana_row['info'],
+                            match_range=(0, len(kana_text)) if matches else None,
+                            match=False  # Kanji matched, so kana doesn't match
+                        ))
+            
+            # Build senses from batched data
+            senses = []
+            if entry_id in senses_by_entry:
+                for sense_row in senses_by_entry[entry_id]:
+                    sense_id = sense_row['sense_id']
+                    
+                    pos_tags = sense_pos_map.get(sense_id, [])
+                    glosses = sense_glosses_map.get(sense_id, [])
+                    fields = sense_fields_map.get(sense_id) or None
+                    misc = sense_misc_map.get(sense_id) or None
+                    dial = sense_dial_map.get(sense_id) or None
+                    
+                    senses.append(Sense(
+                        index=sense_row['sense_index'],
+                        pos_tags=pos_tags,
+                        glosses=glosses,
+                        info=sense_row['info'],
+                        field=fields,
+                        misc=misc,
+                        dial=dial
+                    ))
+            
             entries.append(WordEntry(
                 entry_id=entry_id,
                 ent_seq=ent_seq,
