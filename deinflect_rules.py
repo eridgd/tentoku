@@ -265,6 +265,41 @@ DEINFLECT_RULE_DATA = [
 # Module-level cache for rule groups
 _CACHED_RULE_GROUPS = None
 
+# Module-level index: ending → list of rules
+_RULES_BY_ENDING = None
+
+
+def get_rules_by_ending():
+    """
+    Get rules indexed by their 'from' ending for O(1) lookup.
+    
+    Returns:
+        Dict[str, List[dict]]: Map from ending string to list of rules
+    """
+    global _RULES_BY_ENDING
+
+    if _RULES_BY_ENDING is not None:
+        return _RULES_BY_ENDING
+
+    from collections import defaultdict
+
+    _RULES_BY_ENDING = defaultdict(list)
+
+    for from_ending, to_replacement, from_type, to_type, reasons in DEINFLECT_RULE_DATA:
+        rule = {
+            'from': from_ending,
+            'to': to_replacement,
+            'fromType': from_type,
+            'toType': to_type,
+            'reasons': reasons,
+            'fromLen': len(from_ending),
+        }
+        _RULES_BY_ENDING[from_ending].append(rule)
+
+    # Convert to regular dict for faster access
+    _RULES_BY_ENDING = dict(_RULES_BY_ENDING)
+    return _RULES_BY_ENDING
+
 
 def get_deinflect_rule_groups():
     """

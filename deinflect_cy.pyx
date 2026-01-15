@@ -10,7 +10,7 @@ Core deinflection logic - Cython optimized version with C++ unordered_map.
 
 from typing import List, Dict
 from tentoku._types import CandidateWord, WordType, Reason
-from tentoku.deinflect_rules import get_deinflect_rule_groups
+from tentoku.deinflect_rules import get_rules_by_ending
 from tentoku.normalize_cy import kana_to_hiragana
 
 # Import C++ unordered_map for faster lookups
@@ -34,7 +34,8 @@ cpdef list deinflect(str word):
     cdef list result = []
     # Use C++ unordered_map instead of Python dict for faster lookups
     cdef unordered_map[string, int] result_index
-    cdef list rule_groups = get_deinflect_rule_groups()
+    # Get the rules index (cached) for O(1) lookup instead of O(rules) linear scan
+    cdef dict rules_by_ending = get_rules_by_ending()
     cdef int i = 0
     cdef object this_candidate
     cdef str word_text, ending, hiragana_ending, new_word
@@ -50,6 +51,9 @@ cpdef list deinflect(str word):
     cdef string word_str, new_word_str
     cdef unordered_map[string, int].iterator it
     cdef pair[unordered_map[string, int].iterator, bint] insert_result
+    cdef int from_len
+    cdef list matching_rules
+    cdef int word_text_len
 
     # Start with the original word
     original = CandidateWord(
@@ -110,18 +114,23 @@ cpdef list deinflect(str word):
                     result_index[new_word_str] = len(result) - 1
 
         # Try to apply deinflection rules
-        for rule_group in rule_groups:
-            if rule_group['fromLen'] > len(word_text):
-                continue
-
-            ending = word_text[-rule_group['fromLen']:]
+        # Check endings from longest to shortest (max 7 chars in current rules)
+        # Optimization: Use hash map lookup (O(1)) instead of linear scan (O(rules))
+        word_text_len = len(word_text)
+        
+        for from_len in range(min(7, word_text_len), 0, -1):
+            ending = word_text[-from_len:]
             hiragana_ending = kana_to_hiragana(ending)
 
-            for rule in rule_group['rules']:
-                if not (word_type & rule['fromType']):
-                    continue
+            # Look up rules by ending (O(1) instead of O(rules))
+            matching_rules = []
+            if ending in rules_by_ending:
+                matching_rules.extend(rules_by_ending[ending])
+            if hiragana_ending != ending and hiragana_ending in rules_by_ending:
+                matching_rules.extend(rules_by_ending[hiragana_ending])
 
-                if ending != rule['from'] and hiragana_ending != rule['from']:
+            for rule in matching_rules:
+                if not (word_type & rule['fromType']):
                     continue
 
                 new_word = word_text[:-len(rule['from'])] + rule['to']

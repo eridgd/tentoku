@@ -7,7 +7,7 @@ Japanese words back to their dictionary forms.
 
 from typing import List, Dict
 from ._types import CandidateWord, WordType, Reason
-from .deinflect_rules import get_deinflect_rule_groups
+from .deinflect_rules import get_rules_by_ending
 from .normalize import kana_to_hiragana
 
 # Try to import Cython-optimized version, fall back to Python if not available
@@ -34,7 +34,8 @@ def _deinflect_py(word: str) -> List[CandidateWord]:
     """
     result: List[CandidateWord] = []
     result_index: Dict[str, int] = {}
-    rule_groups = get_deinflect_rule_groups()
+    # Get the rules index (cached) for O(1) lookup instead of O(rules) linear scan
+    rules_by_ending = get_rules_by_ending()
     
     # Start with the original word
     original = CandidateWord(
@@ -108,18 +109,21 @@ def _deinflect_py(word: str) -> List[CandidateWord]:
                     result_index[new_word] = len(result) - 1
         
         # Try to apply deinflection rules
-        for rule_group in rule_groups:
-            if rule_group['fromLen'] > len(word_text):
-                continue
-            
-            ending = word_text[-rule_group['fromLen']:]
+        # Check endings from longest to shortest (max 7 chars in current rules)
+        # Optimization: Use hash map lookup (O(1)) instead of linear scan (O(rules))
+        for from_len in range(min(7, len(word_text)), 0, -1):
+            ending = word_text[-from_len:]
             hiragana_ending = kana_to_hiragana(ending)
             
-            for rule in rule_group['rules']:
+            # Look up rules by ending (O(1) instead of O(rules))
+            matching_rules = []
+            if ending in rules_by_ending:
+                matching_rules.extend(rules_by_ending[ending])
+            if hiragana_ending != ending and hiragana_ending in rules_by_ending:
+                matching_rules.extend(rules_by_ending[hiragana_ending])
+            
+            for rule in matching_rules:
                 if not (word_type & rule['fromType']):
-                    continue
-                
-                if ending != rule['from'] and hiragana_ending != rule['from']:
                     continue
                 
                 new_word = word_text[:-len(rule['from'])] + rule['to']
