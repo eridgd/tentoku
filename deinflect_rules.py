@@ -262,20 +262,30 @@ DEINFLECT_RULE_DATA = [
 ]
 
 
+# Module-level cache for rule groups
+_CACHED_RULE_GROUPS = None
+
+
 def get_deinflect_rule_groups():
     """
     Get deinflection rule groups, organized by length.
-    
+
     Returns:
         List of rule groups, each containing rules of the same length
     """
+    global _CACHED_RULE_GROUPS
+
+    # Return cached result if available
+    if _CACHED_RULE_GROUPS is not None:
+        return _CACHED_RULE_GROUPS
+
     rule_groups = []
     prev_len = -1
     current_group = None
-    
+
     for from_ending, to_replacement, from_type, to_type, reasons in DEINFLECT_RULE_DATA:
         from_len = len(from_ending)
-        
+
         if prev_len != from_len:
             prev_len = from_len
             current_group = {
@@ -283,7 +293,7 @@ def get_deinflect_rule_groups():
                 'fromLen': from_len
             }
             rule_groups.append(current_group)
-        
+
         current_group['rules'].append({
             'from': from_ending,
             'to': to_replacement,
@@ -291,6 +301,8 @@ def get_deinflect_rule_groups():
             'toType': to_type,
             'reasons': reasons
         })
-    
+
+    # Cache the result
+    _CACHED_RULE_GROUPS = rule_groups
     return rule_groups
 

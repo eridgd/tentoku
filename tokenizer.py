@@ -14,6 +14,13 @@ from .normalize import normalize_input
 # Module-level cache for default dictionary
 _default_dictionary: Optional[Dictionary] = None
 
+# Check if trie-accelerated dictionary is available
+try:
+    from .trie_dict import TrieAcceleratedDictionary, MARISA_AVAILABLE
+    _TRIE_AVAILABLE = MARISA_AVAILABLE
+except ImportError:
+    _TRIE_AVAILABLE = False
+
 
 def tokenize(
     text: str,
@@ -41,12 +48,16 @@ def tokenize(
         List of Token objects
     """
     global _default_dictionary
-    
+
     # Create default dictionary if not provided
     if dictionary is None:
         if _default_dictionary is None:
-            from .sqlite_dict_optimized import OptimizedSQLiteDictionary
-            _default_dictionary = OptimizedSQLiteDictionary()
+            # Use trie-accelerated dictionary if available (faster)
+            if _TRIE_AVAILABLE:
+                _default_dictionary = TrieAcceleratedDictionary()
+            else:
+                from .sqlite_dict_optimized import OptimizedSQLiteDictionary
+                _default_dictionary = OptimizedSQLiteDictionary()
         dictionary = _default_dictionary
     
     tokens: List[Token] = []

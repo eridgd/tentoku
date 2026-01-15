@@ -36,6 +36,7 @@ cython_modules = [
     'yoon_cy.pyx',
     'parallel_tokenize.pyx',  # Parallel processing module
     'sqlite_dict_cy.pyx',  # Fast SQLite dictionary
+    'trie_dict_cy.pyx',  # Fast trie dictionary lookups
 ]
 
 # Create Extension objects

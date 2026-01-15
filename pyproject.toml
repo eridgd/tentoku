@@ -37,5 +37,9 @@ dev = [
 full = [
     "lxml>=4.0.0",  # Faster XML parsing for database building
     "tqdm>=4.0.0",  # Progress bars for database building
+    "marisa-trie>=1.0.0",  # Fast trie-based dictionary lookups
+]
+trie = [
+    "marisa-trie>=1.0.0",  # Fast trie-based dictionary lookups
 ]
 

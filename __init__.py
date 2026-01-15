@@ -21,6 +21,14 @@ from .sqlite_dict_optimized import OptimizedSQLiteDictionary as SQLiteDictionary
 # This reduces database lookups dramatically for long text
 _FAST_SQLITE_AVAILABLE = False
 
+# Try to import trie-accelerated dictionary (optional, requires marisa-trie)
+try:
+    from .trie_dict import TrieAcceleratedDictionary
+    _TRIE_AVAILABLE = True
+except ImportError:
+    TrieAcceleratedDictionary = None
+    _TRIE_AVAILABLE = False
+
 from ._types import (
     WordEntry, WordResult, Token, WordType, Reason
 )
@@ -34,6 +42,7 @@ __all__ = [
     "tokenize",
     "Dictionary",
     "SQLiteDictionary",  # Now points to OptimizedSQLiteDictionary
+    "TrieAcceleratedDictionary",  # Fast trie-based dictionary (requires marisa-trie)
     "WordEntry",
     "WordResult",
     "Token",
@@ -44,6 +53,7 @@ __all__ = [
     "build_database",
     "is_using_cython",
     "verify_cython_status",
+    "is_using_trie",
 ]
 
 
@@ -83,4 +93,14 @@ def verify_cython_status(verbose=True):
         if verbose:
             print("Warning: verify_cython module not available")
         return False
+
+
+def is_using_trie():
+    """
+    Check if trie-accelerated dictionary is available and being used.
+
+    Returns:
+        bool: True if marisa-trie is installed and trie dictionary is available
+    """
+    return _TRIE_AVAILABLE
 

@@ -195,11 +195,19 @@ def lookup_candidates(
     cdef list word_entries
     cdef bint is_deinflection
     cdef object entry
+    cdef bint has_exists
 
     # Deinflect the input
     candidates = deinflect(input_text)
 
+    # OPTIMIZATION: If dictionary supports exists(), filter candidates first
+    has_exists = hasattr(dictionary, 'exists')
+
     for candidate_index, candidate in enumerate(candidates):
+        # OPTIMIZATION: Skip lookup if word doesn't exist in dictionary
+        if has_exists and not dictionary.exists(candidate.word):
+            continue
+
         # Look up in dictionary
         # Changed from max(max_results * 3, 20) to max_results * 2 to reduce excessive lookups
         lookup_max = max_results * 2

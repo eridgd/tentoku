@@ -537,6 +537,60 @@ class OptimizedSQLiteDictionary(Dictionary):
         
         return entries
 
+    def get_entries_by_ids(self, entry_ids: List[int],
+                           matching_text: Optional[str] = None) -> List[WordEntry]:
+        """
+        Fetch full WordEntry objects for given entry IDs.
+
+        This method is used by TrieAcceleratedDictionary to fetch entries
+        after the trie has determined which entry IDs match.
+
+        Args:
+            entry_ids: List of entry IDs to fetch
+            matching_text: Text that was matched (for setting match_range)
+
+        Returns:
+            List of WordEntry objects
+        """
+        if not entry_ids:
+            return []
+
+        if not self.conn:
+            self._connect()
+
+        cursor = self.conn.cursor()
+        normalized_matching = kana_to_hiragana(matching_text) if matching_text else None
+
+        # Fetch entries
+        placeholders = ','.join('?' * len(entry_ids))
+        cursor.execute(f"""
+            SELECT entry_id, ent_seq FROM entries
+            WHERE entry_id IN ({placeholders})
+        """, entry_ids)
+
+        entry_rows = cursor.fetchall()
+
+        if not entry_rows:
+            return []
+
+        # Use batched query method
+        return self._build_entries_batched(cursor, entry_rows, normalized_matching or '')
+
+    def get_entries_by_ids_map(self, entry_ids: List[int],
+                                matching_text: Optional[str] = None) -> dict:
+        """
+        Fetch entries as a map from entry_id to WordEntry.
+
+        Args:
+            entry_ids: List of entry IDs to fetch
+            matching_text: Text that was matched (for setting match_range)
+
+        Returns:
+            Dictionary mapping entry_id to WordEntry
+        """
+        entries = self.get_entries_by_ids(entry_ids, matching_text)
+        return {e.entry_id: e for e in entries}
+
     def __enter__(self):
         """Context manager entry."""
         return self

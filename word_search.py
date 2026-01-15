@@ -206,23 +206,31 @@ def _lookup_candidates_py(
 ) -> List[WordResult]:
     """
     Look up candidates for a given input, handling deinflection.
-    
+
     Args:
         input_text: Input text to look up
         dictionary: Dictionary to search
         existing_entries: Set of entry IDs we already have
         max_results: Maximum number of results
         input_length: Original input length for this match
-        
+
     Returns:
         List of WordResult objects
     """
     candidate_results: List[WordResult] = []
-    
+
     # Deinflect the input to get candidate dictionary forms
     candidates = deinflect(input_text)
-    
+
+    # OPTIMIZATION: If dictionary supports exists(), filter candidates first
+    # This avoids expensive dictionary lookups for non-existent words
+    has_exists = hasattr(dictionary, 'exists')
+
     for candidate_index, candidate in enumerate(candidates):
+        # OPTIMIZATION: Skip lookup if word doesn't exist in dictionary
+        if has_exists and not dictionary.exists(candidate.word):
+            continue
+
         # Look up this candidate in the dictionary
         # Get more results than max_results so we can sort and pick the best ones
         # Use a multiplier to ensure we get enough results for proper sorting
@@ -232,7 +240,7 @@ def _lookup_candidates_py(
         # This matches 10ten Reader's behavior where matchingText is the original input
         matching_text = original_search_text if original_search_text is not None else input_text
         word_entries = dictionary.get_words(candidate.word, lookup_max, matching_text=matching_text)
-        
+
         # Filter by word type if this is a deinflection (not the original)
         is_deinflection = candidate_index != 0
         if is_deinflection:
@@ -240,13 +248,13 @@ def _lookup_candidates_py(
                 entry for entry in word_entries
                 if entry_matches_type(entry, candidate.type)
             ]
-        
+
         # Drop redundant results
         word_entries = [
             entry for entry in word_entries
             if entry.entry_id not in existing_entries
         ]
-        
+
         # Convert to WordResult
         for entry in word_entries:
             candidate_results.append(WordResult(
@@ -254,12 +262,12 @@ def _lookup_candidates_py(
                 match_len=input_length,
                 reason_chains=candidate.reason_chains if candidate.reason_chains else None
             ))
-    
+
     # Sort results across all candidate lookups
     # Note: sort_word_results now uses matchRange from entries, not matching_text
     if candidate_results:
         candidate_results = sort_word_results(candidate_results)
-    
+
     return candidate_results[:max_results]
 
 
