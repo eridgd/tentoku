@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.2.1] - 2026-01-15
+
+### Added
+- **Trie-accelerated dictionary** for faster tokenization:
+  - `TrieAcceleratedDictionary` using marisa-trie for O(key_length) existence checks
+  - `build_trie.py` to create trie indexes from SQLite dictionaries
+  - Trie dictionary automatically used as default when marisa-trie is available
+  - `is_using_trie()` function to check if trie acceleration is active
+  - Comprehensive tests and benchmark script (`benchmark_trie.py`) for trie performance
+- **Deinflection optimization benchmark** (`benchmark_deinflect_optimization.py`) for performance testing
+
+### Changed
+- **Deinflection performance optimization**:
+  - Replaced O(rules) linear scan with O(1) hash map lookup using `get_rules_by_ending()`
+  - Applied to both Python (`deinflect.py`) and Cython (`deinflect_cy.pyx`) versions
+  - **2.89x faster deinflection** (0.1538ms → 0.0532ms per deinflection)
+  - **1.49x faster tokenization** average across text lengths
+- **SQLite dictionary optimization**:
+  - Replaced per-entry queries with batched IN clause queries
+  - Reduced from hundreds/thousands of queries to 8-10 per lookup
+  - Applied to both Python (`sqlite_dict_optimized.py`) and Cython (`sqlite_dict_cy.pyx`) versions
+  - Increased SQLite cache size to 128MB
+  - Added query planner optimization pragmas
+  - **1.4-2.7x faster** (8-16s → 5.8s for 134 tokens)
+- **Tokenization improvements**:
+  - Fixed tokenization of grammatical patterns like `ようにする`
+  - Added `match_len` as first sorting criterion to prioritize longer matches
+  - Increased `max_results` from 5 to 12 to prevent short high-priority words from crowding out longer matches
+  - Updated Cython sorting (`sorting_cy.pyx`) to match Python version with `match_len` prioritization
+  - Allow expressions to match verb types in `type_matching.py` for better deinflection support
+
+### Fixed
+- Fixed issue where `ようにした` was incorrectly split into `よ` + `うに` + `した` instead of being tokenized as one token with dict_form `ようにする`
+- Fixed Cython sorting to match Python version's `match_len` prioritization
+
 ## [0.2.0] - 2026-01-14
 
 ### Added
